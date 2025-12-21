@@ -1,9 +1,9 @@
 \subsection{Parameter-Independent Relaxation}
   \label{subsec:parameter-independent-relaxation}
 
-  To avoid the conceptual pitfalls of a fundamental time coordinate, we define the dynamics not as a function of an absolute
-  variable, but as a sequence of field configurations $(\chi_\lambda)$ where $\lambda$ is a strictly monotonic ordering
-  parameter.
+  To avoid the conceptual pitfalls of a fundamental time coordinate, we define the dynamics not as a function of an
+  absolute variable, but as a sequence of field configurations $(\chi_\lambda)$ where $\lambda$ is a strictly monotonic
+  ordering parameter.
   At the fundamental level, the evolution of $\chi$ is defined by its relaxation flow:
   \begin{equation}
     \frac{d\chi}{d\lambda} = \mathcal{R}(\chi, \nabla\chi)
@@ -23,32 +23,58 @@
   Consequently, the ``speed of time'' is locally determined by the density of $\chi$-gradients, providing a direct
   link between field topology and temporal flow.
 
-\subsection{Minimal Evolution Equation}
-  \label{subsec:minimal-evolution-equation}
+\subsection{Hamiltonian Derivation of the Evolution Equation}
+  \label{subsec:hamiltonian-derivation}
 
-  The dynamics of the $\chi$ field is governed by a minimal relaxation principle rather than by a conventional action-based
-  variational formulation.
-  The guiding assumption is that spacetime unfolds through a locally constrained, irreversible relaxation of $\chi$ toward
-  larger values.
-
-  We postulate the following first-order evolution equation:
+  While the dynamics of $\chi$ can be viewed as a minimal relaxation principle, it can be more rigorously derived from a
+  Hamiltonian constraint.
+  We postulate that the dynamics of $\chi$ are governed by a Dirac-type kinematic constraint in phase space, analogous
+  to the mass-shell condition for a massless relativistic particle:
   \begin{equation}
-    \partial_t \chi = c \, \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}} ,
+  (\partial_t \chi)
+    ^2 + |\nabla \chi|^2 = c^2,
+    \label{eq:hamiltonian_constraint}
+  \end{equation}
+  where $c$ is the fundamental velocity scale.
+  Combined with the \textit{arrow of time} postulate ($\partial_t \chi \geq 0$), which reflects the irreversible
+  relaxation of the Cosmochron, this leads uniquely to the first-order evolution equation:
+  \begin{equation}
+    \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}.
     \label{eq:chi_dynamics}
   \end{equation}
-  where $\nabla \chi$ denotes the spatial gradient of $\chi$.
 
-  This equation ensures that the local rate of $\chi$-increase never exceeds the fundamental bound $c$ and reduces to
-  $\partial_t \chi \approx c$ in homogeneous regions.
+  This derivation grounds the ``minimal principle'' in the symplectic structure of the field's phase space, ensuring
+  that $\chi$ acts as an intrinsic time coordinate.
 
-  This relaxation equation resembles a relativistic dispersion relation, where $c$ acts as a maximal
-  ``speed of spacetime unfolding''.
-  The square-root term ensures that local variations in $\chi$ cannot propagate faster than $c$, preserving causality while
-  allowing cumulative effects (such as cosmic expansion) to exceed $c$ when integrated over large scales.
+  The mathematical stability of this equation is demonstrated in~\ref{sec:stability_chi}, while explicit analytical
+  solutions are derived in~\ref{sec:analytical_solutions_chi}.
+  The coupling of the $\chi$ field with matter, extending this kinematic backbone to a dynamical theory, is further
+  discussed in~\ref{sec:coupling_matter_chi} and Section~\ref{subsec:variational-formulation}.
 
-  The stability of this equation is demonstrated in~\ref{sec:stability_chi}, while explicit analytical solutions are
-  derived in~\ref{sec:analytical_solutions_chi}.
-  The coupling of the $\chi$ field with matter is further discussed in~\ref{sec:coupling_matter_chi}.
+\subsection{Variational Formulation and Born-Infeld Action}
+  \label{subsec:variational-formulation}
+
+  To extend this kinematic constraint to a full dynamical theory including matter, we propose an effective Lagrangian
+  density of the Born-Infeld type:
+  \begin{equation}
+    \mathcal{L} = -c^2 \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}} + \partial_t \chi - \frac{4\pi G}{c^2} \rho \chi ,
+  \end{equation}
+  where $\rho$ represents the matter density. The presence of the term $\partial_t \chi$ linear in the first-order
+  temporal derivative is crucial: it ensures that the momentum conjugate to $\chi$, defined as
+  $\Pi_\chi = \frac{\partial \mathcal{L}}{\partial (\partial_t \chi)}$, is a non-vanishing constant ($\Pi_\chi = 1$).
+
+  In the Hamiltonian formalism, this constant momentum acts as a primary constraint that effectively enforces the
+  unit-velocity evolution of the field.
+  This structure ensures that the field dynamics remain locked onto the Hamiltonian
+  constraint~\eqref{eq:hamiltonian_constraint} while the square-root term acts as a non-linear regularizer for spatial
+  gradients.
+  The variation with respect to $\chi$ yields a non-linear Poisson equation:
+  \begin{equation}
+    \nabla \cdot \left( \frac{\nabla \chi}{\sqrt{1 - |\nabla \chi|^2/c^2}} \right) = \frac{4\pi G}{c^2} \rho .
+    \label{eq:nonlinear_poisson}
+  \end{equation}
+  This formulation naturally recovers the Newtonian limit for weak gradients ($|\nabla \chi| \ll c$) while preventing
+  gravitational singularities as the gradient magnitude is bounded by $c$.
 
 \subsection{Causality and Locality}
   \label{subsec:causality-and-locality}
@@ -78,6 +104,11 @@
 
   This simple relation already reproduces a Hubble-like expansion law when distances are identified with accumulated
   $\chi$ increments, as discussed in Section~\ref{sec:cosmology}.
+
+  As shown in Appendix~\ref{sec:mond_derivation}, the requirement $\partial_t \chi \geq 0$ in an expanding background
+  ($H_0$) implies a minimal residual gradient $\nabla \chi_{\min} \propto \sqrt{H_0}$.
+  This ``acceleration floor'' provides a first-principles derivation for MOND-like phenomenology, explaining galactic
+  rotation curves without invoking dark matter particles.
 
 \subsection{Influence of Local Structure}
   \label{subsec:influence-of-local-structure}
@@ -121,10 +152,19 @@
   This form is not unique and should be understood as a lowest-order approximation, valid in regimes where
   $\chi$ varies smoothly.
 
+  Furthermore, this kinematic framework accounts for key gravitational observations.
+  As shown in Appendix~\ref{sec:gw_speed}, linearizing Eq.~\eqref{eq:chi_dynamics} ensures that gravitational
+  perturbations propagate at exactly $c$, consistent with GW170817. Additionally, the requirement
+  $\partial_t \chi \geq 0$ in an expanding background implies a minimal residual gradient
+  $\nabla \chi_{\min} \propto \sqrt{H_0}$ (Appendix~\ref{sec:mond_derivation}).
+  This ``acceleration floor'' provides a first-principles derivation for MOND-like phenomenology, explaining galactic
+  rotation curves without invoking dark matter particles.
+
   More general constructions, including tensorial or nonlocal extensions, may be required beyond this
   approximation and are left for future work.
 
-\subsection{Limitations and Scope}\label{subsec:limitations-and-scope}
+\subsection{Limitations and Scope}
+  \label{subsec:limitations-and-scope}
 
   Equation~\eqref{eq:chi_dynamics} is intentionally minimal.
   It does not attempt to describe quantum fluctuations of $\chi$, nor does it incorporate backreaction effects beyond

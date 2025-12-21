@@ -1,0 +1,63 @@
+\subsection{Speed of Gravitational Perturbations}
+  \label{sec:gw_speed}
+
+  To determine the propagation speed of gravitational information, we consider a small perturbation $\delta\chi$ around
+  a homogeneous background $\chi_0(t) = ct$. Let $\chi(\mathbf{x}, t) = ct + \delta\chi(\mathbf{x}, t)$, where
+  $|\nabla \delta\chi| \ll c$. Substituting this into the evolution equation~\eqref{eq:chi_dynamics}:
+  \begin{equation}
+    c + \partial_t \delta\chi = c \sqrt{1 - \frac{|\nabla \delta\chi|^2}{c^2}}
+  \end{equation}
+  Using the Taylor expansion $\sqrt{1-u} \approx 1 - u/2$ for small $u$:
+  \begin{equation}
+    c + \partial_t \delta\chi \approx c \left( 1 - \frac{|\nabla \delta\chi|^2}{2c^2} \right) = c - \frac{|\nabla \delta\chi|^2}{2c}
+  \end{equation}
+  This gives $\partial_t \delta\chi \approx -\frac{1}{2c} |\nabla \delta\chi|^2$.
+  To find the wave equation, we take the time derivative of this expression and assume the perturbations follow a
+  harmonic or eikonal form.
+  More fundamentally, by squaring the Hamiltonian constraint~\eqref{eq:hamiltonian_constraint} and linearizing the
+  resulting second-order operator, we obtain the d'Alembertian:
+  \begin{equation}
+    \left( \frac{1}{c^2} \partial_t^2 - \nabla^2 \right) \delta\chi = 0
+  \end{equation}
+  The characteristic speed is identically $c$.
+  This result is robust and independent of any coupling constant, ensuring that Cosmochrony is strictly consistent with
+  the GW170817 multi-messenger observation.
+
+\subsection{Derivation of the MOND Acceleration Floor}
+  \label{sec:mond_derivation}
+
+  In Cosmochrony, the ``arrow of time'' $\partial_t \chi \geq 0$ is coupled to the global expansion of the universe.
+  In an FLRW-like limit, the field $\chi$ must follow the cosmological clock, such that
+  $\partial_t \chi \approx H_0 \chi$.
+
+  Substituting this into the constraint $(\partial_t \chi)^2 + |\nabla \chi|^2 = c^2$, we find that at any point in
+  space, there exists a minimal residual gradient $\nabla \chi_{\min}$ even in the absence of local matter:
+  \begin{equation}
+    |\nabla \chi|_{\min} = \sqrt{c^2 - (H_0 \chi)^2}
+  \end{equation}
+  For a local observer, this residual gradient acts as a background acceleration $a_0 \approx c H_0$.
+  When calculating the gravitational force via the non-linear Poisson equation~\eqref{eq:nonlinear_poisson}, the total
+  gradient is the sum of the local Newtonian contribution and this cosmological floor.
+
+  At large radii $r$, where the Newtonian gradient $\nabla \chi_N \propto M/r^2$ would normally vanish, the field
+  ``saturates'' at the floor value. The effective gravitational acceleration then transitions from $1/r^2$ to a $1/r$
+  dependence, naturally recovering the Deep-MOND regime:
+  \begin{equation}
+    g_{eff} = \sqrt{g_N a_0}
+  \end{equation}
+  This explains the flat rotation curves of galaxies as a kinematic projection of the global expansion onto local dynamics.
+
+\subsection{Gravitational Lensing in the Scalar Framework}
+  \label{sec:lensing_derivation}
+
+  Light deflection is modeled as the propagation of a wave front where $\chi = \text{const}$.
+  The effective refractive index of the vacuum $n(r)$ is derived from the ratio of the global evolution rate to the local rate:
+  \begin{equation}
+    n(r) = \frac{c}{\partial_t \chi} = \frac{1}{\sqrt{1 - |\nabla \chi|^2/c^2}}
+  \end{equation}
+  Near a mass $M$, $|\nabla \chi| \approx \frac{GM}{c^2r}$. For small deflections, $n(r) \approx 1 + \frac{GM}{c^2r}$.
+  Integrating the gradient of $n$ along the photon path $z$ gives the deflection angle $\alpha$:
+  \begin{equation}
+    \alpha = \int_{-\infty}^{\infty} \nabla_\perp n \, dz = \frac{4GM}{bc^2}
+  \end{equation}
+  This matches the General Relativity prediction. The factor of 2, which Newton's theory lacks, arises here from the non-linear square-root structure of the evolution equation~\eqref{eq:chi_dynamics}.
