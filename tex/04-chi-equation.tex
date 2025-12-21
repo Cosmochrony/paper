@@ -1,19 +1,27 @@
 \subsection{Parameter-Independent Relaxation}
   \label{subsec:parameter-independent-relaxation}
 
-  To avoid the conceptual pitfalls associated with introducing a fundamental time coordinate, the evolution of the field
-  $\chi$ is defined such that its physical content is invariant under any strictly monotonic reparameterization $t \rightarrow f(t)$.
-  The dynamics is therefore not formulated in terms of an absolute time variable, but in terms of relations between
-  successive configurations of the field and their spatial structure.
+  To avoid the conceptual pitfalls of a fundamental time coordinate, we define the dynamics not as a function of an absolute
+  variable, but as a sequence of field configurations $(\chi_\lambda)$ where $\lambda$ is a strictly monotonic ordering
+  parameter.
+  At the fundamental level, the evolution of $\chi$ is defined by its relaxation flow:
+  \begin{equation}
+    \frac{d\chi}{d\lambda} = \mathcal{R}(\chi, \nabla\chi)
+  \end{equation}
+  where $\mathcal{R}$ represents the rate of geometric tension release toward equilibrium.
+  The ``temporal'' derivative $\partial_t$ used in subsequent sections is then understood as a convenient
+  reparametrization of this primary flow:
+  \begin{equation}
+    \partial_t \chi \equiv \frac{d\chi}{d\lambda} \frac{d\lambda}{dt}
+  \end{equation}
+  Since $t$ merely serves to label the relaxation ordering, all physical results are invariant under any monotonic
+  reparameterization $t \rightarrow f(t)$ with $f'(t) > 0$.
 
-  The parameter $t$ appearing in the evolution equations serves only as an auxiliary ordering label for the relaxation
-  process, ensuring a consistent causal ordering of field states through the monotonic progression of $\chi$ itself.
-  Any monotonic reparameterization corresponds to a change of labeling without physical consequence.
-  Observable quantities---such as relative relaxation rates, solitonic stability, or emergent curvature---depend only on
-  ratios of field variations and spatial gradients, and are therefore independent of the specific choice of $t$.
-
-  In this sense, the relaxation of $\chi$ defines the physical notion of time through its own
-  internal progression, while $t$ itself plays the role of a gauge parameter rather than a fundamental observable.
+  In this framework, the relaxation of $\chi$ is not occurring \textit{in} time; rather, the local rate of relaxation
+  \textit{defines} the physical measure of time.
+  What we perceive as duration is the cumulative displacement of the field toward its equilibrium state.
+  Consequently, the ``speed of time'' is locally determined by the density of $\chi$-gradients, providing a direct
+  link between field topology and temporal flow.
 
 \subsection{Minimal Evolution Equation}
   \label{subsec:minimal-evolution-equation}
