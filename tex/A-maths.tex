@@ -10,31 +10,34 @@
   excitations—map onto the effective field theories of the Standard Model and General Relativity.}
 
   \paragraph{From Discrete Network to Continuum.}
-    As established in the relational foundation (see Appendix~\ref{subsec:relational_foundation}), the collective
-    behavior of the graph $G(V,E)$ can be mapped onto a continuous effective action.
-    In this framework, the operational distance $d(i,j)$ between two nodes is defined as the geodesic distance on the
-    weighted graph:
+    As established in the relational foundation, the collective behavior of the graph $G(V,E)$ can be mapped onto a
+    continuous effective action. In this framework, the connectivity $K_{uv}$ between nodes is not a static background
+    but a \textbf{dynamic measure} of the local $\chi$-field gradient, representing the relational tension between units:
+    \begin{equation}
+      K_{uv} \propto \frac{1}{1 - \frac{(\Delta \chi_{uv})^2}{c^2 \Delta \ell^2}}
+    \end{equation}
+    where $\Delta \chi_{uv}$ is the field variation between adjacent nodes, and $\Delta \ell$ denotes a fixed
+    combinatorial link scale of the graph---not a physical spatial distance.
+    The operational distance $d(i,j)$ is then defined as the geodesic distance on this weighted graph:
     \begin{equation}
       d(i,j) = \min_{p \in \mathcal{P}_{ij}} \sum_{(u,v) \in p} \frac{1}{\sqrt{K_{uv}}}
     \end{equation}
-    where $\mathcal{P}_{ij}$ is the set of all paths connecting nodes $i$ and $j$, and $K_{uv}$ is the connectivity
-    between adjacent nodes. This definition ensures that $d(i,j)$ is well-defined and satisfies the metric axioms.
-
-    The transition to a continuous metric $g_{\mu\nu}$ is analogous to the transition from molecular dynamics to the
-    Navier-Stokes equations. The action $S_{\text{CC}} = \int \mathcal{L}_{\text{CC}} \sqrt{-g} \, d^4x$ represents a
-    coarse-grained limit where the discrete connectivity $K_{ij}$ is replaced by a smooth tensor field.
+    where $\mathcal{P}_{ij}$ is the set of all paths connecting $i$ and $j$, and the $\sqrt{K_{uv}}$ dependence
+    reflects the Born--Infeld–type non-linearity of the $\chi$-field dynamics and ensures
+    that the emergent metric respects the fundamental gradient bound set by $c$.
+    This definition ensures that the geometry is a secondary consequence of the field's local state.
 
   \paragraph{Local Metric Reconstruction.}
-    The metric $g_{\mu\nu}(x)$ is not a global distance matrix but an effective local field.
-    It is reconstructed from the local connectivity surrounding a point $x$.
+    The metric tensor $g_{\mu\nu}(x)$ is an effective local field reconstructed from this connectivity.
     For any small displacement $\Delta x^\mu$ in the continuum, the components $g_{\mu\nu}$ are determined such that the
     quadratic form matches the infinitesimal operational distance of the network:
     \begin{equation}
       g_{\mu\nu}(x) \Delta x^\mu \Delta x^\nu \approx \delta \ell^2_{network}
     \end{equation}
-    where $\delta \ell$ is the distance between adjacent nodes in the direction of $\Delta x$.
-    In this view, the curvature of spacetime is a macroscopic manifestation of the spatial gradients in the network's
-    connectivity density $K_{uv}$.
+    Spatial inhomogeneities in the connectivity density $K_{uv}$ modify the geodesic structure of the underlying network.
+    In this view, the curvature of spacetime (gravity) is the macroscopic manifestation of these connectivity gradients,
+    induced by localized $\chi$-field configurations (matter).
+
 
 \subsubsection{Gravity and Time: The Geometric Relaxation Term ($\mathcal{L}_{\text{Gravity/Time}}$)}
   This term ensures the emergence of GR and imposes the arrow of time. In the continuous limit:
@@ -89,8 +92,8 @@ temporal flow.
 \subsection{Stability Analysis of the $\chi$-Field Dynamics}
 \label{sec:stability_chi}
 
-The stability of the $\chi$-field dynamics, governed by $\partial_t \chi = c \sqrt{1 - |\nabla \chi|^2/c^2}$
-, describes the irreversible relaxation of $\chi$, where $c$ is the maximal relaxation speed.
+The stability of the $\chi$-field dynamics, governed by $\partial_t \chi = c \sqrt{1 - |\nabla \chi|^2/c^2}$,
+describes the irreversible relaxation of $\chi$, where $c$ is the maximal relaxation speed.
 
 It is essential to ensure that Cosmochrony provides a \textbf{physically consistent and predictive framework}.
 Without stability, small perturbations could lead to unphysical divergences, compromising the theory's
@@ -716,9 +719,10 @@ conceptual circularity of using a continuous metric to define the field's dynami
   While LQG often introduces matter as an excitation on a pre-existing spin network, Cosmochrony suggests that the
   network itself is the $\chi$ field.
   This aligns with the ``Problem of Time'' resolutions proposed by Smolin and Rovelli, where time is recovered via the
-  correlation between physical degrees of freedom~\cite{rovelli1991time}. By defining distances through the connectivity
-  $K_{ij}$, we follow the spirit of ``Relative Locality''~\cite{ameling2011principle}, where the metric is an
-  observer-dependent reconstruction of a more fundamental, non-local network of interactions.
+  correlation between physical degrees of freedom~\cite{rovelli1991time}.
+  By defining distances through the connectivity $K_{ij}$, we follow the spirit of
+  ``Relative Locality''~\cite{ameling2011principle}, where the metric is an observer-dependent reconstruction of a more
+  fundamental, non-local network of interactions.
 
 \subsection{Energy and Curvature}\label{subsec:energy-and-curvature}
 
@@ -727,8 +731,8 @@ The local energy density associated with $\chi$ variations may be expressed as
   \mathcal{E}_\chi = \frac{1}{2} \left[ (\partial_t \chi)^2 + (\nabla \chi)^2 \right] .
 \end{equation}
 
-Regions of high curvature in $\chi$
-correspond to localized energy concentrations and are identified with particle-like excitations.
+Regions of high curvature in $\chi$ correspond to localized energy concentrations and are identified with particle-like
+excitations.
 Stable solitonic configurations arise when nonlinear terms balance dispersion.
 
 \subsection{Relation to Classical Limits}\label{subsec:relation-to-classical-limits}
@@ -737,8 +741,8 @@ In regimes where $\chi$ varies slowly and excitations are dilute, the dynamics r
 In this limit, the effective metric approaches Minkowski spacetime and standard quantum field theory on flat
 spacetime is recovered.
 
-Conversely, in high-density regimes, strong gradients in $\chi$
-reproduce the phenomenology of curved spacetime and gravitational collapse.
+Conversely, in high-density regimes, strong gradients in $\chi$ reproduce the phenomenology of curved spacetime and
+gravitational collapse.
 
 \subsection{Status of the Formulation}\label{subsec:status-of-the-formulation}
 
