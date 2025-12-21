@@ -1,0 +1,133 @@
+\subsection{Cosmic Expansion as $\chi$ Relaxation}\label{subsec:cosmic-expansion-as-$chi$-relaxation}
+
+  In cosmochrony, cosmic expansion is not driven by an initial impulse or by a cosmological constant.
+  Instead, it results from the monotonic relaxation of the $\chi$ field toward larger characteristic wavelengths.
+
+  As $\chi$ increases uniformly, spatial separations between comoving points grow proportionally.
+  The recession velocity between distant objects thus arises as a cumulative effect of local $\chi$
+  relaxation rather than as motion through space.
+
+  \begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=1]
+
+% Axes
+      \draw[->] (0,0) -- (6,0) node[right]{Cosmic time};
+      \draw[->] (0,0) -- (0,4) node[above]{Scale / Wavelength};
+
+% LambdaCDM
+      \draw[thick, gray, dashed]
+      plot[smooth] coordinates {(0.5,0.7) (2,1.3) (4,2.5) (5.5,3.7)};
+      \node[gray] at (4.5,3.2) {$\Lambda$CDM};
+
+% Chi relaxation
+      \draw[thick, blue]
+      plot[smooth] coordinates {(0.5,0.8) (2,1.4) (4,2.2) (5.5,2.9)};
+      \node[blue] at (4.7,2.5) {$\chi(t)$};
+
+    \end{tikzpicture}
+    \caption{Comparison between standard $\Lambda$CDM cosmological expansion and Cosmochrony. In the latter,
+      the observed Hubble law emerges from the monotonic relaxation of the fundamental field $\chi$,
+      without invoking dark energy.}
+    \label{fig:cosmo_comparison}
+  \end{figure}
+
+  Primordial fluctuations in $\chi$ at the recombination epoch ($z \sim 1100$
+  ) are imprinted as temperature anisotropies in the CMB. The near scale-invariance of these fluctuations
+  reflects the universal relaxation dynamics of $\chi$
+  , while their acoustic peaks arise from oscillatory coupling between $\chi$
+  and matter excitations. Unlike inflationary models, no superluminal stretching is required: correlations
+  extend across the observable universe because they originate from a single connected $\chi$
+  -field configuration prior to relaxation.
+
+\subsection{Emergent Hubble Law}
+  \label{subsec:emergent-hubble-law}
+
+  Let $\chi(t)$ denote the spatially averaged value of the field.
+  The effective scale factor $a(t)$ scales proportionally to $\chi(t)$:
+  \begin{equation}
+    a(t) \propto \chi(t).
+  \end{equation}
+
+  The Hubble parameter follows directly:
+  \begin{equation}
+    H(t) = \frac{\dot{a}}{a} = \frac{\dot{\chi}}{\chi}.
+  \end{equation}
+
+  Assuming maximal relaxation speed $\dot{\chi} = c$, the present value of the Hubble constant becomes
+  \begin{equation}
+    H_0 \approx \frac{c}{\chi(t_0)},
+  \end{equation}
+  providing a natural scale for cosmic expansion without introducing dark energy.
+
+\subsection{Cosmic Acceleration Without Dark Energy}\label{subsec:cosmic-acceleration-without-dark-energy}
+
+  Because $\chi$ relaxation accumulates over time, recession velocities increase with distance.
+  This leads to an apparent acceleration when interpreted through conventional cosmological models.
+
+  In cosmochrony, this effect does not reflect a change in the expansion rate but the cumulative nature of $\chi$
+  growth.
+  Thus, accelerated expansion emerges without requiring a cosmological constant or exotic energy components.
+
+\subsection{Cosmic Microwave Background}\label{subsec:cosmic-microwave-background}
+
+  In this model, the Cosmic Microwave Background (CMB) reflects frozen fluctuations of the $\chi$
+  field at the epoch when matter-radiation interactions decoupled.
+
+  Primordial variations in $\chi$
+  phase and amplitude imprint temperature anisotropies that persist as large-scale correlations.
+
+  These fluctuations originate from stochastic variations in local $\chi$
+  relaxation prior to large-scale structure formation.
+  Their near scale invariance reflects the universal relaxation dynamics of the field.
+
+  Unlike inflationary scenarios, no superluminal expansion is required to explain horizon-scale coherence:
+  correlations originate from the pre-relaxation continuity of $\chi$.
+
+  Further details on how $\chi$
+  -field fluctuations reproduce the observed CMB anisotropies---including solutions to the
+  horizon and flatness problems without inflation, as well as predicted deviations at large angular scales---are
+  provided in Appendices~\ref{sec:chi_cmb_spectrum} and~\ref{sec:cosmochrony_horizon_flatness}.
+
+\subsection{Hubble Tension}\label{subsec:hubble-tension}
+
+  Measurements of the Hubble constant derived from early-universe observables~\cite{Planck2020,Riess2019}
+  , such as the CMB, probe smaller values of $\chi$.
+  In contrast, late-time measurements using local distance ladders correspond to larger accumulated $\chi$ values.
+
+  This difference naturally produces a tension between inferred values of $H_0$
+  without invoking systematic errors or new particles.
+
+  The CMB anisotropy spectrum in the $\chi$-framework differs from inflationary predictions in the low-$\ell$
+  regime, where the absence of a primordial inflationary phase would suppress large-angle correlations. This
+  could be tested by future high-precision CMB experiments like CMB-S4 or LiteBIRD\@.
+
+  The predicted decrease of $H_0$
+  with cosmic time provides a natural explanation for the current Hubble tension. Early-universe probes (e.g.,
+  CMB-based measurements yielding $H_0 \approx 67 \, \text{km/s/Mpc}$) sample smaller $\chi$
+  values than late-time distance ladder methods ($H_0 \approx 74 \, \text{km/s/Mpc}$
+  ), consistent with the observed $\sim 4.4\sigma$
+  discrepancy. Although this numerical agreement should not be interpreted as a precision prediction, it is an
+  indication that the framework naturally selects the observed cosmological scale. Future measurements of $H(z)$
+  across redshift ranges may distinguish between this geometric interpretation and dark energy models.
+
+  This mechanism suggests that the "tension" is not a failure of the standard cosmological model but a manifestation of
+  the non-linear coupling between matter density and the field’s relaxation rate.
+  A formal derivation of this local correction, yielding an $8.4\%$ increase in $H_0$ within the KBC void, is detailed
+  in Appendix \ref{appendix:hubble_tension}.
+
+\subsection{Entropy and the Arrow of Time}\label{subsec:entropy-and-the-arrow-of-time}
+
+  The monotonic increase of $\chi$ defines a preferred temporal direction.
+  As $\chi$ grows, localized excitations become increasingly separated, leading to effective irreversibility.
+
+  Entropy increase thus arises geometrically from the relaxation of $\chi$
+  , providing a unified explanation for the arrow of time at both microscopic and cosmological scales.
+
+\subsection{Summary}
+  \label{subsec:summary4}
+
+  Cosmological expansion, apparent acceleration, the Hubble law, the CMB, and the arrow of time all emerge from the
+  universal relaxation of the $\chi$ field.
+  Cosmochrony reproduces key cosmological observations without introducing dark energy or modifying general
+  relativity at large scales.
