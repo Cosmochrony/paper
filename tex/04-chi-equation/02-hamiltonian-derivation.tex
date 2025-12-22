@@ -1,27 +1,43 @@
 \subsection{Hamiltonian Derivation of the Evolution Equation}
   \label{subsec:hamiltonian-derivation}
 
-  While the dynamics of $\chi$ can be viewed as a minimal relaxation principle, it can be more rigorously derived from a
-  Hamiltonian constraint.
-  We postulate that the dynamics of $\chi$ are governed by a Dirac-type kinematic constraint in phase space, analogous
-  to the mass-shell condition for a massless relativistic particle:
-  \begin{equation}
-  (\partial_t \chi)
-    ^2 + |\nabla \chi|^2 = c^2,
-    \label{eq:hamiltonian_constraint}
-  \end{equation}
-  where $c$ is the fundamental velocity scale.
-  Combined with the \textit{arrow of time} postulate ($\partial_t \chi \geq 0$), which reflects the irreversible
-  relaxation of the Cosmochron, this leads uniquely to the first-order evolution equation:
-  \begin{equation}
-    \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}.
-    \label{eq:chi_dynamics}
-  \end{equation}
+  \subsubsection*{Discrete Dynamics of $\chi$}
+    Before introducing any metric structure, the dynamics of $\chi$ can be formulated purely in terms of its local
+    relaxation on a discrete network. Let $\lambda$ be a monotonic ordering parameter, and define the local variation of
+    $\chi$ at node $i$ as:
+    \[
+      \frac{d \chi_i}{d \lambda} = c \sqrt{1 - \frac{1}{c^2} \sum_{j \sim i} K_{ij} (\chi_i - \chi_j)^2}
+      \label{eq:discrete-dynamics}
+    \]
+    Here, $K_{ij}$ is the connectivity strength between nodes $i$ and $j$ (introduced in Section~\ref{subsec:the-geometric-effective-action-and-lagrangians-of-cosmochrony-Lcc}),
+    and the sum runs over neighboring nodes $j$. This equation is \textbf{metric-independent} and defines the fundamental
+    dynamics of $\chi$ in terms of its local correlations.
 
-  This derivation grounds the ``minimal principle'' in the symplectic structure of the field's phase space, ensuring
-  that $\chi$ acts as an intrinsic time coordinate.
+  \subsubsection*{Continuum Limit}
+    In the limit where the network becomes dense (i.e., the distance between nodes approaches zero), the discrete sum can be
+    approximated by a continuous Laplacian:
+    \[
+      \sum_{j \sim i} K_{ij} (\chi_i - \chi_j)^2 \approx \int |\nabla \chi|^2 \, dV
+    \]
+    This yields the effective evolution equation in the continuum:
+    \[
+      \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}
+    \]
+    where $\nabla$ is now defined with respect to the emergent metric $g_{\mu\nu}$, derived from the network's
+    connectivity (see Section~\ref{subsec:the-geometric-effective-action-and-lagrangians-of-cosmochrony-Lcc}).
 
-  The mathematical stability of this equation is demonstrated in~\ref{subsec:stability_chi}, while explicit analytical
-  solutions are derived in~\ref{subsec:analytical_solutions_chi}.
-  The coupling of the $\chi$ field with matter, extending this kinematic backbone to a dynamical theory, is further
-  discussed in~\ref{subsec:coupling_matter_chi} and Section~\ref{subsec:variational-formulation}.
+  \subsubsection*{Hamiltonian Constraint}
+    While the dynamics of $\chi$ can be viewed as a minimal relaxation principle, it can be more rigorously derived from
+    a Hamiltonian constraint.
+    We postulate that the dynamics of $\chi$ are governed by a Dirac-type kinematic constraint in phase space, analogous
+    to the mass-shell condition for a massless relativistic particle:
+    \[
+      (\partial_t \chi)^2 + |\nabla \chi|^2 = c^2
+    \]
+    where $c$ is the fundamental velocity scale. Combined with the arrow of time postulate ($\partial_t \chi \geq 0$), which
+    reflects the irreversible relaxation of the Cosmochron, this leads uniquely to the first-order evolution equation:
+    \[
+      \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}
+    \]
+    This derivation grounds the ``minimal principle'' in the symplectic structure of the field's phase space, ensuring
+    that $\chi$ acts as an intrinsic time coordinate.
