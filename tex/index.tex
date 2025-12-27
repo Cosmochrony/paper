@@ -1,60 +1,62 @@
-\documentclass[11pt]{article}
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl} % Math and Physical Sciences Numbered Reference Style
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{geometry}
 \usepackage{physics}
-\usepackage{cite}
 \usepackage{tikz}
 \usepackage{amsopn}
 \usepackage{amstext}
+\usepackage{microtype}
+\usepackage{xparse}
+\NewDocumentCommand{\subsubsubsection}{s m}{%
+  \IfBooleanTF{#1}{\paragraph*{#2}}{\paragraph{#2}}%
+}
 \usetikzlibrary{arrows.meta, calc, decorations.pathmorphing, shapes.geometric, shadings, positioning, decorations.markings}
-\geometry{margin=1in}
 
-\title{Cosmochrony: An Exploratory Geometric Framework for Emergent Spacetime, Gravitation, and Quantum Phenomena}
-\author{Jérôme Beau\\Independent Researcher\\javarome@gmail.com}
-\newcommand{\version}{v1.0.32, December 26th 2025}
-\date{\version}
+\title[Cosmochrony]{Cosmochrony: An Exploratory Geometric Framework for Emergent Spacetime, Gravitation, and Quantum Phenomena}
+\author*[1]{\fnm{Jérôme} \sur{Beau}}\email{javarome@gmail.com}
+\affil*[1]{\orgname{Independent Researcher}, \country{France}}
+\date{}
+
+\abstract{
+  We present \emph{Cosmochrony}, a minimalist geometric framework in which time, spacetime structure, gravitation,
+  and quantum phenomena emerge from the irreversible relaxation of a single continuous scalar quantity, denoted $\chi$.
+  The field $\chi$ is not defined on a pre-existing spacetime manifold; rather, it constitutes a
+  pre-geometric substrate whose monotonic relaxation provides an intrinsic ordering of physical
+  processes, identified with physical time.
+  This irreversibility is interpreted energetically, with energy understood as the residual capacity of $\chi$
+  configurations to relax, while spatial relations arise relationally from gradients and correlations within the field.
+
+  Within this framework, matter is described as stable, localized topological configurations of $\chi$.
+  Gravitation emerges as a collective effect of these excitations locally constraining the relaxation
+  of the field, leading to gravitational time dilation and effective spacetime curvature without
+  postulating a fundamental metric or gravitational interaction.
+
+  Quantum phenomena are interpreted as effective descriptions of coherent fluctuations around
+  solitonic configurations of $\chi$.
+  Entanglement reflects the persistence of shared field configurations across spatial separation,
+  yielding nonlocal correlations without superluminal signaling, local hidden variables, or
+  fundamental wavefunction collapse.
+
+  The standard formalisms of general relativity and quantum mechanics are not assumed at the
+  fundamental level but are recovered as emergent, coarse-grained descriptions valid in regimes
+  where $\chi$ admits a stable geometric interpretation.
+  Cosmological expansion follows directly from the global relaxation of $\chi$, leading to a
+  geometric interpretation of the Hubble parameter and an apparent acceleration without invoking
+  dark energy or an inflationary phase.
+
+  While not proposed as a final unified theory, Cosmochrony offers a conceptually coherent
+  framework that clarifies the physical origin of time, geometry, gravitation, and quantum
+  correlations within a single scalar dynamics.
+  The approach identifies qualitative and semi-quantitative signatures that may allow empirical
+  distinction from standard cosmological scenarios and provides a basis for further foundational
+  and mathematical investigation.
+}
+
+\keywords{Emergent spacetime, quantum gravity, cosmology, geometric frameworks}
 
 \begin{document}
   \maketitle
-
-  \begin{abstract}
-    We present \emph{Cosmochrony}, a minimalist geometric framework in which time, spacetime structure, gravitation,
-    and quantum phenomena emerge from the irreversible relaxation of a single continuous scalar quantity, denoted $\chi$.
-    The field $\chi$ is not defined on a pre-existing spacetime manifold; rather, it constitutes a
-    pre-geometric substrate whose monotonic relaxation provides an intrinsic ordering of physical
-    processes, identified with physical time.
-    This irreversibility is interpreted energetically, with energy understood as the residual capacity of $\chi$
-    configurations to relax, while spatial relations arise relationally from gradients and correlations within the field.
-
-    Within this framework, matter is described as stable, localized topological configurations of $\chi$.
-    Gravitation emerges as a collective effect of these excitations locally constraining the relaxation
-    of the field, leading to gravitational time dilation and effective spacetime curvature without
-    postulating a fundamental metric or gravitational interaction.
-
-    Quantum phenomena are interpreted as effective descriptions of coherent fluctuations around
-    solitonic configurations of $\chi$.
-    Entanglement reflects the persistence of shared field configurations across spatial separation,
-    yielding nonlocal correlations without superluminal signaling, local hidden variables, or
-    fundamental wavefunction collapse.
-
-    The standard formalisms of general relativity and quantum mechanics are not assumed at the
-    fundamental level but are recovered as emergent, coarse-grained descriptions valid in regimes
-    where $\chi$ admits a stable geometric interpretation.
-    Cosmological expansion follows directly from the global relaxation of $\chi$, leading to a
-    geometric interpretation of the Hubble parameter and an apparent acceleration without invoking
-    dark energy or an inflationary phase.
-
-    While not proposed as a final unified theory, Cosmochrony offers a conceptually coherent
-    framework that clarifies the physical origin of time, geometry, gravitation, and quantum
-    correlations within a single scalar dynamics.
-    The approach identifies qualitative and semi-quantitative signatures that may allow empirical
-    distinction from standard cosmological scenarios and provides a basis for further foundational
-    and mathematical investigation.
-  \end{abstract}
-
-  \tableofcontents
 
   \input{01-introduction/introduction}
   \input{02-context-and-motivation/context-and-motivation}
@@ -70,26 +72,22 @@
   \input{12-discussion-comparison/discussion-comparison}
   \input{13-conclusion-and-outlook/conclusion-and-outlook}
 
-    \appendix
-      \section*{Appendices}
-      \addcontentsline{toc}{section}{Appendices}
-      \input{A-appendix-math/appendix-math}
-      \input{B-appendix-conceptual/appendix-conceptual}
-      \input{C-appendix-cosmo/appendix-cosmo}
-      \input{D-appendix-technical/appendix-technical}
-      \input{Glossary}
+  \appendix
+  \section*{Appendices}
+    \input{A-appendix-math/appendix-math}
+    \input{B-appendix-conceptual/appendix-conceptual}
+    \input{C-appendix-cosmo/appendix-cosmo}
+    \input{D-appendix-technical/appendix-technical}
+    \input{Glossary}
 
-    \bibliographystyle{plain} % We choose the "plain" reference style
-    \bibliography{refs} % Entries are in the refs.bib file
+    \backmatter
 
-  \section*{Acknowledgements}
-    The author wishes to express sincere gratitude for the technical assistance received during the formulation and
-    verification of the theoretical developments presented herein. Specifically, the advanced capabilities of the large
-    language model ChatGPT 5 (OpenAI), Sonnet 4.5 (Claude), Gemini 2.5 (Google), Le Chat (Mistral Large) and Grok 4.1
-    were utilized for rigorous dimensional consistency checks and the execution of complex tensor algebra stemming from
-    the author's initial conceptual insights.
-    These models served strictly as sophisticated computational assistants under the intellectual direction of the author,
-    who assumes sole responsibility for the theoretical conceptualization, the selection of hypotheses,
-    and the final physical interpretation of all results.
+    \bmhead{Acknowledgements}
+    The author acknowledges the use of large language models as a supportive tool
+    for refining language, structure, and internal consistency during the
+    development of this manuscript.
+    All conceptual contributions, theoretical choices, and interpretations remain the sole responsibility of the author.
+
+    \bibliography{refs}
 
 \end{document}
