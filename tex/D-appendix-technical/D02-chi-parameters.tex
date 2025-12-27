@@ -1,0 +1,96 @@
+\subsection{D.2 Estimates of $\chi$-Field Parameters}
+  \label{subsec:chi-parameters}
+
+  This section compiles \textbf{technical estimates} of the fundamental parameters governing the $\chi$-field dynamics, derived from observational constraints and theoretical consistency.
+  These parameters include:
+  \begin{itemize}
+    \item The \textbf{connectivity scale} $K_0$ (Section~\ref{subsec:Kij-definition}),
+    \item The \textbf{characteristic scale} $\chi_c$ (linked to the Planck length or Hubble scale),
+    \item The \textbf{potential parameters} $\lambda$ and $\eta$ (Section~\ref{subsec:soliton_energy_mass}),
+    \item The \textbf{relaxation speed} $c$ and its relation to the speed of light.
+  \end{itemize}
+
+  \subsubsection*{D.2.1 Connectivity Scale $K_0$ and Characteristic Scale $\chi_c$}
+    The connectivity matrix $K_{ij}$ (Equation~\eqref{eq:Kij-def}) depends on two fundamental scales:
+    \begin{itemize}
+      \item $K_0$: The maximal connectivity strength, with dimensions of $[\text{length}]^{-2}$.
+      \item $\chi_c$: The characteristic scale of the $\chi$ field, associated with either the Planck length $\ell_P \approx 1.6 \times 10^{-35}$ m or the Hubble scale $c/H_0 \approx 1.4 \times 10^{26}$ m.
+    \end{itemize}
+
+    From the emergent gravitational constant (Equation~\eqref{eq:G-emergent}):
+    \begin{equation}
+      G = \frac{c^4}{16 \pi K_0 \chi_c^2},
+    \end{equation}
+    we derive two possible regimes for $(K_0, \chi_c)$:
+    \begin{enumerate}
+      \item \textbf{Planck-scale regime}:
+      \begin{itemize}
+        \item If $\chi_c \approx \ell_P$, then $K_0 \approx 1.3 \times 10^{93}$ m$^{-2}$.
+        \item This regime suggests that $\chi$-field effects become significant at quantum gravitational scales.
+      \end{itemize}
+      \item \textbf{Cosmological-scale regime}:
+      \begin{itemize}
+        \item If $\chi_c \approx c/H_0$, then $K_0 \approx 1.1 \times 10^{-52}$ m$^{-2}$.
+        \item This regime implies a ``softer'' network with cosmological-scale effects dominating the dynamics.
+      \end{itemize}
+    \end{enumerate}
+
+  \subsubsection*{D.2.2 Potential Parameters $\lambda$ and $\eta$}
+    The soliton mass spectrum (Section~\ref{subsec:soliton_energy_mass}) depends on the potential parameters $\lambda$ and $\eta$ via:
+    \begin{equation}
+      m_{\text{soliton}} \propto \sqrt{\lambda} \eta^3.
+    \end{equation}
+    To reproduce the electron mass ($m_e \approx 9.11 \times 10^{-31}$ kg), we require:
+    \begin{itemize}
+      \item For a kink soliton (Section~\ref{subsec:soliton_energy_mass}):
+      \begin{equation}
+        \lambda \sim 10^{-116} \text{ m}^{-2},
+      \end{equation}
+      assuming $\eta \sim 1$ in natural units. This tiny value suggests that $\lambda$ is \textbf{dynamically generated} rather than fundamental.
+      \item For skyrmions (fermions), the mass ratio $m_p/m_e \approx 1836$ requires a hierarchical structure in $\lambda$ or $\eta$ (Section~\ref{subsec:perspectives_mass_spectrum}).
+    \end{itemize}
+
+  \subsubsection*{D.2.3 Relaxation Speed and Cosmological Constraints}
+    The maximal relaxation speed $c$ is identified with the speed of light.
+    From the Hubble parameter relation (Section~\ref{subsec:hubble-constant}):
+    \begin{equation}
+      H_0 \approx \frac{c}{\chi(t_0)},
+    \end{equation}
+    we infer:
+    \begin{itemize}
+      \item $\chi(t_0) \approx 4 \times 10^{26}$ m (consistent with the Hubble radius).
+      \item The age of the universe $t_0 \approx \chi(t_0)/c \approx 13.8$ Gyr (Section~\ref{subsec:age-of-the-universe}).
+    \end{itemize}
+
+  \subsubsection*{D.2.4 Observational Constraints on $\chi$-Field Parameters}
+    Current observational constraints (Section~\ref{subsec:normalization-of-the-chi-field}) include:
+    \begin{itemize}
+      \item \textbf{CMB anisotropies}: The $\chi$-field fluctuations must reproduce the observed CMB power spectrum, implying $\chi_c \lesssim c/H_0$ to avoid overproducing large-scale power (Section~\ref{subsec:chi_cmb_spectrum}).
+      \item \textbf{Hubble tension}: The local value of $H_0$ suggests $\chi(t_0) \approx 4 \times 10^{26}$ m, while CMB-based measurements probe smaller $\chi$ values, contributing to the $\sim 8\%$ discrepancy (Section~\ref{subsec:hubble-tension}).
+      \item \textbf{Gravitational wave propagation}: The absorption of gravitational waves near compact objects constrains $K_0$ to ensure $\lesssim 10\%$ attenuation (Section~\ref{sec:gw_speed}).
+    \end{itemize}
+
+  \subsubsection*{D.2.5 Summary of Parameter Ranges}
+    The current best estimates for the $\chi$-field parameters are summarized in Table~\ref{tab:chi-parameters}.
+
+    \begin{table}[h]
+      \centering
+      \caption{Estimated Ranges for $\chi$-Field Parameters}
+      \label{tab:chi-parameters}
+      \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Parameter} & \textbf{Planck-Scale Regime} & \textbf{Cosmological-Scale Regime} \\ \hline
+        $K_0$ & $1.3 \times 10^{93}$ m$^{-2}$ & $1.1 \times 10^{-52}$ m$^{-2}$ \\ \hline
+        $\chi_c$ & $1.6 \times 10^{-35}$ m & $1.4 \times 10^{26}$ m \\ \hline
+        $\lambda$ & $\sim 10^{-116}$ m$^{-2}$ & $\lesssim 10^{-100}$ m$^{-2}$ \\ \hline
+        $\eta$ & $\sim 1$ (natural units) & $\gg 1$ \\ \hline
+      \end{tabular}
+    \end{table}
+
+  \subsubsection*{D.2.6 Open Questions}
+    Key unresolved issues include:
+    \begin{itemize}
+      \item The \textbf{explicit form of $V(\chi)$} required to stabilize solitons at the observed mass scales (Section~\ref{subsec:perspectives_mass_spectrum}).
+      \item The \textbf{connection between $\lambda$ and $\eta$} across different particle species (e.g., electrons vs. protons).
+      \item The \textbf{environmental dependence} of $K_0$ and $\chi_c$ (e.g., in high-density regions like galaxy clusters).
+    \end{itemize}

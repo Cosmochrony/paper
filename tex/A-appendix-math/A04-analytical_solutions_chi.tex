@@ -1,0 +1,91 @@
+\subsection{Analytical Solutions of the \(\chi\)-Field Dynamics}
+  \label{subsec:analytical-solutions}
+
+  To illustrate the behavior of the \(\chi\)
+  field, we derive explicit analytical solutions of the dynamical equation
+  \[
+    \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}},
+  \]
+  in two simple but physically relevant cases: \textbf{homogeneous configurations} and
+  \textbf{spherically symmetric solutions}.
+
+  \subsubsection{Homogeneous Solution}
+    In a spatially homogeneous universe, \(\nabla \chi = 0\).
+    The dynamical equation reduces to:
+    \[
+      \partial_t \chi = c.
+    \]
+    Integrating with respect to time, we obtain the trivial but fundamental solution:
+    \[
+      \chi(t) = \chi_0 + c t,
+    \]
+    where \(\chi_0\) is the initial value of \(\chi\).
+    This solution describes the \textbf{background cosmological expansion} in Cosmochrony, where \(\chi\) grows linearly
+    with time, directly yielding a Hubble-like law for the scale factor \(a(t) \propto \chi(t)\).
+
+  \subsubsection{Spherically Symmetric Solution}
+    Consider a spherically symmetric configuration, where \(\chi = \chi(r,t)\) and the gradient reduces to
+    \(\nabla \chi = \partial_r \chi \, \hat{r}\).
+    The dynamical equation becomes:
+    \[
+      \partial_t \chi = c \sqrt{1 - \frac{(\partial_r \chi)^2}{c^2}}.
+    \]
+
+    To find a stationary solution (\(\partial_t \chi = 0\)), we set:
+    \[
+      c \sqrt{1 - \frac{(\partial_r \chi)^2}{c^2}} = 0 \implies \partial_r \chi = \pm c.
+    \]
+
+    Integrating, we obtain:
+    \[
+      \chi(r) = \chi_0 \pm c r,
+    \]
+    where \(\chi_0\) is an integration constant.
+    This solution represents a \textbf{conical profile} for \(\chi\), with a gradient maximal (\(|\nabla \chi| = c\)).
+    While this solution is not physically realizable globally (as it violates the boundedness of \(\chi\)), it illustrates
+    the extreme case where the relaxation of \(\chi\) is maximally slowed by spatial gradients.
+
+    For a more realistic, time-dependent solution, assume a separable ansatz \(\chi(r,t) = R(r)T(t)\).
+    Substituting into the dynamical equation and separating variables, we find:
+    \[
+      \frac{\dot{T}}{c \sqrt{1 - \frac{T^2 (R')^2}{c^2}}} = 1.
+    \]
+    This implies \(\dot{T} = c\), so \(T(t) = c t + T_0\).
+    The spatial part \(R(r)\) must then satisfy:
+    \[
+      (R')^2 = \frac{c^2}{T^2} \left(1 - \frac{1}{c^2}\right).
+    \]
+    For \(T(t) = c t\), this simplifies to:
+    \[
+      R(r) = R_0 \pm r,
+    \]
+    yielding the time-dependent solution:
+    \[
+      \chi(r,t) = \chi_0 + c t \pm r.
+    \]
+    This solution describes a \textbf{propagating front} of \(\chi\), where the field grows linearly with time and varies linearly with radius.
+    It is particularly relevant for modeling localized excitations, such as particle-like solitons, in a spherically symmetric geometry.
+
+  \subsubsection{Planar Wave Solution}
+    For a planar wave ansatz \(\chi(x,t) = \chi_0 + \delta \chi(x,t)\), where \(\delta \chi\)
+    represents a small perturbation, we linearize the dynamical equation:
+    \[
+      \partial_t \delta \chi = -\frac{(\partial_x \delta \chi)^2}{2c}.
+    \]
+    Assuming a wave-like perturbation \(\delta \chi = \epsilon \sin(kx - \omega t)\),
+    we substitute into the linearized equation and find the dispersion relation:
+    \[
+      \omega = \frac{c k^2}{2 \chi_0}.
+    \]
+    This shows that \textbf{high-wavenumber perturbations are strongly damped},
+    confirming the stability of the homogeneous solution against small-scale fluctuations.
+    The planar wave solution is particularly useful for modeling propagating disturbances in \(\chi\),
+    such as gravitational waves or electromagnetic radiation in the Cosmochrony framework.
+
+  \subsubsection{Conclusion}
+    These analytical solutions illustrate the rich dynamical behavior of the \(\chi\)
+    field in simple but physically meaningful configurations.
+    The homogeneous solution underpins the cosmological expansion,
+    while the spherically symmetric and planar wave solutions provide insights into localized excitations and propagating disturbances.
+    Together, they confirm the consistency and versatility
+    of the \(\chi\)-field dynamics as a unifying framework for spacetime, gravity, and quantum phenomena.

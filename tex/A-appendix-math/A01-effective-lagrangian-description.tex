@@ -1,0 +1,29 @@
+\subsection{Effective Lagrangian Description as a Hydrodynamic Limit}
+  \label{subsec:hydrodynamic-limit}
+
+  \subsubsection*{From Discrete Network to Continuum}
+    This appendix provides a \textbf{technical derivation} of the effective Lagrangian density $\mathcal{L}_{\mathrm{CC}}$
+    in the continuum limit, where the discrete network dynamics (Section~\ref{subsec:geometric-action})
+    are approximated by smooth fields.
+    The connectivity matrix $K_{ij}$, introduced in Section~\ref{subsec:geometric-action},
+    is mapped to an effective metric $g_{\mu\nu}$ through the relation:
+    \[
+      g_{\mu\nu} dx^\mu dx^\nu \approx \sum_{(u,v) \in \text{path}} \frac{1}{K_{uv}}
+    \]
+    This mapping ensures that the emergent geometry is consistent with the fundamental relational structure of the
+    $\chi$-field.
+
+  \subsubsection*{From Discrete to Continuum}
+    The discrete dynamics of $\chi$ (Equation~\ref{eq:discrete-dynamics} in Section~\ref{subsec:hamiltonian-derivation})
+    are recovered in the continuum limit, where the sum over neighbors becomes a spatial integral.
+    The effective Lagrangian density $\mathcal{L}_{\mathrm{CC}}$ is then constructed to reproduce the continuum dynamics
+    while preserving the constraints of the discrete network.
+
+  \subsubsection*{Gravity and Time: The Geometric Relaxation Term ($\mathcal{L}_{\text{Gravity/Time}}$)}
+    This term ensures the emergence of General Relativity (GR) in the macroscopic limit and imposes the fundamental
+    directionality of time via the irreversible relaxation of $\chi$:
+    \[
+      \mathcal{L}_{\text{Gravity/Time}} = \frac{1}{16 \pi G_{\text{eff}}} \cdot F(\chi) R - \Lambda_{\text{Flow}}^4 \cdot \chi
+    \]
+    where $R$ is the Ricci scalar, $F(\chi)$ is the non-minimal coupling function, and $\Lambda_{\text{Flow}}$ is a constant
+    ensuring the monotonic relaxation of $\chi$.
