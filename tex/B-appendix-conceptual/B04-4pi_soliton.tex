@@ -1,39 +1,39 @@
 \subsection{Example: \(4\pi\)-Periodic Soliton and Spin-1/2}
   \label{subsec:4pi_soliton}
 
-  To illustrate how a \(4\pi\)
-  -periodic soliton can represent a spin-1/2 particle, consider a 1D soliton solution for the \(\chi\)
-  field with a phase twist. Let \(\chi(x)\) be a complex field defined as:
+  To illustrate how a \(4\pi\)-periodic soliton can represent a spin-1/2 particle, consider a 1D soliton solution for the
+  \(\chi\) field with a phase twist.
 
+  Let $\chi(x)$ be written in the form
   \[
-    \chi(x) = \eta \tanh(\kappa x) e^{i \theta(x)},
+    \chi(x) = \eta \tanh(\kappa x)\, e^{i \theta(x)},
   \]
+  where $\eta$ is the amplitude, $\kappa$ determines the soliton’s width, and $\theta(x)$ is the phase.
+  Here $\chi$ is expressed in a complex representation for convenience; the underlying physical
+  field remains real, and the phase $\theta(x)$ encodes the oscillatory structure of a localized
+  $\chi$ excitation rather than an independent internal degree of freedom.
 
-  where \(\eta\) is the amplitude, \(\kappa\) determines the soliton's width, and \(\theta(x)\)
-  is the phase. For a spin-1/2 particle, the phase \(\theta(x)\) must satisfy:
-
+  For a spin-1/2 particle, the phase \(\theta(x)\) must satisfy:
   \[
     \theta(x + 2\pi) = \theta(x) + \pi, \quad \theta(x + 4\pi) = \theta(x) + 2\pi.
   \]
 
-  This \(4\pi\)-periodicity reflects the double-valuedness of spinors under rotations.
+  This $4\pi$-periodicity reflects the double-valued transformation behavior
+  characteristic of spinorial representations under rotations.
 
   \subsubsection{Explicit Construction of a \(4\pi\)-Periodic Soliton}
 
     Define the phase \(\theta(x)\) as:
-
     \[
       \theta(x) = \frac{x}{2},
     \]
 
     so that a full rotation \(x \to x + 4\pi\) returns the phase to its original value:
-
     \[
       \theta(x + 4\pi) = \frac{x + 4\pi}{2} = \theta(x) + 2\pi.
     \]
 
     The soliton solution is then:
-
     \[
       \chi(x) = \eta \tanh(\kappa x) e^{i x/2}.
     \]
@@ -47,29 +47,40 @@
 
   \subsubsection{Topological Interpretation}
 
-    The \(4\pi\)-periodicity of the soliton is a manifestation of its \textbf{topological winding number}
-    . For a closed loop in space, the phase change \(\Delta \theta\) is given by:
+    The \(4\pi\)-periodicity of the soliton is a manifestation of its \textbf{topological winding number}.
+    For a closed loop in space, the phase change \(\Delta \theta\) is given by:
 
     \[
       \Delta \theta = \oint \nabla \theta \cdot d\mathbf{l} = 2\pi n,
     \]
 
-    where \(n\) is the winding number. For a spin-1/2 particle, the effective winding is \(n = 1/2\)
-    , but since the phase must be single-valued in space, the soliton must traverse the loop twice to return to
-    its original state, hence the \(4\pi\)-periodicity.
+    where \(n\) is the winding number.
+    For a spin-1/2 particle, the effective behavior corresponds to a half-integer winding,
+    in the sense that a single traversal produces a phase shift of $\pi$.
+    However, since the phase must be single-valued in space, the soliton must traverse
+    the loop twice to return to its original state, hence the $4\pi$ periodicity.
+
+    This behavior indicates that while spatial rotations act on physical space through $\mathrm{SO}(3)$,
+    the twisted $\chi$ excitation realizes a projective representation of this group.
+    A $2\pi$ rotation returns the spatial configuration but not the excitation state itself, which is restored only
+    after a $4\pi$ rotation.
+    This is equivalently described by the universal double cover $\mathrm{SU}(2)\!\to\!\mathrm{SO}(3)$, making the
+    spin-$\tfrac{1}{2}$ character explicit without introducing a fundamental spinor field.
 
   \subsubsection{Connection to Quantum Statistics}
 
     The \(4\pi\)-periodicity of the soliton directly implies that it obeys \textbf{fermionic statistics}:
     \begin{itemize}
-      \item Under a \(2\pi\) rotation, the wavefunction of the soliton acquires a phase of \(e^{i\pi} = -1\)
-      , which is the hallmark of a fermion.
-      \item This explains the \textbf{Pauli exclusion principle}
-      : two identical solitons cannot occupy the same state because their wavefunctions would interfere
-      destructively due to the \(-1\) phase factor.
+      \item Under a \(2\pi\) rotation, the effective quantum state of the soliton acquires a phase of \(e^{i\pi} = -1\), which is the
+      hallmark of a fermion.
+      \item At the multi-soliton level, the $4\pi$ topology induces an antisymmetric transformation
+      of identical excitation states under exchange, providing a natural geometric basis for
+      fermionic exclusion in the effective description.
     \end{itemize}
+    At the multi-soliton level, this fermionic transformation behavior naturally leads to
+    Pauli-type exclusion in the effective quantum description.
 
-    \begin{figure}[h]
+  \begin{figure}[h]
       \centering
       \begin{tikzpicture}[x=1.5cm, y=1.5cm]
         % Axes
