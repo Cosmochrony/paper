@@ -1,233 +1,94 @@
-\subsubsection{Evolution of the Hubble Parameter \(H(z)\) in Cosmochrony}
-\label{subsec:hubble_tension}
+\subsection{Evolution of the Hubble Parameter and the Hubble Tension}
+  \label{app:hubble_tension}
 
-In Cosmochrony, the evolution of the Hubble parameter \(H(z)\) with redshift \(z\)
-is determined by the dynamics of the \(\chi\)
-field, which governs the expansion of the universe.
-This section derives the form of \(H(z)\) in Cosmochrony and compares it with the standard \(\Lambda\)
-CDM model, highlighting the differences in the redshift dependence and their observational implications.
+  In Cosmochrony, the cosmological expansion is governed by the relaxation dynamics
+  of the scalar field $\chi$, rather than by a balance between matter, radiation,
+  and a dark energy component.
+  The Hubble parameter therefore reflects the instantaneous relaxation rate of
+  $\chi$ relative to its global value.
 
-\subsubsubsection{Hubble Parameter in Cosmochrony}
-
-  In Cosmochrony, the Hubble parameter is directly related to the time derivative of the \(\chi\) field.
-  The scale factor \(a(t)\) is proportional to \(\chi(t)\), such that:
-  \[
-    a(t) \propto \chi(t).
-  \]
-
-  The Hubble parameter \(H(t)\) is then given by:
-  \[
-    H(t) = \frac{\dot{a}}{a} = \frac{\dot{\chi}}{\chi}.
-  \]
-
-  Using the relaxation equation for \(\chi\):
-  \[
-    \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}},
-  \]
-  and assuming a homogeneous universe (\(\nabla \chi = 0\)), we obtain:
-  \[
-    \dot{\chi} = c.
-  \]
-
-  Thus, the Hubble parameter in Cosmochrony is:
-  \[
-    H(t) = \frac{c}{\chi(t)}.
-  \]
-
-  Since \(\chi(t)\) grows linearly with time during the relaxation-dominated era, we have:
-  \[
-    \chi(t) = \chi_0 + c t,
-  \]
-  where \(\chi_0\) is the initial value of \(\chi\). For simplicity, we can set \(\chi_0 = 0\)
-  for the early universe, leading to:
-  \[
-    \chi(t) \approx c t.
-  \]
-
-  The Hubble parameter then becomes:
-  \[
-    H(t) = \frac{c}{\chi(t)} = \frac{1}{t}.
-  \]
-
-  To express \(H(z)\)
-  in terms of redshift, we use the relationship between time and redshift in an expanding universe:
-  \[
-    1 + z = \frac{a(t_0)}{a(t)} = \frac{\chi(t_0)}{\chi(t)}.
-  \]
-
-  Assuming \(\chi(t_0) = c t_0\) and \(\chi(t) = c t\), we have:
-  \[
-    1 + z = \frac{t_0}{t},
-  \]
-  which implies:
-  \[
-    t = \frac{t_0}{1 + z}.
-  \]
-
-  Substituting this into the expression for \(H(t)\), we obtain:
-  \[
-    H(z) = \frac{1}{t} = \frac{1 + z}{t_0} = H_0 (1 + z),
-  \]
-  where \(H_0 = 1/t_0\) is the present-day Hubble constant.
-
-\subsubsubsection{Hubble Parameter in \(\Lambda\)CDM}
-
-  In the standard \(\Lambda\)CDM model, the Hubble parameter \(H(z)\) is given by:
-  \[
-    H(z) = H_0 \sqrt{\Omega_{m0} (1 + z)^3 + \Omega_{\Lambda}},
-  \]
-  where \(\Omega_{m0}\) is the present-day matter density parameter, and \(\Omega_{\Lambda}\)
-  is the dark energy density parameter.
-
-  For comparison, we use the Planck 2018 best-fit values:
-  \[
-    \Omega_{m0} \approx 0.315, \quad \Omega_{\Lambda} \approx 0.685, \quad H_0 \approx 67.4 \, \text{km/s/Mpc}.
-  \]
-
-\subsubsubsection{Comparison of \(H(z)\) in Cosmochrony and \(\Lambda\)CDM}
-
-  The evolution of \(H(z)\) in Cosmochrony and \(\Lambda\)CDM exhibits several key differences:
-
-  \begin{itemize}
-    \item In Cosmochrony, \(H(z)\) evolves linearly with redshift:
+  \paragraph{Global expansion rate.}
+    At the background level, the scale factor is proportional to $\chi$,
     \[
-      H(z) = H_0 (1 + z).
+      a(t) \propto \chi(t),
     \]
-    This linear dependence reflects the direct proportionality between the Hubble parameter and the inverse of the
-    \(\chi\) field, which grows linearly with time.
-
-    \item In \(\Lambda\)CDM, \(H(z)\)
-    has a more complex redshift dependence due to the contributions of matter and dark energy:
+    so that the Hubble parameter is given by
     \[
-      H(z) = H_0 \sqrt{\Omega_{m0} (1 + z)^3 + \Omega_{\Lambda}}.
+      H(t) = \frac{\dot{\chi}}{\chi}.
     \]
-    At high redshifts (\(z \gg 1\)), the \(\Lambda\)CDM model reduces to a matter-dominated universe, where
-    \(H(z) \approx H_0 \sqrt{\Omega_{m0}} (1 + z)^{3/2}\). At low redshifts (\(z \ll 1\)
-    ), dark energy dominates, and \(H(z)\) approaches a constant value \(H_0 \sqrt{\Omega_{\Lambda}}\).
+    In a perfectly homogeneous configuration, $\nabla \chi = 0$ and the relaxation
+    equation reduces to $\dot{\chi} = c$, yielding
+    \[
+      H(t) = \frac{c}{\chi(t)}.
+    \]
+    This relation defines the \emph{global} expansion rate in Cosmochrony.
+    Its precise redshift dependence beyond the homogeneous limit depends on how
+    inhomogeneities and relaxation gradients contribute to the average dynamics,
+    and is not assumed here to follow an exact power law at all epochs.
 
-    \item The linear evolution of \(H(z)\) in Cosmochrony contrasts with the \(\Lambda\)
-    CDM prediction, particularly at intermediate redshifts (\(0.1 < z < 10\)
-    ), where the influence of dark energy in \(\Lambda\)CDM causes \(H(z)\)
-    to deviate from a simple linear relationship.
-  \end{itemize}
-
-\subsubsubsection{Quantitative Comparison}
-
-  To illustrate the differences between Cosmochrony and \(\Lambda\)CDM, we compare the predicted values of
-  \(H(z)\) at several redshifts:
-
-  \begin{table}[h]
-    \centering
-    \caption{Comparison of \(H(z)\) in Cosmochrony and \(\Lambda\)CDM}
-    \label{tab:hubble_z_comparison}
-    \begin{tabular}{|c|c|c|c|}
-      \hline
-      \textbf{Redshift \(z\)} & \textbf{Cosmochrony \(H(z)\) (km/s/Mpc)} &
-      \textbf{$\Lambda$CDM \(H(z)\) (km/s/Mpc)} & \textbf{Relative Difference} \\
-      \hline
-      0 & 67.4 & 67.4
-      & 0\% \\
-      0.5 & 101.1 & 95.6
-      & +5.8\% \\
-      1 & 134.8 & 129.5
-      & +4.1\% \\
-      3 & 269.6 & 238.5
-      & +13.0\% \\
-      10 & 741.4 & 560.3
-      & +32.3\% \\
-      \hline
-    \end{tabular}
-  \end{table}
-
-  The table shows that the linear evolution of \(H(z)\)
-  in Cosmochrony leads to systematically higher values of the Hubble parameter at higher redshifts compared to
-  \(\Lambda\)
-  CDM. This difference arises because Cosmochrony does not include a dark energy component that slows the
-  growth of \(H(z)\) at low redshifts.
-
-\subsubsubsection{Observational Implications}
-
-  The distinct redshift evolution of \(H(z)\) in Cosmochrony has several observational implications:
-
-  \begin{itemize}
-    \item \textbf{Baryon Acoustic Oscillations (BAO)}:
-    \textbf{Baryon Acoustic Oscillations (BAO)}:
-    Measurements of BAO at various redshifts constrain the evolution of $H(z)$.
-    In this framework, the acoustic scale is a ``frozen'' imprint of the primordial $\chi$-fluctuations described
-    in~\ref{subsubsec:comparison-with-lambda-cdm-acoustic-peaks}.
-    However, Cosmochrony predicts a faster increase in $H(z)$ with redshift compared to $\Lambda$CDM.
-    Consequently, the apparent angular diameter distance of the BAO scale at $z > 1$ should exhibit a systematic shift,
-    offering a clear discriminant between the $\chi$-field relaxation and a constant dark energy density ($\Lambda$).
-    This prediction is directly testable with upcoming high-precision surveys such as DESI or Euclid.
-
-    \item \textbf{Type Ia Supernovae}
-    : The distance--redshift relation for Type Ia supernovae depends on the integrated expansion
-    history encoded in the Hubble parameter \(H(z)\), through the luminosity distance
-    \(d_L(z) = (1+z)\int_0^z c\,dz'/H(z')\)~\cite{Riess1998,Perlmutter1999,Hogg1999}.
-    The linear evolution of \(H(z)\) in Cosmochrony would result in slightly different distance
-    moduli compared to \(\Lambda\)CDM, particularly at intermediate redshifts, where the inferred
-    expansion history is most sensitive to the detailed form of \(H(z)\)~\cite{Betoule2014}.
-
-    \item \textbf{CMB Anisotropies}
-    : The angular diameter distance to the surface of last scattering and the growth of cosmological
-    structures imprinted in the CMB anisotropies are influenced by the integrated history of
-    \(H(z)\)~\cite{HuSugiyama1995,Dodelson2003}.
-    Cosmochrony's linear \(H(z)\) could therefore lead to subtle differences in the CMB power
-    spectrum relative to \(\Lambda\)CDM, particularly in the damping tail at high multipoles and in
-    the late-time integrated Sachs--Wolfe effect~\cite{SachsWolfe1967,HuWhite1997}.
-  \end{itemize}
-
-\subsubsubsection{Non-linear Resolution of the Hubble Tension}
-  \label{appendix:hubble_tension}
-
-  The discrepancy between local and global measurements of $H_0$ can be naturally accounted for through the internal
-  kinematics of the $\chi$ field.
-  We depart from the fundamental equation of motion $\dot{\chi} = c \sqrt{1 - \beta^2}$, where $\beta = |\nabla \chi|/c$ represents the local field gradient density.
-
-  \paragraph{The Relaxation Budget Parameter $\Omega_\chi$}
-    We introduce a dimensionless parameter $\Omega_\chi$, defined as the global fraction of the $\chi$-field relaxation budget stored in spatial gradients:
+  \paragraph{Relaxation budget and effective expansion.}
+    To quantify the influence of inhomogeneities, we introduce the dimensionless
+    \emph{relaxation budget parameter}
     \begin{equation}
-      \Omega_\chi \equiv \langle \beta^2 \rangle
+      \Omega_\chi \equiv \langle \beta^2 \rangle,
+      \qquad \beta \equiv \frac{|\nabla \chi|}{c},
       \label{eq:chi-relaxation}
     \end{equation}
-    In the late universe, $\Omega_\chi$ is empirically constrained to be close to the observed matter
-    fraction $\Omega_m$ ($\Omega_\chi \approx \Omega_m \approx 0.31$), reflecting the fact that matter (solitons) is the
-    primary source of field gradients.
-    Consequently, the global expansion rate is governed by the average available relaxation
-    speed: $\bar{H} = \frac{c}{\chi}\sqrt{1 - \Omega_\chi}$.
+    which measures the fraction of the relaxation capacity stored in spatial
+    gradients of $\chi$.
+    In the late universe, these gradients are dominated by localized solitonic
+    excitations and therefore track the matter distribution.
 
-    The linear identification $\beta_{loc}^2 = \Omega_\chi(1+\delta)$ assumes a ``mean-field'' approximation where the
-    energy density of the gradients (the solitons) is locally proportional to the number density of those solitons.
-    In this regime, the collective resistance to relaxation scales linearly with the local concentration of field
-    deformations, much like the elastic energy density in a deformed medium scales with the density of defects.
-    This ensures that in the limit $\delta \to -1$ (absolute vacuum), $\beta^2 \to 0$ and the relaxation
-    speed $\dot{\chi}$ reaches its upper bound $c$.
+    The effective global expansion rate is then reduced according to
+    \[
+      \bar{H} = \frac{c}{\chi}\sqrt{1 - \Omega_\chi}.
+    \]
+    Empirically, $\Omega_\chi$ is constrained to be close to the observed matter
+    fraction, $\Omega_\chi \simeq \Omega_m \approx 0.3$, providing a natural
+    suppression of the expansion rate without invoking dark energy.
 
-  \paragraph{Local Variation and the Hubble Tension}
-    In a local region characterized by a density contrast $\delta = (\rho - \bar{\rho})/\bar{\rho}$, the local gradient density scales as $\beta_{loc}^2 = \Omega_\chi(1+\delta)$.
-    This linear scaling constitutes the minimal closure relation between matter inhomogeneities and $\chi$-field gradients, sufficient to capture the leading non-linear effect.
-    The local Hubble parameter $H_{loc}$ then deviates from the global average according to:
+  \paragraph{Local expansion and the Hubble tension.}
+    In an inhomogeneous universe, the relaxation budget varies locally.
+    In a region with density contrast
+    \[
+      \delta = \frac{\rho - \bar{\rho}}{\bar{\rho}},
+    \]
+    we adopt the minimal closure relation
+    \[
+      \beta_{\text{loc}}^2 = \Omega_\chi (1+\delta),
+    \]
+    corresponding to a mean-field scaling between matter density and $\chi$-gradient
+    energy.
+
+    The local Hubble parameter then becomes
     \begin{equation}
-      H_{loc} = \bar{H} \sqrt{\frac{1 - \Omega_\chi(1 + \delta)}{1 - \Omega_\chi}}
+      H_{\text{loc}}
+      = \bar{H}
+      \sqrt{\frac{1 - \Omega_\chi (1+\delta)}{1 - \Omega_\chi}}.
     \end{equation}
-    For an underdense region (void) where $\delta < 0$, the available relaxation budget is locally higher, leading to $H_{loc} > \bar{H}$.
+    In underdense regions ($\delta < 0$), the available relaxation capacity is higher,
+    leading to $H_{\text{loc}} > \bar{H}$.
 
-  \paragraph{Numerical Consistency}
-    Assuming $\Omega_\chi \approx 0.31$ and a local underdensity corresponding to the KBC void ($\delta \approx -0.4$ on a scale of $300$ Mpc), the ratio becomes:
-    \begin{equation}
-      \frac{H_{loc}}{\bar{H}} = \sqrt{\frac{1 - 0.31(0.6)}{0.69}} \approx 1.084
-    \end{equation}
-    This $8.4\%$ increase naturally accounts for the Hubble tension.
-    This analysis shows that the Hubble tension does not necessarily signal missing components or modifications of the
-    cosmological model, but may instead reflect a non-linear environmental effect arising from the relaxation dynamics
-    of the $\chi$ field.
+  \paragraph{Numerical consistency.}
+    For $\Omega_\chi \approx 0.31$ and a local underdensity consistent with the KBC
+    void ($\delta \approx -0.4$ on scales of $\sim 300$~Mpc), we obtain
+    \[
+      \frac{H_{\text{loc}}}{\bar{H}} \approx 1.08,
+    \]
+    corresponding to an $8\%$ enhancement of the locally inferred Hubble constant.
+    This magnitude is sufficient to account for the observed Hubble tension between
+    local distance-ladder measurements and global CMB-based inferences.
 
-\subsubsubsection{Conclusion}
+  \paragraph{Interpretation and status.}
+    In Cosmochrony, the Hubble tension does not signal missing energy components or
+    inconsistencies in early-universe physics.
+    Instead, it arises as a non-linear environmental effect associated with the
+    redistribution of the $\chi$-field relaxation budget in an inhomogeneous universe.
 
-  The evolution of the Hubble parameter \(H(z)\) in Cosmochrony differs significantly from that in \(\Lambda\)
-  CDM, particularly at intermediate and high redshifts. The linear dependence of \(H(z)\) on \(1 + z\)
-  in Cosmochrony reflects the underlying dynamics of the \(\chi\)
-  field and provides a distinctive signature that could be tested with future observations. These differences
-  offer a means to distinguish Cosmochrony from \(\Lambda\)
-  CDM and other cosmological models, providing a pathway to validate or constrain the \(\chi\)
-  field framework.
+    While the framework naturally predicts a separation between local and global
+    expansion rates, a fully quantitative determination of $H(z)$ across all
+    redshifts requires numerical simulations of $\chi$ dynamics and is left for
+    future work.
+    The resolution of the Hubble tension, however, follows directly from the
+    relaxation-based interpretation of cosmological expansion and constitutes a
+    distinctive and testable signature of the theory.

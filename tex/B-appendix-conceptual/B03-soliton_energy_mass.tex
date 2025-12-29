@@ -1,130 +1,92 @@
-\subsection{Energy of \(\chi\)-Field Solitons and Particle Masses}
+\subsection{Soliton Energy and Structural Mass Scaling}
   \label{subsec:soliton_energy_mass}
 
-  In Cosmochrony, particles are modeled as \textbf{topologically stable solitons} of the \(\chi\)
-  field, where their mass arises from the energy of localized \(\chi\)
-  configurations.
-  This section demonstrates how the energy of these solitons maps to the masses of observed
-  particles, such as the electron and proton, by deriving explicit expressions for their energy in terms of the
-  \(\chi\)-field parameters.
+  \paragraph{Status of this analysis.}
+    This section presents a \emph{quantitative but non-numerical} analysis of the mass
+    associated with localized solitonic configurations of the $\chi$ field.
+    The goal is not to reproduce the observed particle mass spectrum, but to identify
+    robust scaling relations, hierarchy constraints, and structural dependencies that
+    emerge independently of microscopic details.
+    A fully quantitative derivation of particle masses would require a complete
+    effective field description, including gauge interactions and renormalization
+    effects, which lies beyond the scope of the present work.
 
-  \subsubsection{General Expression for Soliton Energy}
-    The energy \(E\) of a soliton configuration is given by the integral of the energy density \(\mathcal{E}\) over space:
-    \[
-      E = \int \mathcal{E} \, d^3x = \int \left( \frac{1}{2} (\nabla \chi)^2 + V(\chi) \right) \, d^3x,
-    \]
-    where \(V(\chi)\) is the potential energy density of the \(\chi\) field.
-    For solitons, this energy is localized and finite, corresponding to the particle's mass via \(E = mc^2\).
+  \paragraph{Mass as integrated resistance to relaxation.}
+    Within Cosmochrony, the mass of a localized excitation is interpreted as a measure
+    of the total resistance it presents to the global relaxation of the $\chi$ field.
+    Once an effective geometric description applies, this resistance may be summarized
+    by an effective energy functional of the configuration,
+    \begin{equation}
+      M_{\mathrm{eff}} \;\propto\;
+      \int_{\mathcal{V}}
+      \left[
+        \mathcal{T}(\nabla \chi)
+        + \mathcal{U}(\chi)
+      \right]
+      \, d^3x ,
+    \end{equation}
+    where $\mathcal{T}$ encodes gradient-induced resistance and $\mathcal{U}$ represents
+    nonlinear self-interaction terms stabilizing the soliton.
+    This expression should be understood as an effective diagnostic measure rather than
+    as a fundamental Hamiltonian.
 
-  \subsubsection{Kink Solitons (Scalar Particles)}
-    Consider a 1D kink solution in a \(\phi^4\)-like potential:
-    \[
-      V(\chi) = \frac{\lambda}{4} (\chi^2 - \eta^2)^2,
-    \]
-    where \(\eta\) is the vacuum expectation value and \(\lambda\) is the coupling constant. The kink solution is:
-    \[
-      \chi(x) = \eta \tanh\left( \sqrt{\frac{\lambda}{2}} \eta x \right).
-    \]
-    The energy of this kink is:
-    \[
-      E_{\text{kink}} = \int_{-\infty}^{\infty}
-      \left( \frac{1}{2} \left( \frac{d\chi}{dx} \right)^2 + V(\chi) \right) dx = \frac{2 \sqrt{2}}{3} \lambda^{1/2}
-      \eta^3.
-    \]
-    Identifying this energy with the particle mass \(m\), we have:
-    \[
-      m_{\text{kink}} = \frac{2 \sqrt{2}}{3} \frac{\lambda^{1/2} \eta^3}{c^2}.
-    \]
-    For an electron-like particle, we can match this to the observed electron mass
-    \(m_e \approx 9.11 \times 10^{-31}\) kg. Assuming \(\eta \sim 1\) (in natural units), this requires:
-    \[
-      \lambda \sim \left( \frac{3 m_e c^2}{2 \sqrt{2} \eta^3} \right)^2 \approx 10^{-44} \text{ in natural units}.
-    \]
+  \paragraph{Scaling with soliton size and internal structure.}
+    For a localized configuration characterized by a typical spatial scale $\ell$ and
+    a characteristic amplitude $\Delta \chi$, dimensional analysis yields
+    \begin{equation}
+      M_{\mathrm{eff}} \;\sim\;
+      \ell^3
+      \left[
+        \frac{(\Delta \chi)^2}{\ell^2}
+        + V(\Delta \chi)
+      \right].
+    \end{equation}
+    In the regime where stabilization results from a balance between gradient resistance
+    and nonlinear self-interaction, the soliton size $\ell$ is dynamically fixed, leading
+    to a finite and stable effective mass.
+    Importantly, different classes of solitons (kinks, vortices, knotted configurations)
+    exhibit distinct scaling behaviors with respect to $\ell$ and $\Delta \chi$, implying
+    that mass hierarchies arise structurally rather than from fine-tuning.
 
-  \subsubsection{Vortices (Charged Bosons)}
-    For a 2D vortex with winding number \(n\), the energy is dominated by the gradient term due to the logarithmic divergence of the integral:
-    \[
-      E_{\text{vortex}} = 2 \pi \eta^2 n^2 \int_0^R \frac{dr}{r} + \text{core energy},
-    \]
-    where \(R\) is the system size. The core energy (where \(\chi \approx 0\)) is finite and scales as:
-    \[
-      E_{\text{core}} \approx 2 \pi \eta^2 |n|.
-    \]
-    The total energy (mass) of the vortex is thus:
-    \[
-      m_{\text{vortex}} \approx \frac{2 \pi \eta^2 |n|}{c^2}.
-    \]
-    For a photon-like excitation (\(n=1\)), matching the energy to the photon's effective mass (if any) or its energy-momentum relation \(E = pc\)
-    would require \(\eta \sim 10^{18}\) GeV, suggesting a connection to the Planck scale.
+  \paragraph{Topological classes and mass hierarchy.}
+    The effective mass depends not only on the size of the excitation but also on its
+    topological class.
+    Configurations with higher winding or linking numbers necessarily involve increased
+    internal gradients, resulting in systematically larger resistance to relaxation.
+    As a consequence, masses associated with different topological families obey
+    ordering relations of the form
+    \begin{equation}
+      M_{n+1} \;>\; M_n ,
+    \end{equation}
+    where $n$ labels a topological invariant.
+    This establishes a natural mechanism for discrete mass hierarchies without requiring
+    the introduction of ad hoc parameters.
 
-  \subsubsection{Skyrmions (Fermions: Electrons and Protons)}
-    Skyrmions are 3D solitons with a topological charge \(Q\).
-    Their energy is given by:
-    \[
-      E_{\text{skyrmion}} = 4 \pi \int_0^\infty r^2
-      \left( \frac{1}{2} \left( \frac{d\chi}{dr} \right)^2 + \frac{\sin^2 f}{r^2} + V(\chi) \right) dr,
-    \]
-    where \(f(r)\) is the skyrmion profile function.
-    For the standard skyrmion with \(Q=1\), the energy is approximately:
-    \[
-      E_{\text{skyrmion}} \approx 73.2 \frac{F_\pi}{e},
-    \]
-    where \(F_\pi\) is a coupling constant and \(e\) is the skyrmion coupling parameter.
-    In Cosmochrony, we identify:
-    \[
-      F_\pi \sim \eta, \quad e \sim \lambda^{-1/2}.
-    \]
-    Thus, the mass of the skyrmion (fermion) is:
-    \[
-      m_{\text{skyrmion}} \approx \frac{73.2 \eta}{\lambda^{1/2} c^2}.
-    \]
+  \paragraph{Spectral interpretation.}
+    From a spectral perspective, localized excitations correspond to bound modes of the
+    linearized relaxation operator around a solitonic background.
+    The effective mass is then controlled by the lowest nontrivial eigenvalue associated
+    with the configuration,
+    \begin{equation}
+      M_{\mathrm{eff}} \;\sim\; \lambda_{\min}^{-1},
+    \end{equation}
+    where $\lambda_{\min}$ denotes the smallest positive eigenvalue governing the
+    stability of the soliton.
+    This formulation highlights that mass is fundamentally a spectral property of the
+    $\chi$ dynamics rather than a free parameter.
 
-    For an electron (\(m_e \approx 0.511\) MeV), this requires:
-    \[
-      \frac{\eta}{\lambda^{1/2}} \approx 7 \times 10^{-6} \text{ in natural units}.
-    \]
+  \paragraph{Robustness and universality.}
+    The scaling relations derived above depend only on generic properties of the $\chi$
+    field—locality, monotonic relaxation, and nonlinear stabilization—and are therefore
+    expected to be robust against modifications of the microscopic details of the model.
+    While numerical values of particle masses cannot be fixed at this level, the existence
+    of discrete, ordered, and stable mass scales emerges as a structural prediction of
+    the framework.
 
-    For a proton (\(m_p \approx 938\) MeV), the ratio \(\eta / \lambda^{1/2}\)
-    must be approximately 1800 times larger than for the electron, suggesting a hierarchical structure in the
-    \(\chi\) field potential or coupling constants.
-
-  \subsubsection{Proton-Electron Mass Ratio}
-    The proton-to-electron mass ratio in Cosmochrony arises from the different topological configurations and
-    coupling strengths:
-    \[
-      \frac{m_p}{m_e} \approx \frac{E_{\text{proton}}}{E_{\text{electron}}} \approx
-      \frac{Q_p \eta_p / \lambda_p^{1/2}}{Q_e \eta_e / \lambda_e^{1/2}},
-    \]
-    where \(Q_p\) and \(Q_e\) are the topological charges, and \(\eta_p, \lambda_p\) and \(\eta_e, \lambda_e\)
-    are the vacuum expectation values and coupling constants for the proton and electron, respectively. Matching
-    the observed ratio \(m_p/m_e \approx 1836\) requires:
-    \[
-      \frac{Q_p \eta_p}{Q_e \eta_e} \sqrt{\frac{\lambda_e}{\lambda_p}} \approx 1836.
-    \]
-    This can be achieved by assuming that protons are composed of multiple skyrmions (quarks) or have a more complex
-    topological structure.
-
-  \subsubsection{Summary: Soliton Energy and Particle Masses}
-    The energy of \(\chi\)-field solitons provides a geometric explanation for particle masses. The key results are:
-
-    \begin{table}[h]
-      \centering
-      \caption{Soliton Energy and Particle Masses}
-      \label{tab:soliton_mass}
-      \begin{tabular}{|c|c|c|c|}
-        \hline
-        \textbf{Particle} & \textbf{Soliton Type} & \textbf{Energy Expression} &
-        \textbf{Parameters} \\
-        \hline
-        Electron & Skyrmion (\(Q=1\)) & \(E \approx 73.2 \frac{\eta}{\lambda^{1/2}}\) &
-        \(\eta / \lambda^{1/2} \approx 7 \times 10^{-6}\) \\
-        Proton & Multi-skyrmion (\(Q=3\)) & \(E \approx 219.6 \frac{\eta}{\lambda^{1/2}}\) &
-        \(\eta / \lambda^{1/2} \approx 1.3 \times 10^{-3}\) \\
-        \hline
-      \end{tabular}
-    \end{table}
-
-    These results demonstrate that the \(\chi\)
-    -field framework can reproduce the observed particle masses by appropriately choosing the potential
-    parameters \(\eta\) and \(\lambda\)
-    , supporting the interpretation of particles as topological solitons in Cosmochrony.
+  \paragraph{Summary.}
+    Solitonic configurations of the $\chi$ field naturally possess finite effective
+    masses determined by their size, internal structure, and topological class.
+    Rather than predicting specific numerical values, Cosmochrony constrains the possible
+    scaling and hierarchy of masses through geometric and spectral principles.
+    This structural quantitativity provides a sound foundation for future extensions
+    toward a fully predictive mass spectrum.

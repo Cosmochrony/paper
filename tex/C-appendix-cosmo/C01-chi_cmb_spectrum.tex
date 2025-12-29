@@ -1,160 +1,71 @@
-\subsection{Spectrum of \(\chi\)-Field Fluctuations and CMB Anisotropies}
-  \label{subsec:chi_cmb_spectrum}
+\subsection{Low-\texorpdfstring{$\ell$}{ℓ} CMB Power Suppression from Global \texorpdfstring{$\chi$}{χ} Relaxation}
+  \label{app:lowell_attenuation}
 
-  In Cosmochrony, the anisotropies of the Cosmic Microwave Background (CMB) are interpreted as frozen fluctuations
-  of the \(\chi\) field at the epoch of recombination.
-  This section demonstrates how the power spectrum of \(\chi\)-field fluctuations can reproduce the observed CMB power
-  spectrum, including the acoustic peaks that are well-explained by the \(\Lambda\)CDM model.
+  One of the most persistent anomalies of the cosmic microwave background (CMB) concerns the
+  suppression of temperature anisotropy power at the largest angular scales
+  ($\ell \lesssim 30$), particularly in the quadrupole and octupole moments.
+  Within the standard $\Lambda$CDM framework, these deviations are generally
+  attributed to cosmic variance, and no deterministic physical mechanism is
+  associated with their occurrence.
 
-  \subsubsection{Fluctuations of \(\chi\) and Temperature Anisotropies}
+  In the Cosmochrony framework, however, the large-scale modes of the CMB probe
+  the global configuration space of the $\chi$ field rather than local stochastic
+  perturbations alone.
+  Because $\chi$ undergoes a monotonic relaxation constrained by a maximal
+  relaxation speed and by global connectivity, the longest-wavelength modes
+  correspond to collective configurations that are not freely adjustable.
 
-    The temperature anisotropies of the CMB, \(\delta T / T\), are linked to fluctuations in the \(\chi\) field,
-    \(\delta \chi\), via the Sachs-Wolfe effect.
-    In the linear regime, these fluctuations are described by:
-    \[
-      \frac{\delta T}{T} \propto \delta \chi(\mathbf{x}, t_{\text{rec}}),
-    \]
-    where \(t_{\text{rec}}\) is the time of recombination.
-    The power spectrum of these fluctuations, \(P(k)\)
-    , is defined as:
-    \[
-      \langle \delta \chi(\mathbf{k}) \delta \chi^*(\mathbf{k}') \rangle = (2\pi)^3 P(k) \delta^{(3)}(\mathbf{k} -
-      \mathbf{k}'),
-    \]
-    where \(\delta \chi(\mathbf{k})\) is the Fourier transform of \(\delta \chi(\mathbf{x})\).
+  \paragraph{Structural attenuation of global modes.}
+    At very low multipoles, the associated angular modes span regions comparable
+    to the full causal domain of the $\chi$ field.
+    As a consequence, these modes are subject to global relaxation constraints:
+    their amplitude is attenuated relative to the scale-invariant expectation,
+    not as a result of random fluctuation, but due to the finite relaxation budget
+    available for the largest coherent configurations of $\chi$.
 
-  \subsubsection{Power Spectrum of \(\chi\)-Field Fluctuations}
+    This effect is deterministic in origin but statistical in manifestation.
+    Cosmochrony does not predict exact multipole amplitudes; instead, it predicts
+    a systematic suppression envelope affecting the lowest $\ell$ modes, whose
+    precise realization depends on the detailed configuration of $\chi$ at
+    last scattering.
 
-    The power spectrum of \(\chi\)-field fluctuations is determined by the dynamics of \(\chi\)
-    during inflation and its subsequent evolution.
-    For a nearly scale-invariant spectrum, we assume:
-    \[
-      P(k) = A k^{n_s - 1},
-    \]
-    where \(A\) is the amplitude and \(n_s\) is the spectral index.
-    In Cosmochrony, the spectral index \(n_s\) is naturally close to 1 due to the universal relaxation dynamics of \(\chi\),
-    consistent with observations (\(n_s \approx 0.96\)).
+  \paragraph{Illustrative comparison with observations.}
+    Figure~\ref{fig:cmb_lowell_unsmoothed} displays the observed CMB temperature
+    power spectrum at low multipoles, without aggressive smoothing, together with
+    a schematic attenuation envelope representative of the Cosmochrony mechanism.
+    This figure is intended to illustrate the qualitative structural deviation
+    from scale invariance implied by global $\chi$ relaxation constraints.
+    It does \emph{not} constitute an independent multipole-by-multipole prediction.
 
-    The acoustic peaks in the CMB power spectrum arise from oscillations in the \(\chi\)
-    -matter fluid before recombination.
-    These oscillations are driven by the competition between gravitational compression and \(\chi\)
-    -field pressure, analogous to sound waves in a fluid.
-    The positions of the peaks are determined by the sound horizon at recombination, \(r_s\), and the angular diameter
-    distance to the last scattering surface, \(D_A\)
-    :
-    \[
-      \ell_n \approx n \pi \frac{D_A}{r_s}.
-    \]
-
-  \subsubsection{Comparison with \(\Lambda\)CDM Acoustic Peaks}
-    \label{subsubsec:comparison-with-lambda-cdm-acoustic-peaks}
-
-    In the \(\Lambda\)
-    CDM model, the acoustic peaks are a consequence of baryon-photon fluid oscillations.
-    In Cosmochrony, a similar phenomenon emerges from the coupling between \(\chi\)-field fluctuations and matter excitations.
-    The key differences and similarities are:
-
-    \begin{itemize}
-      \item \textbf{Origin of Fluctuations}: In \(\Lambda\)CDM, fluctuations originate from quantum fluctuations of the
-      inflaton field during inflation.
-      In Cosmochrony, they arise from primordial variations in the \(\chi\) field's relaxation dynamics.
-      Crucially, the phase of these acoustic oscillations is locked to the initial relaxation onset of $\chi$.
-      Unlike inflation, which requires a separate ``reheating'' phase to populate the universe with particles,
-      the intrinsic coupling between $\chi$-fluctuations and matter ensures that baryonic matter is born directly within
-      these geometric ripples.
-      This provides a natural mechanism for the phase coherence of the acoustic peaks without invoking super-horizon
-      inflationary correlation.
-
-      \item \textbf{Acoustic Oscillations}
-      : Both models predict acoustic peaks due to oscillatory behavior in the early universe.
-      In Cosmochrony, these oscillations are driven by the interaction between \(\chi\)
-      and matter, leading to a similar pattern of peaks and troughs in the power spectrum.
-
-      \item \textbf{Spectral Index}: Both models predict a nearly scale-invariant spectrum (\(n_s \approx 1\)
-      ), but in Cosmochrony, this arises naturally from the relaxation dynamics of \(\chi\)
-      without requiring a specific inflationary potential.
-
-      \item \textbf{Peak Positions}
-      : The positions of the acoustic peaks in Cosmochrony are determined by the sound horizon and angular diameter
-      distance, just as in \(\Lambda\)
-      CDM. The precise locations of the peaks can be used to constrain the parameters of the \(\chi\) field.
-    \end{itemize}
-
-  \subsubsection{Quantitative Estimation of the Power Spectrum}
-
-    To estimate the power spectrum of \(\chi\)-field fluctuations, consider the following steps:
-
-    \begin{enumerate}
-      \item \textbf{Primordial Fluctuations}: Assume that the primordial fluctuations of \(\chi\)
-      are Gaussian and nearly scale-invariant, with a power spectrum given by:
-      \[
-        P_{\chi}(k) = A \left( \frac{k}{k_0} \right)^{n_s - 1},
-      \]
-      where \(k_0\) is a pivot scale.
-
-      \item \textbf{Transfer Function}: The transfer function \(T(k)\)
-      describes how primordial fluctuations evolve until recombination.
-      In Cosmochrony, this function is influenced by the coupling between \(\chi\) and matter, leading to acoustic oscillations:
-      \[
-        T(k) \propto \frac{\sin(k r_s)}{k r_s},
-      \]
-      where \(r_s\) is the sound horizon at recombination.
-
-      \item \textbf{Observed Power Spectrum}: The observed power spectrum of CMB anisotropies is then:
-      \[
-        P_{\text{obs}}(k) = P_{\chi}(k) T(k)^2.
-      \]
-      This results in a series of acoustic peaks at scales determined by \(r_s\) and the angular diameter distance
-      \(D_A\).
-    \end{enumerate}
-
-  \subsubsection{Implications for Cosmochrony}
-
-    The ability of Cosmochrony to reproduce the CMB power spectrum, including the acoustic peaks, has several
-    important implications:
-
-    \begin{itemize}
-      \item \textbf{Consistency with Observations}: The model is consistent with the precise measurements of the CMB power spectrum by experiments such as
-      Planck, which have confirmed the acoustic peak structure to high accuracy.
-
-      \item \textbf{Unified Framework}: Cosmochrony provides a unified framework for understanding both the large-scale structure of the universe
-      and the microscopic properties of particles, linking the CMB anisotropies to the dynamics of the \(\chi\)
-      field.
-
-      \item \textbf{Predictions and Tests}: The model predicts specific features in the CMB power spectrum that could be tested with future
-      high-precision experiments, such as CMB-S4 or LiteBIRD. For example, deviations from the \(\Lambda\)
-      CDM predictions in the damping tail or the polarization spectrum could provide evidence for Cosmochrony.
-    \end{itemize}
-
-  \subsubsection{Scale-Dependent Attenuation of Low-$\ell$ Modes}
-    \label{app:lowell_attenuation}
-
-    Beyond the averaged suppression shown in the main text, Cosmochrony suggests a more general structural
-    effect at the largest angular scales. In particular, a scale-dependent attenuation acting on global modes
-    naturally preserves the relative ordering of low-$\ell$ multipoles while reducing their overall amplitude
-    as $\ell \rightarrow 0$.
-
-    Figure~\ref{fig:cmb_lowell_unsmoothed} illustrates this effect by applying a monotonic attenuation factor
-    to a multipole pattern, while leaving the relative variations between neighboring modes unchanged. This
-    construction is intended to highlight a qualitative difference with $\Lambda$CDM, in which low-$\ell$
-    features arise from stochastic fluctuations rather than deterministic modulation.
-
-    \begin{figure}[t]
+    \begin{figure}[htbp]
       \centering
-      \includegraphics[width=\linewidth]{C-appendix-cosmo/cmb_lowell_unsmoothed}
-      \caption{
-        Illustrative comparison between the Planck 2018 low-$\ell$ CMB temperature spectrum (points), the
-        $\Lambda$CDM ensemble-averaged prediction (dashed line), and an unsmoothed Cosmochrony-inspired attenuation
-        applied to a multipole pattern. The Cosmochrony curve preserves the relative ordering of low-$\ell$
-        multipoles while introducing a scale-dependent attenuation that increases toward the largest angular
-        scales. This construction is illustrative and does not represent an independent multipole-level
-        prediction.
-      }
+      \includegraphics[width=0.85\textwidth]{C-appendix-cosmo/cmb_lowell_unsmoothed}
+      \caption{Observed CMB temperature power spectrum at low multipoles
+        ($\ell \lesssim 30$), shown without heavy smoothing.
+        The shaded region illustrates a qualitative attenuation envelope expected
+        from global $\chi$ relaxation constraints in Cosmochrony.
+        Unlike $\Lambda$CDM, where low-$\ell$ suppression is treated as a statistical
+        accident, Cosmochrony interprets it as a structural consequence of the finite
+        relaxation capacity of the largest-scale $\chi$ configurations.
+        The envelope is illustrative and does not represent a parameter-fitted
+        prediction.}
       \label{fig:cmb_lowell_unsmoothed}
     \end{figure}
 
+  \paragraph{Conceptual distinction from $\Lambda$CDM.}
+    In $\Lambda$CDM, deviations at low $\ell$ are explained \emph{a posteriori}
+    as realizations of cosmic variance around an ensemble mean.
+    In Cosmochrony, by contrast, the ensemble itself is constrained:
+    the global relaxation dynamics of $\chi$ limit the admissible configuration
+    space for the longest-wavelength modes.
+    This introduces a qualitative, physically grounded distinction between
+    large-scale and small-scale fluctuations.
 
-  It is important to stress that this unsmoothed representation does not constitute an independent
-    multipole-by-multipole prediction. Rather, it serves as an illustrative example of how global constraints
-    on the $\chi$ field could manifest as a scale-dependent compression of large-angle temperature
-    anisotropies, without erasing their underlying structure.
+  \paragraph{Scope and limitations.}
+    The present analysis does not replace detailed Boltzmann calculations nor
+    does it attempt to reproduce the full angular power spectrum.
+    Its purpose is to identify a robust qualitative signature of Cosmochrony:
+    a deterministic suppression tendency affecting the lowest multipoles,
+    arising from the global relaxation structure of the fundamental field.
+    Quantitative refinement of this effect is deferred to future numerical
+    studies of $\chi$ dynamics.

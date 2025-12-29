@@ -1,114 +1,74 @@
-\subsection{Example: \(4\pi\)-Periodic Soliton and Spin-1/2}
+\subsection{Example: \(4\pi\)-Periodic Soliton and Spinorial Behavior}
   \label{subsec:4pi_soliton}
 
-  To illustrate how a \(4\pi\)-periodic soliton can represent a spin-1/2 particle, consider a 1D soliton solution for the
-  \(\chi\) field with a phase twist.
+  This section provides an \emph{illustrative geometric construction} showing how
+  spin-$\tfrac{1}{2}$--like behavior may emerge from a scalar $\chi$ configuration,
+  without introducing a fundamental spinor field.
 
-  Let $\chi(x)$ be written in the form
-  \[
-    \chi(x) = \eta \tanh(\kappa x)\, e^{i \theta(x)},
-  \]
-  where $\eta$ is the amplitude, $\kappa$ determines the soliton’s width, and $\theta(x)$ is the phase.
-  Here $\chi$ is expressed in a complex representation for convenience; the underlying physical
-  field remains real, and the phase $\theta(x)$ encodes the oscillatory structure of a localized
-  $\chi$ excitation rather than an independent internal degree of freedom.
+  The construction should be understood as an effective and topological model,
+  intended to demonstrate plausibility rather than to constitute a complete
+  microscopic derivation of fermionic degrees of freedom.
 
-  For a spin-1/2 particle, the phase \(\theta(x)\) must satisfy:
-  \[
-    \theta(x + 2\pi) = \theta(x) + \pi, \quad \theta(x + 4\pi) = \theta(x) + 2\pi.
-  \]
+  \subsubsection{Phase-Twisted Solitonic Configuration}
 
-  This $4\pi$-periodicity reflects the double-valued transformation behavior
-  characteristic of spinorial representations under rotations.
+    For convenience, the scalar field $\chi$ is represented in a complex form,
+    \begin{equation}
+      \chi(x) = \eta \tanh(\kappa x)\, e^{i \theta(x)},
+    \end{equation}
+    where the complex phase does \emph{not} represent an independent internal degree
+    of freedom but serves as a parametrization of the internal oscillatory structure
+    of a localized $\chi$ excitation.
+    The underlying physical field remains real.
 
-  \subsubsection{Explicit Construction of a \(4\pi\)-Periodic Soliton}
-
-    Define the phase \(\theta(x)\) as:
-    \[
+    Choosing
+    \begin{equation}
       \theta(x) = \frac{x}{2},
-    \]
-
-    so that a full rotation \(x \to x + 4\pi\) returns the phase to its original value:
-    \[
-      \theta(x + 4\pi) = \frac{x + 4\pi}{2} = \theta(x) + 2\pi.
-    \]
-
-    The soliton solution is then:
-    \[
-      \chi(x) = \eta \tanh(\kappa x) e^{i x/2}.
-    \]
-
-    This soliton has the following properties:
-    \begin{itemize}
-      \item It is localized around \(x = 0\), with \(\chi(x) \to 0\) as \(|x| \to \infty\).
-      \item The phase winds by \(\pi\) as \(x\) goes from \(-\infty\) to \(+\infty\), but a full \(2\pi\)
-      rotation of the soliton requires \(x \to x + 4\pi\), reflecting the spin-1/2 nature.
-    \end{itemize}
+    \end{equation}
+    implies that the configuration returns to its original state only after a
+    $4\pi$ variation of the phase,
+    \begin{equation}
+      \theta(x+4\pi)=\theta(x)+2\pi,
+    \end{equation}
+    while a $2\pi$ variation produces a sign inversion.
 
   \subsubsection{Topological Interpretation}
 
-    The \(4\pi\)-periodicity of the soliton is a manifestation of its \textbf{topological winding number}.
-    For a closed loop in space, the phase change \(\Delta \theta\) is given by:
+    This $4\pi$ periodicity reflects a topological obstruction analogous to that
+    encountered in spinorial representations.
+    Although the spatial configuration may appear unchanged after a $2\pi$ rotation,
+    the internal state of the excitation is not.
+    Only a $4\pi$ rotation restores full equivalence.
 
-    \[
-      \Delta \theta = \oint \nabla \theta \cdot d\mathbf{l} = 2\pi n,
-    \]
+    This behavior mirrors the double-cover structure
+    $\mathrm{SU}(2)\!\to\!\mathrm{SO}(3)$
+    characteristic of spin-$\tfrac{1}{2}$ systems, without postulating a fundamental
+    spinor field.
+    Instead, the spinorial behavior arises from the topology of the solitonic
+    configuration itself.
 
-    where \(n\) is the winding number.
-    For a spin-1/2 particle, the effective behavior corresponds to a half-integer winding,
-    in the sense that a single traversal produces a phase shift of $\pi$.
-    However, since the phase must be single-valued in space, the soliton must traverse
-    the loop twice to return to its original state, hence the $4\pi$ periodicity.
+  \subsubsection{Relation to Fermionic Statistics}
 
-    This behavior indicates that while spatial rotations act on physical space through $\mathrm{SO}(3)$,
-    the twisted $\chi$ excitation realizes a projective representation of this group.
-    A $2\pi$ rotation returns the spatial configuration but not the excitation state itself, which is restored only
-    after a $4\pi$ rotation.
-    This is equivalently described by the universal double cover $\mathrm{SU}(2)\!\to\!\mathrm{SO}(3)$, making the
-    spin-$\tfrac{1}{2}$ character explicit without introducing a fundamental spinor field.
+    At the effective level, such $4\pi$-periodic excitations naturally acquire a
+    minus sign under $2\pi$ rotations.
+    In multi-excitation configurations, this topological property suggests an
+    antisymmetric exchange behavior, providing a geometric basis for fermion-like
+    statistics.
 
-  \subsubsection{Connection to Quantum Statistics}
+    This result does not constitute a proof of the spin--statistics theorem.
+    Rather, it demonstrates that fermionic transformation properties and exclusion
+    behavior can consistently emerge from topologically constrained scalar-field
+    excitations.
 
-    The \(4\pi\)-periodicity of the soliton directly implies that it obeys \textbf{fermionic statistics}:
+  \subsubsection{Conceptual Scope}
+
+    The present construction is intentionally minimal.
+    It aims to show that:
     \begin{itemize}
-      \item Under a \(2\pi\) rotation, the effective quantum state of the soliton acquires a phase of \(e^{i\pi} = -1\), which is the
-      hallmark of a fermion.
-      \item At the multi-soliton level, the $4\pi$ topology induces an antisymmetric transformation
-      of identical excitation states under exchange, providing a natural geometric basis for
-      fermionic exclusion in the effective description.
+      \item spinorial behavior does not require a fundamental spinor ontology,
+      \item fermion-like properties may arise from topological constraints,
+      \item scalar-field dynamics can support nontrivial exchange behavior.
     \end{itemize}
-    At the multi-soliton level, this fermionic transformation behavior naturally leads to
-    Pauli-type exclusion in the effective quantum description.
 
-  \begin{figure}[h]
-      \centering
-      \begin{tikzpicture}[x=1.5cm, y=1.5cm]
-        % Axes
-        \draw[->] (-2.5,0) -- (2.5,0) node[right] {$x$};
-        \draw[->] (0,-1.2) -- (0,1.2) node[above] {$\Re(\chi)$};
-        \draw[->] (0,0) -- (0,0,2) node[below left] {$\Im(\chi)$};
-
-        % Real part of chi
-        \draw[thick, blue, domain=-2:2, samples=100] plot (\x, {tanh(2*\x)}, 0);
-        \node[blue, above] at (2, 1, 0) {$\Re(\chi)$};
-
-        % Imaginary part of chi
-        \draw[thick, red, domain=-2:2, samples=100] plot (\x, 0, {tanh(2*\x)*sin(deg(90*\x))});
-        \node[red, above] at (2, 0, 1) {$\Im(\chi)$};
-
-        % Phase arrows
-        \foreach \x in {-2, -1.5, ..., 2} {
-          \pgfmathsetmacro{\phase}{90*\x}
-          \draw[green!50!black, ->] (\x, 0, 0) -- (\x, {0.2*cos(\phase)}, {0.2*sin(\phase)});
-        }
-        \node[green!50!black] at (2, 0.3, 0.5) {Phase $\theta(x) = x/2$};
-      \end{tikzpicture}
-      \caption{
-        Visualization of a \(4\pi\)-periodic soliton representing a spin-1/2 particle.
-        The real part \(\Re(\chi)\) (blue) and imaginary part \(\Im(\chi)\) (red) of the \(\chi\) field are shown,
-        along with the local phase (green arrows).
-        The phase winds by \(\pi\) over the spatial extent of the soliton, but a full \(2\pi\)
-        rotation of the soliton requires a \(4\pi\) change in phase, reflecting its fermionic nature.
-      }
-      \label{fig:4pi_soliton}
-    \end{figure}
+    A fully relational formulation of these topological properties, independent of
+    any embedding geometry, is discussed in
+    Appendix~\ref{app:relational_formulation}.

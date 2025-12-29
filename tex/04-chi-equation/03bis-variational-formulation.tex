@@ -1,32 +1,49 @@
-\subsection{Variational Formulation and Born-Infeld Action}
+\subsection{Variational Formulation and Born--Infeld Action}
   \label{subsec:variational-formulation}
 
-  To extend the kinematic constraint introduced above into an effective dynamical description
-  that incorporates matter sources, we introduce a variational framework inspired by
-  Born--Infeld--type non-linear actions, originally developed to regularize field singularities
-  in classical field theories~\cite{BornInfeld1934,DeserGibbons1998}.
+  In regimes where $\chi$ admits a stable geometric interpretation, the effective
+  relaxation constraint introduced above may be conveniently summarized using a
+  variational formulation.
+  This formulation is not fundamental, but provides a compact and regularized
+  description of the coarse-grained dynamics of $\chi$ in the presence of localized
+  excitations.
+
+  Motivated by Born--Infeld--type non-linear actions originally introduced to control
+  field singularities~\cite{BornInfeld1934,DeserGibbons1998}, we consider the effective
+  Lagrangian density
   \begin{equation}
-    \mathcal{L} = -c^2 \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}} + \partial_t \chi - \frac{4\pi G}{c^2} \rho \chi ,
+    \mathcal{L}_{\mathrm{eff}}
+    = -c^2 \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}
+    + \mathcal{D}_{\mathrm{loc}}\chi
+    - \frac{4\pi G_{\mathrm{eff}}}{c^2} \rho \chi ,
   \end{equation}
-  where $\rho$ represents the matter density. The presence of the term $\partial_t \chi$ linear in the first-order
-  temporal derivative is crucial: it ensures that the momentum conjugate to $\chi$, defined as
-  $\Pi_\chi = \frac{\partial \mathcal{L}}{\partial (\partial_t \chi)}$, is a non-vanishing constant ($\Pi_\chi = 1$).
+  where $\mathcal{D}_{\mathrm{loc}}\chi$ denotes the effective local relaxation rate
+  introduced in Sec.~\ref{subsec:parameter-independent-relaxation}, and $\rho$
+  represents the density of localized excitations.
 
-  In the present framework, the Born--Infeld--type square-root structure does not introduce additional propagating
-  degrees of freedom.
-  Instead, it acts as a non-linear regulator that enforces an upper bound on spatial gradients, ensuring consistency
-  with the fundamental kinematic constraint while avoiding singular field configurations, in direct analogy with
-  the original motivation of Born--Infeld electrodynamics~\cite{BornInfeld1934}.
+  The linear dependence on $\mathcal{D}_{\mathrm{loc}}\chi$ ensures that the effective
+  relaxation flow remains monotonic and constrained, without introducing additional
+  propagating degrees of freedom.
+  The square-root structure acts as a non-linear regulator enforcing the universal
+  upper bound on effective spatial variations, in direct analogy with the original
+  role of Born--Infeld electrodynamics.
 
-  In the Hamiltonian formalism, this constant momentum acts as a primary constraint that effectively enforces the
-  unit-velocity evolution of the field.
-  This structure ensures that the field dynamics remain locked onto the Hamiltonian
-  constraint~\eqref{eq:hamiltonian_constraint} while the square-root term acts as a non-linear regularizer for spatial
-  gradients.
-  The variation with respect to $\chi$ yields a non-linear Poisson equation:
+  Within this effective variational framework, the Euler--Lagrange equation
+  associated with $\chi$ reproduces the non-linear elliptic relation governing the
+  spatial distribution of relaxation slowdown:
   \begin{equation}
-    \nabla \cdot \left( \frac{\nabla \chi}{\sqrt{1 - |\nabla \chi|^2/c^2}} \right) = \frac{4\pi G}{c^2} \rho .
+    \nabla \cdot
+    \left(
+      \frac{\nabla \chi}{\sqrt{1 - |\nabla \chi|^2 / c^2}}
+    \right)
+    = \frac{4\pi G_{\mathrm{eff}}}{c^2} \rho ,
     \label{eq:nonlinear_poisson}
   \end{equation}
-  This formulation naturally recovers the Newtonian limit for weak gradients ($|\nabla \chi| \ll c$) while preventing
-  gravitational singularities as the gradient magnitude is bounded by $c$.
+  which coincides with the effective Poisson-type equation obtained in
+  Sec.~\ref{subsec:microscopic-origin-of-the-coupling-tensor-and-the-poisson-equation}.
+
+  This variational formulation should be understood as a compact, regularized
+  representation of the effective dynamics of $\chi$, not as a fundamental action
+  principle.
+  Its role is to ensure internal consistency and to provide a convenient link to
+  standard gravitational phenomenology in the appropriate weak-field regime.

@@ -1,247 +1,175 @@
 \section{Relation to Quantum Formalism}
   \label{sec:relation-to-quantum-formalism}
 
-  This section does not assign fundamental ontological status to the quantum wavefunction
-  or to Hilbert space structures.
-  Instead, it shows how the formal apparatus of quantum mechanics can be understood
-  as an effective framework emerging from the dynamics of localized and weakly interacting
-  $\chi$-field excitations described in the preceding sections.
+  This section does not assign fundamental ontological status to the quantum
+  wavefunction nor to Hilbert space structures.
+  Instead, it shows how the formal apparatus of quantum mechanics arises as an
+  effective description of localized, weakly interacting excitations of the
+  $\chi$ field introduced in the preceding sections.
 
-  \subsection{Status of the Wavefunction}\label{subsec:status-of-the-wavefunction}
+  Quantum mechanics is therefore not replaced, but reinterpreted as a consistent
+  coarse-grained framework valid in regimes where $\chi$ admits a stable geometric
+  and linearized description.
 
-    In standard quantum mechanics, the wavefunction $\psi$
-    is a complex-valued object defined on configuration space, whose ontological status remains debated.
-    Operationally, $|\psi|^2$ encodes measurement probabilities via the Born rule, while $\psi$
-    itself does not correspond directly to a physical field in spacetime.
+  \subsection{Status of the Wavefunction}
+    \label{subsec:status-of-the-wavefunction}
+
+    In standard quantum mechanics, the wavefunction $\psi$ is a complex-valued object
+    defined on configuration space, whose ontological status remains debated.
+    Operationally, $|\psi|^2$ encodes measurement probabilities via the Born rule,
+    while $\psi$ itself does not correspond directly to a physical field in spacetime.
 
     In Cosmochrony, the $\chi$ field is not identified with the quantum wavefunction.
-    Instead, $\chi$ constitutes a real geometric substratum defined on spacetime, from which effective quantum
-    wavefunctions emerge as coarse-grained descriptions of localized excitations.
-    The quantum wavefunction is thus interpreted as a derived object encoding the statistical behavior of
-    $\chi$-mediated structures rather than as a fundamental entity.
+    Instead, $\chi$ constitutes a real scalar substratum, from which effective
+    quantum wavefunctions emerge as statistical descriptors of coherent excitations.
+    The wavefunction is therefore interpreted as a derived object encoding the
+    collective behavior of $\chi$-mediated structures rather than as a fundamental
+    entity.
 
-    As an example, the hydrogen atom's wavefunction $\psi_{nlm}(r, \theta, \phi)$
-    corresponds to a stable solitonic configuration of $\chi$ with radial nodes $n$, angular momentum $l$,
-    and magnetic quantum number $m$.
-    The probability density $|\psi|^2$ reflects the spatial distribution of $\chi$-curvature, while energy quantization
-    $E_n \propto -1/n^2$ arises from the discrete topological winding numbers permitted by the boundary conditions at $r \to 0$
-    and $r \to \infty$.
+    As an illustrative example, the hydrogen atom wavefunctions
+    $\psi_{nlm}(r,\theta,\phi)$ correspond to stable solitonic configurations of
+    $\chi$ characterized by discrete internal structure.
+    The probability density $|\psi|^2$ reflects the spatial visibility of these
+    configurations in effective geometric descriptions, while energy quantization
+    arises from topological and resonance constraints imposed on stable $\chi$
+    excitations.
 
   \subsection{Emergence of Hilbert Space Structure}
     \label{subsec:emergence-of-hilbert-space-structure}
 
-    The Hilbert space formalism of quantum mechanics provides a linear structure supporting superposition,
-    interference, and unitary evolution.
-    Within Cosmochrony, this structure arises as an effective description of weakly interacting excitations of the
-    $\chi$ field.
+    The Hilbert space formalism of quantum mechanics provides a linear structure
+    supporting superposition, interference, and unitary evolution.
+    Within Cosmochrony, this structure emerges as an effective description of weakly
+    interacting, small-amplitude fluctuations of the $\chi$ field around a slowly
+    varying background.
 
-    Linear superposition reflects the approximate independence of small-amplitude perturbations propagating on a
-    slowly varying $\chi$ background.
-    The complex phase of the wavefunction encodes relative geometric shifts within the underlying $\chi$
-    oscillations rather than representing an intrinsic complex field.
+    Approximate linear superposition reflects the near-independence of such
+    fluctuations in regimes where nonlinear constraints are negligible.
+    The complex phase of the wavefunction encodes relative internal oscillatory
+    structure within $\chi$ rather than representing an intrinsic complex field.
 
-  \subsection{Emergence of the Schrödinger Equation from $\chi$ Fluctuations}
+  \subsection{Emergence of the Schr\"odinger Equation from $\chi$ Fluctuations}
     \label{sec:schrodinger_emergence}
 
-    In Cosmochrony, quantum behavior is not postulated but emerges as an effective,
-    long-wavelength description of small fluctuations of the fundamental $\chi$ field
-    around stable solitonic configurations.
-    In this section, we provide an explicit and standard derivation of the Schr\"odinger equation as the
-    non-relativistic limit of such fluctuations, making all approximations transparent.
+    In Cosmochrony, quantum dynamics is not postulated but emerges as a long-wavelength,
+    non-relativistic description of coherent $\chi$-field fluctuations around stable
+    solitonic configurations.
+    In this subsection, the Schr\"odinger equation is recovered as the standard
+    non-relativistic limit of such fluctuations.
 
     \subsubsection{Non-relativistic limit: Klein--Gordon $\rightarrow$ Schr\"odinger}
       \label{sec:KGtoSch}
 
-      Consider a localized, massive excitation of the Cosmochrony field around a quasi-stationary soliton
-      background,
+      Consider a localized excitation around a quasi-stationary soliton background,
       \begin{equation}
-        \chi(x,t)=\chi_{\mathrm{sol}}(x)+\delta\chi(x,t),
+        \chi(x,t) = \chi_{\mathrm{sol}}(x) + \delta\chi(x,t),
       \end{equation}
-      and assume that, to leading order in small fluctuations, $\delta\chi$ obeys an effective
-      Klein--Gordon equation with a mass scale $m$ set by the soliton's rest-energy:
+      where $\delta\chi$ denotes a small fluctuation.
+      To leading order, $\delta\chi$ obeys an effective Klein--Gordon equation,
       \begin{equation}
-        \left(\frac{1}{c^{2}}\partial_{t}^{2}-\nabla^{2}+\frac{m^{2}c^{2}}{\hbar^{2}}\right)\delta\chi=0.
+        \left(\frac{1}{c^{2}}\partial_{t}^{2}
+          - \nabla^{2}
+          + \frac{m^{2}c^{2}}{\hbar^{2}}\right)\delta\chi = 0,
         \label{eq:KG_eff}
       \end{equation}
+      with $m$ determined by the soliton’s rest-energy.
 
-      In the non-relativistic regime, the field oscillates rapidly at the rest-energy frequency
-      $\omega_{0}=mc^{2}/\hbar$, while its envelope varies slowly.
-      We therefore use the standard ansatz
+      In the non-relativistic regime, the field oscillates rapidly at frequency
+      $\omega_{0} = mc^{2}/\hbar$, while its envelope varies slowly.
+      Using the standard ansatz
       \begin{equation}
-        \delta\chi(x,t)=\psi(x,t)\,e^{-i\omega_{0}t},
+        \delta\chi(x,t) = \psi(x,t)e^{-i\omega_{0}t},
         \qquad
-        \left|\partial_t\psi\right|\ll\omega_{0}|\psi|.
+        |\partial_t\psi| \ll \omega_{0}|\psi|,
         \label{eq:NR_ansatz}
       \end{equation}
-      Compute derivatives:
-      \begin{align}
-        \partial_t\delta\chi &= e^{-i\omega_0 t}\left(\partial_t\psi-i\omega_0\psi\right),\\
-        \partial_t^2\delta\chi &= e^{-i\omega_0 t}
-        \left(\partial_t^2\psi-2i\omega_0\partial_t\psi-\omega_0^2\psi\right),
-      \end{align}
-      and substitute into Eq.~\eqref{eq:KG_eff}. Using $\omega_0=mc^2/\hbar$ cancels the large rest-mass
-      terms ($-\omega_0^2/c^2$ against $+m^2c^2/\hbar^2$), yielding
+      and neglecting higher-order relativistic corrections yields the Schr\"odinger
+      equation,
       \begin{equation}
-        \frac{1}{c^2}\partial_t^2\psi-\frac{2i\omega_0}{c^2}\partial_t\psi-\nabla^2\psi=0.
-        \label{eq:KG_env}
-      \end{equation}
-      Under the slow-envelope condition, $\left|\partial_t^2\psi\right|\ll\omega_0\left|\partial_t\psi\right|$
-      (neglecting terms of order $v^4/c^4$), Eq.~\eqref{eq:KG_env} reduces to
-      \begin{equation}
-        -\frac{2i\omega_0}{c^2}\partial_t\psi-\nabla^2\psi=0
-        \quad\Longrightarrow\quad
-        i\hbar\,\partial_t\psi=-\frac{\hbar^2}{2m}\nabla^2\psi.
-        \label{eq:Sch_free}
-      \end{equation}
-
-      A weak interaction with the surrounding $\chi$ background (or other solitons) can be encoded at the
-      envelope level by an effective potential $V(x)$, giving the standard Schr\"odinger form
-      \begin{equation}
-        i\hbar\,\partial_t\psi=\left[-\frac{\hbar^2}{2m}\nabla^2+V(x)\right]\psi.
+        i\hbar\,\partial_t\psi
+        = -\frac{\hbar^{2}}{2m}\nabla^{2}\psi + V(x)\psi,
         \label{eq:Sch_V}
       \end{equation}
+      where $V(x)$ encodes weak interactions with the surrounding $\chi$ background.
 
-      \paragraph{Cosmochrony-specific content.}
-        Equations~\eqref{eq:Sch_free}--\eqref{eq:Sch_V} establish the rigorous non-relativistic limit of a
-        relativistic scalar excitation.
-        In Cosmochrony, the program is to derive (i) the effective mass $m$ from soliton energetics and (ii) the form of
-        $V(x)$ from interaction-induced deformations of $\chi_{\mathrm{sol}}(x)$.
-
-    \subsubsection{Interpretation}
-
-      In this framework, the complex wavefunction $\psi$ does not represent a fundamental
-      quantum object but an effective description of coherent $\chi$-field fluctuations
-      around a solitonic particle state.
-      The Schr\"odinger equation thus appears as the universal non-relativistic limit of localized $\chi$ excitations,
-      rather than as a fundamental postulate.
-
-      The Cosmochrony program is to relate the effective mass and interaction potential
-      entering the Schr\"odinger dynamics to soliton energetics and interaction-induced
-      deformations of the $\chi$ background.
-      A detailed derivation of these quantities from the full $\chi$ action is left for future work.
-
-      The effective Schr\"odinger description is therefore valid only within the regime of weak,
-      coherent $\chi$-field fluctuations.
-      Interactions that induce strong local deformations of $\chi$ drive the system outside this
-      linearized regime, leading to decoherence without contradicting the emergence of
-      Schr\"odinger dynamics where its underlying assumptions hold.
+      \paragraph{Interpretation.}
+        The wavefunction $\psi$ does not represent a fundamental quantum object but an
+        effective envelope describing coherent $\chi$ fluctuations.
+        The Schr\"odinger equation thus appears as a universal non-relativistic limit of
+        localized $\chi$ excitations rather than as a fundamental axiom.
 
   \subsection{Origin of Quantization}
     \label{subsec:origin-of-quantization}
 
-    Quantization in standard quantum theory is postulated through canonical commutation relations or path-integral
-    prescriptions.
+    Quantization in standard quantum theory is postulated through canonical
+    commutation relations or path-integral prescriptions.
+    In Cosmochrony, discrete energy exchanges arise from topological and stability
+    constraints on localized $\chi$ excitations.
 
-    In Cosmochrony, discrete energy exchanges arise from topological constraints on stable excitations of the $\chi$
-    field.
-    Only certain winding numbers, knot structures, or resonance conditions are dynamically stable, leading to
-    effectively quantized energy levels.
-    The relation $E = h \nu$ emerges as a geometric proportionality between oscillation frequency and curvature energy
-    stored in localized $\chi$ configurations.
+    Only specific internal configurations, resonance conditions, or winding numbers
+    are dynamically stable.
+    As a result, energy levels are effectively quantized.
+    The relation $E = h\nu$ emerges as a proportionality between oscillation frequency
+    and relaxation potential stored in localized $\chi$ configurations, with Planck’s
+    constant appearing as an effective coupling scale.
 
   \subsection{Measurement and the Born Rule}
     \label{subsec:measurement-and-the-born-rule}
 
-    The measurement postulate remains one of the most conceptually opaque elements of quantum mechanics.
-    In Cosmochrony, measurement corresponds to a local irreversible interaction between a structured excitation and
-    stochastic fluctuations of the $\chi$ field.
+    Measurement does not involve a fundamental wavefunction collapse.
+    Instead, it corresponds to an irreversible interaction between a coherent
+    excitation and stochastic fluctuations of the surrounding $\chi$ field.
 
-    Detection events occur when interference between the excitation and ambient $\chi$
-    fluctuations produces a stable localized crest.
-    The Born rule arises statistically from the distribution of these fluctuations, with $|\psi|^2$
-    representing the density of favorable geometric configurations rather than a fundamental probability axiom.
-
-    During a measurement, the detector's macroscopic degrees of freedom impose boundary conditions that select a
-    specific topological sector of the $\chi$-field.
-    For example, a photon detector absorbs energy by fixing a localized crest in $\chi$, effectively ``cutting'' the extended
-    wave configuration and collapsing it to a particle-like excitation.
-    The Born rule $P \propto |\psi|^2$ then follows from the statistical distribution of $\chi$-fluctuations that satisfy the
-    detector's constraints, without requiring an intrinsic probabilistic postulate.
+    Detection events occur when such interactions stabilize a localized configuration.
+    The Born rule arises statistically from the distribution of $\chi$ fluctuations
+    compatible with the detector’s constraints.
+    Thus, $|\psi|^{2}$ represents the density of favorable configurations rather than a
+    primitive probability postulate.
 
   \subsection{Entanglement and Nonlocal Correlations}
     \label{subsec:entanglement-and-nonlocal-correlations}
 
-    Quantum entanglement is traditionally described as nonlocal correlation between subsystems whose joint
-    wavefunction cannot be factorized.
+    Quantum entanglement corresponds to persistent relational structure within a
+    single extended $\chi$ configuration.
+    Separated particles remain correlated because they are manifestations of the same
+    underlying excitation.
 
-    In Cosmochrony, entanglement corresponds to persistent geometric connectedness within a single extended $\chi$
-    configuration.
-    Separated particles remain correlated because they are manifestations of the same underlying wave segment.
-    Decoherence corresponds to the progressive tearing or dispersion of this shared geometric structure due to
-    environmental interactions.
-
-    This interpretation preserves the empirical predictions of quantum mechanics while avoiding superluminal
-    signaling, as no information propagates faster than the local relaxation rate of $\chi$.
+    These correlations do not rely on superluminal signaling.
+    They reflect the holistic but dynamically local structure of $\chi$, consistent
+    with relativistic causality.
 
   \subsection{Spin and Statistics}
     \label{subsec:spin-and-statistics}
 
-    Spin is treated in quantum mechanics as an intrinsic degree of freedom associated with representations of the
-    rotation group.
-    The necessity of $4\pi$ rotations for fermions is usually accepted as a mathematical fact without deeper geometric
-    explanation.
+    Spin emerges from topological organization of $\chi$ excitations.
+    Configurations requiring a $4\pi$ internal rotation to return to equivalence
+    correspond to fermions, while $2\pi$-periodic configurations correspond to bosons.
 
-    Within Cosmochrony, half-integer spin emerges from topological twists of $\chi$ excitations.
-    Fermionic states correspond to M\"obius-like configurations requiring $4\pi$
-    rotations to return to identity, while bosonic states correspond to untwisted or integer-winding structures.
-    The spin-statistics connection follows naturally from the topological stability of these configurations.
-
-    See an illustrated example in ~\ref{subsec:4pi_soliton}.
+    The spin--statistics connection follows naturally from the topological stability of
+    these structures rather than from imposed quantum postulates.
+    An explicit example is discussed in Section~\ref{subsec:4pi_soliton}.
 
   \subsection{Orbital Geometry as Probabilistic Visibility of Underlying $\chi$ Fluctuations}
     \label{sec:orbital_geometry_visibility}
 
-    Atomic orbitals are commonly visualized as isosurfaces of the probability density $|\psi|^2$
-    exceeding a fixed threshold.
-    Whether such visualizations appear as connected regions or as multiple disjoint lobes, they
-    represent probabilistic structures rather than spatially occupied material zones.
+    Atomic orbitals are not spatial material distributions but probabilistic
+    visibility patterns of underlying $\chi$ fluctuations.
+    Their shapes encode stable structural features of $\chi$, such as nodal surfaces
+    and symmetry constraints, while their apparent extent reflects stochastic
+    variations.
 
-    In the Cosmochrony framework, these probability distributions are not taken as primitive.
-    They arise from stationary fluctuation modes of the fundamental $\chi$ field, which provides
-    the underlying dynamical substrate.
-    Orbital shapes therefore encode the regions where fluctuations of $\chi$ are most likely to
-    give rise to detectable material manifestations, without implying permanent occupation of
-    those regions.
-
-    From this perspective, orbital visualizations capture only the visible portion of an
-    underlying four-dimensional wave-like configuration.
-    The probabilistic character of the orbitals reflects the fluctuating nature of this
-    configuration, while their geometric stability reflects the existence of stationary modes.
-
-    When present, the disjoint appearance of orbital lobes offers a particularly suggestive
-    geometric indication of this interpretation.
-    Such disjointness naturally arises when only certain crest regions of the underlying
-    fluctuation pattern exceed the threshold for manifestation, while intermediate regions
-    remain below detectability.
-    Importantly, this effect concerns the visibility of probability density rather than the
-    spatial distribution of material substance.
-
-    While the detailed manifestations of orbital probability densities are influenced by
-    stochastic fluctuations of the $\chi$ field, the overall orbital geometry remains fixed by
-    the underlying topological configuration of $\chi$ associated with the corresponding
-    excitation.
-    In this sense, orbital shapes encode invariant structural features of $\chi$, such as nodal
-    surfaces and symmetry properties, while their local intensity and apparent extent reflect
-    the fluctuating nature of the field.
-
-    This distinction parallels the behavior observed in interference experiments.
-    In a double-slit setup, the interference pattern is determined by the underlying wave
-    structure and remains invariant, even though individual detection events occur at random
-    locations.
-    Similarly, atomic orbitals correspond to stable probabilistic patterns imposed by the
-    topology of $\chi$, modulated by stochastic fluctuations that govern the distribution of
-    individual manifestations.
-
-    A formal mathematical discussion of threshold visibility, level sets, and projection-induced
-    fragmentation is provided in Appendix~\ref{app:level_sets_orbitals}.
+    Orbital visualizations therefore represent statistical manifestations of
+    stationary $\chi$ modes rather than occupied spatial regions.
 
   \subsection{Scope and Limitations}
     \label{subsec:scope-and-limitations}
 
-    Cosmochrony does not aim to replace the quantum formalism.
-    All standard computational tools of quantum mechanics remain valid within their domain of applicability.
+    Cosmochrony does not seek to replace quantum mechanics.
+    All standard computational tools remain valid within their domain of
+    applicability.
 
-    The contribution of Cosmochrony is interpretative and unificatory: it proposes a geometric origin for quantum
-    behavior, measurement statistics, and nonlocal correlations, without modifying experimentally tested predictions.
-    Further work is required to formalize the precise mapping between $\chi$
-    dynamics and operator-based quantum theory.
+    Its contribution is interpretative and unificatory: it provides a coherent
+    geometric and dynamical origin for quantum phenomena without modifying
+    experimentally verified predictions.
+    A complete mapping between $\chi$ dynamics and operator-based quantum theory is
+    left for future work.

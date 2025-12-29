@@ -1,24 +1,32 @@
 \subsection{Parameter-Independent Relaxation}
   \label{subsec:parameter-independent-relaxation}
 
-  To avoid the conceptual pitfalls of a fundamental time coordinate, we define the dynamics not as a function of an
-  absolute variable, but as a sequence of field configurations $(\chi_\lambda)$ where $\lambda$ is a strictly monotonic
-  ordering parameter.
-  At the fundamental level, the evolution of $\chi$ is defined by its relaxation flow:
-  \begin{equation}
-    \frac{d\chi}{d\lambda} = \mathcal{R}(\chi, \nabla\chi)
-  \end{equation}
-  where $\mathcal{R}$ represents the rate of geometric tension release toward equilibrium.
-  The ``temporal'' derivative $\partial_t$ used in subsequent sections is then understood as a convenient
-  reparametrization of this primary flow:
-  \begin{equation}
-    \partial_t \chi \equiv \frac{d\chi}{d\lambda} \frac{d\lambda}{dt}
-  \end{equation}
-  Since $t$ merely serves to label the relaxation ordering, all physical results are invariant under any monotonic
-  reparameterization $t \rightarrow f(t)$ with $f'(t) > 0$.
+  To avoid the conceptual pitfalls associated with a fundamental time coordinate,
+  the dynamics of the scalar quantity $\chi$ is formulated without reference to any
+  external temporal parameter.
+  Instead, physical evolution is described as an ordered sequence of $\chi$
+  configurations, denoted $(\chi_\lambda)$, where $\lambda$ is a strictly monotonic
+  ordering parameter labeling the relaxation process.
 
-  In this framework, the relaxation of $\chi$ is not occurring \textit{in} time; rather, the local rate of relaxation
-  \textit{defines} the physical measure of time.
-  What we perceive as duration is the cumulative displacement of the field toward its equilibrium state.
-  Consequently, the ``speed of time'' is locally determined by the density of $\chi$-gradients, providing a direct
-  link between field topology and temporal flow.
+  At the fundamental level, the dynamics of $\chi$ is defined by an intrinsic
+  relaxation flow:
+  \begin{equation}
+    \mathcal{D}_{\lambda}\chi = \mathcal{R}[\chi],
+  \end{equation}
+  where $\mathcal{R}[\chi]$ denotes the local rate of relaxation toward equilibrium,
+  defined purely in terms of the relational structure of $\chi$ configurations.
+  No spacetime derivative or geometric operator is assumed at this stage.
+
+  Quantities commonly interpreted as temporal derivatives arise only at the level of
+  effective descriptions, when $\chi$ configurations admit a quasi-stable geometric
+  interpretation.
+  In such regimes, a coordinate time parameter may be introduced as a convenient
+  label of the relaxation ordering, but it carries no fundamental significance and
+  does not affect the underlying dynamics.
+
+  Within this framework, relaxation does not occur \emph{in} time.
+  Rather, the cumulative relaxation of $\chi$ defines what is operationally
+  identified as physical duration.
+  Local variations in the relaxation rate provide the effective measure of temporal
+  flow, establishing a direct connection between the structure of $\chi$
+  configurations and the emergent notion of time.

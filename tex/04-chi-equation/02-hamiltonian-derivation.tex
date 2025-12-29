@@ -1,74 +1,72 @@
 \subsection{Hamiltonian Derivation of the Evolution Equation}
   \label{subsec:hamiltonian-derivation}
 
-  \subsubsection*{Discrete Dynamics of $\chi$}
-    Before introducing any metric structure, the dynamics of $\chi$ can be formulated purely in terms of its local relaxation on a discrete network.
-    Let $\lambda$ be a monotonic ordering parameter, and define the local variation of $\chi$ at node $i$ as:
-    \begin{equation}
-      \frac{d \chi_i}{d \lambda} = c \sqrt{1 - \frac{1}{c^2} \sum_{j \sim i} K_{ij} (\chi_i - \chi_j)^2}
-      \label{eq:discrete-dynamics}
-    \end{equation}
-    where $K_{ij}$ is the connectivity strength defined in Equation~\eqref{eq:Kij-def}, and the sum runs over neighboring nodes $j$.
-    This equation is \textbf{metric-independent} and defines the fundamental dynamics of $\chi$ in terms of its local correlations.
+  \subsubsection*{Effective Constraint on Local Relaxation}
 
-    To illustrate the physical implications, consider a \textbf{homogeneous background} where $\chi_i = \chi_0 + \delta \chi_i$ with $|\delta \chi_i| \ll \chi_0$. Expanding $K_{ij}$ to first order in $\delta \chi_i$:
-    \begin{equation}
-      K_{ij} \approx K_0 \left(1 - \frac{|\delta \chi_i - \delta \chi_j|^2}{\chi_c^2}\right)
-    \end{equation}
-    Substituting into the evolution equation yields:
-    \begin{equation}
-      \frac{d \chi_i}{d \lambda} \approx c \left[1 - \frac{K_0}{2 c^2 \chi_c^2} \sum_{j \sim i} (\delta \chi_i - \delta \chi_j)^2 \right]
-    \end{equation}
-    This shows that \textbf{localized perturbations} (e.g., particles) induce a \textbf{slowdown in the relaxation of $\chi$}, which manifests macroscopically as \textbf{gravitational time dilation} (see Section~\ref{sec:gravity-emergence}).
+    Although the fundamental dynamics of $\chi$ is formulated without reference to
+    spacetime or a Hamiltonian structure, its relaxation is subject to universal local
+    constraints.
+    In regimes where $\chi$ configurations admit a stable geometric interpretation,
+    these constraints may be summarized in a compact, Hamiltonian-like form.
 
-  \subsubsection*{Continuum Limit}
-    In the limit where the network becomes dense (i.e., the distance between nodes approaches zero), the discrete sum can be approximated by a continuous Laplacian:
+    Specifically, the local relaxation rate of $\chi$ is bounded by the invariant
+    constant $c$.
+    When expressed in effective geometric variables, this bound can be written as:
     \begin{equation}
-      \sum_{j \sim i} K_{ij} (\chi_i - \chi_j)^2 \approx \int |\nabla \chi|^2 \, dV
+    (\mathcal{D}_{\text{loc}}\chi)^2 + |\nabla \chi|_{\text{eff}}^2 = c^2 ,
+    \label{eq:effective_hamiltonian_constraint}
     \end{equation}
-    This yields the effective evolution equation in the continuum:
+    where $|\nabla \chi|_{\text{eff}}$ denotes the effective magnitude of spatial
+    variations of $\chi$ within the coarse-grained geometric description.
+    This relation does not define a fundamental Hamiltonian, but provides a concise
+    summary of the admissible local relaxation configurations.
+
+    Selecting the monotonic relaxation branch yields the effective evolution equation:
     \begin{equation}
-      \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}
+      \mathcal{D}_{\text{loc}}\chi
+      = c \sqrt{1 - \frac{|\nabla \chi|_{\text{eff}}^2}{c^2}} ,
       \label{eq:chi_dynamics}
     \end{equation}
-    where $\nabla$ is now defined with respect to the emergent metric $g_{\mu\nu}$, derived from the network's connectivity (see Section~\ref{subsec:geometric-action}).
+    which encodes the slowdown of relaxation induced by structural variations of
+    $\chi$.
 
-  \subsubsection*{Continuum Limit and Newtonian Gravity}
-    In the continuum limit, the discrete sum in Equation~\eqref{eq:discrete-dynamics} becomes a spatial integral, and the evolution equation reduces to:
-    \begin{equation}
-      \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}
-    \end{equation}
-    The \textbf{source term} $S[\chi, \rho]$ in the effective wave equation (Section~\ref{subsec:effective-evolution-equation}) can now be derived explicitly from the discrete coupling $K_{ij}$.
-    For a localized excitation (e.g., a particle of mass $m$), the spatial variation of $\chi$ induces a \textbf{modulation of $K_{ij}$}, which in turn slows the relaxation rate.
-    This effect is captured by the \textbf{nonlinear Poisson equation}:
-    \begin{equation}
-      \nabla \cdot \left( \frac{\nabla \chi}{\sqrt{1 - |\nabla \chi|^2 / c^2}} \right) = \frac{4 \pi G}{c^2} \rho
-    \end{equation}
-    where $G$ emerges as an \textbf{effective coupling constant} related to $K_0$ and $\chi_c$. In the weak-field limit ($|\nabla \chi| \ll c$), this reduces to the standard Poisson equation:
-    \begin{equation}
-      \nabla^2 \Phi = 4 \pi G \rho
-    \end{equation}
-    with the gravitational potential $\Phi$ identified as:
-    \begin{equation}
-      \Phi = c^2 \ln \left( \frac{\partial_t \chi}{c} \right)
-    \end{equation}
-    This derivation shows that \textbf{Newtonian gravity} emerges naturally from the \textbf{collective coupling $K_{ij}$} without postulating a fundamental metric or curvature.
-    The full derivation, including the mapping between $K_0$, $\chi_c$, and $G$, is provided in Appendix~\ref{subsec:collective-coupling}.
+  \subsubsection*{Emergent Gravitational Interpretation}
 
-  \subsubsection*{Hamiltonian Constraint}
-    While the dynamics of $\chi$ can be viewed as a minimal relaxation principle, it can be more rigorously derived from
-    a Hamiltonian constraint.
-    We postulate that the dynamics of $\chi$ are governed by a Dirac-type kinematic constraint in phase space, analogous
-    to the mass-shell condition for a massless relativistic particle:
+    Localized excitations of $\chi$ generate regions of enhanced relational structure,
+    which locally reduce the relaxation rate.
+    When interpreted in the effective spacetime description, this manifests as
+    gravitational time dilation.
+    No independent gravitational field is postulated; the effect arises directly from
+    the constrained relaxation dynamics of $\chi$.
+
+    In the weak-structure regime ($|\nabla \chi|_{\text{eff}} \ll c$), the effective
+    description admits a simplified elliptic relation governing the spatial
+    distribution of relaxation slowdown:
     \begin{equation}
-    (\partial_t \chi)^2 + |\nabla \chi|^2 = c^2
-      \label{eq:hamiltonian_constraint}
+      \nabla \cdot \left( \frac{\nabla \chi}
+      {\sqrt{1 - |\nabla \chi|^2 / c^2}} \right)
+      \simeq \frac{4 \pi G_{\text{eff}}}{c^2} \rho ,
+      \label{eq:effective_poisson_relation}
     \end{equation}
-    where $c$ is the fundamental velocity scale.
-    Combined with the arrow of time postulate ($\partial_t \chi \geq 0$), which reflects the irreversible relaxation of
-    the Cosmochron, this leads uniquely to the first-order evolution equation:
+    where $\rho$ denotes the density of localized excitations and $G_{\text{eff}}$ is
+    an emergent coupling parameter characterizing the collective influence of such
+    structures on the relaxation flow.
+
+    In the Newtonian limit, this reduces to an effective Poisson equation for a
+    gravitational potential $\Phi$ defined by:
     \begin{equation}
-      \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}}
+      \Phi \equiv c^2 \ln \left( \frac{\mathcal{D}_{\text{loc}}\chi}{c} \right),
+      \label{eq:effective_gravitational_potential}
     \end{equation}
-    This derivation grounds the ``minimal principle'' in the symplectic structure of the field's phase space, ensuring
-    that $\chi$ acts as an intrinsic time coordinate.
+    recovering standard gravitational phenomenology as a coarse-grained description of
+    $\chi$ dynamics.
+
+  \subsubsection*{Interpretational Status}
+
+    The relations above do not constitute a fundamental Hamiltonian or variational
+    theory.
+    They provide an effective, local summary of the constraints governing $\chi$
+    relaxation in regimes where spacetime notions apply.
+    The predictive content of Cosmochrony remains entirely encoded in the intrinsic,
+    pre-geometric relaxation dynamics of $\chi$, while geometric and gravitational
+    structures emerge only as descriptive tools.

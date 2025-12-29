@@ -1,123 +1,132 @@
 \subsection{Phenomenological Implications}
   \label{subsec:phenomenology}
 
-  \subsubsection{Speed of Gravitational Perturbations}
-  \label{sec:gw_speed}
+  This section discusses the principal phenomenological consequences of Cosmochrony
+  that are accessible to observation. The emphasis is placed on results that follow
+  robustly from the kinematic and dynamical structure of the $\chi$ field, without
+  introducing additional assumptions or tunable parameters.
 
-  To determine the propagation speed of gravitational information, we consider a small perturbation $\delta\chi$ around
-  a homogeneous background $\chi_0(t) = ct$. Let $\chi(\mathbf{x}, t) = ct + \delta\chi(\mathbf{x}, t)$, where
-  $|\nabla \delta\chi| \ll c$. Substituting this into the evolution equation~\eqref{eq:chi_dynamics}:
-  \begin{equation}
-    c + \partial_t \delta\chi = c \sqrt{1 - \frac{|\nabla \delta\chi|^2}{c^2}}
-  \end{equation}
-  Using the Taylor expansion $\sqrt{1-u} \approx 1 - u/2$ for small $u$:
-  \begin{equation}
-    c + \partial_t \delta\chi \approx c \left( 1 - \frac{|\nabla \delta\chi|^2}{2c^2} \right) = c - \frac{|\nabla \delta\chi|^2}{2c}
-  \end{equation}
-  This gives $\partial_t \delta\chi \approx -\frac{1}{2c} |\nabla \delta\chi|^2$.
-  To find the wave equation, we take the time derivative of this expression and assume the perturbations follow a
-  harmonic or eikonal form.
-  More fundamentally, by squaring the Hamiltonian constraint~\eqref{eq:hamiltonian_constraint} and linearizing the
-  resulting second-order operator, we obtain the d'Alembertian:
-  \begin{equation}
-    \left( \frac{1}{c^2} \partial_t^2 - \nabla^2 \right) \delta\chi = 0
-  \end{equation}
-  The characteristic speed is identically $c$.
-  This result is robust and independent of any coupling constant, ensuring that Cosmochrony is strictly consistent with
-  the GW170817 multi-messenger observation.
+  \paragraph{Speed of gravitational perturbations.}
+    To determine the propagation speed of gravitational information in Cosmochrony, we
+    consider small perturbations $\delta\chi$ around a homogeneous background solution
+    \begin{equation}
+      \chi_0(t) = c t ,
+    \end{equation}
+    such that
+    \begin{equation}
+      \chi(\mathbf{x},t) = c t + \delta\chi(\mathbf{x},t),
+      \qquad |\nabla \delta\chi| \ll c .
+    \end{equation}
 
-\subsubsection{Emergence and Evolution of an Effective MOND-like Acceleration Scale}
-  \label{sec:mond_derivation}
+    Substituting into the fundamental evolution equation
+    (Eq.~\ref{eq:chi_dynamics}) gives
+    \begin{equation}
+      c + \partial_t \delta\chi
+      = c \sqrt{1 - \frac{|\nabla \delta\chi|^2}{c^2}} .
+    \end{equation}
 
-  In Cosmochrony, the intrinsic arrow of time is encoded in the monotonic evolution of the fundamental
-  field $\chi$, with $\partial_t \chi \geq 0$.
-  At large scales and late cosmic times, when $\chi$ admits a quasi-homogeneous and isotropic description, this
-  monotonic relaxation can be coarse-grained into an effective cosmological clock, analogous to the role played by
-  cosmic time in standard FLRW cosmology~\cite{Ellis1971,Weinberg2008}.
+    Expanding to leading order in spatial gradients yields
+    \begin{equation}
+      \partial_t \delta\chi \simeq -\frac{|\nabla \delta\chi|^2}{2c} .
+    \end{equation}
 
-  In such regimes, and only as an effective description, the temporal evolution of $\chi$ may be
-  approximated by
-  \begin{equation}
-    \partial_t \chi \simeq H(t)\,\chi,
-  \end{equation}
-  where $H(t)$ denotes the emergent Hubble parameter associated with the global relaxation of the
-  field.
-  This relation should not be interpreted as a fundamental equation of motion, but as a phenomenological correspondence
-  valid in the FLRW-like limit of the theory, in the same spirit as coarse-grained descriptions commonly employed in
-  emergent gravity and cosmological averaging approaches~\cite{Buchert2000,Padmanabhan2010}.
+    While this first-order equation reflects the irreversible relaxation character of
+    the dynamics, the propagation of perturbations is more transparently captured by
+    considering the second-order operator obtained from the squared Hamiltonian
+    constraint (Eq.~\ref{eq:chi_dynamics}). Linearizing this operator leads to
+    the effective wave equation
+    \begin{equation}
+      \left( \frac{1}{c^2}\partial_t^2 - \nabla^2 \right)\delta\chi = 0 .
+      \label{eq:gw_wave}
+    \end{equation}
 
-  The local kinematic constraint governing the $\chi$ field,
-  \begin{equation}
-  (\partial_t \chi)^2 + |\nabla \chi|^2 = c^2,
-  \end{equation}
-  then implies that even in the absence of localized matter excitations, the cosmological evolution
-  of $\chi$ generically induces a non-vanishing residual spatial gradient.
-  In the homogeneous limit, this minimal gradient magnitude is given by
-  \begin{equation}
-    |\nabla \chi|_{\mathrm{\min}} = \sqrt{c^2 - (H(t)\chi)^2}.
-  \end{equation}
+    The characteristic propagation speed of disturbances in the $\chi$ field is
+    therefore
+    \begin{equation}
+      v_{\mathrm{prop}} = c .
+    \end{equation}
 
-  This residual gradient does not correspond to a directional force acting on test particles.
-  Rather, it defines a background kinematic scale that constrains how additional, locally induced
-  gradients can contribute to the effective dynamics.
-  For a local observer, the associated scale may be expressed as an effective acceleration floor,
-  \begin{equation}
-    a_0(t) \sim c\,H(t),
-  \end{equation}
-  a relation that has long been noted empirically in the context of galactic dynamics and MOND-like
-  phenomenology~\cite{Milgrom1983a,Milgrom2002,FamaeyMcGaugh2012}, but which here arises dynamically
-  from the global relaxation of the $\chi$ field.
-  Unlike Milgromian dynamics, where $a_0$ is postulated as a universal constant, Cosmochrony predicts that this scale
-  evolves slowly with cosmic time, tracking the evolution of $H(t)$.
+    This result ensures strict consistency with multi-messenger observations,
+    including the near-simultaneous arrival of gravitational and electromagnetic
+    signals in GW170817. In Cosmochrony, this equality is not imposed but follows
+    directly from the fundamental kinematic bound on $\chi$ relaxation.
 
-  When localized matter excitations are present, they induce additional spatial gradients
-  $\nabla \chi_N$ that, in the weak-field and short-distance limit, reproduce the Newtonian scaling
-  $|\nabla \chi_N| \propto M/r^2$.
-  ue to the non-linear nature of the kinematic constraint, the total
-  effective gradient is not a linear superposition of the cosmological and local contributions.
-  Instead, the field dynamics enforces a saturation behavior: at sufficiently large radii, where the
-  Newtonian contribution would otherwise vanish, the total gradient asymptotically approaches the
-  cosmological floor set by $|\nabla \chi|_{\mathrm{\min}}$.
+  \paragraph{Emergent acceleration scale and MOND-like phenomenology.}
+    In Cosmochrony, the arrow of time is encoded in the monotonic evolution of the
+    fundamental field $\chi$, with $\partial_t \chi \ge 0$. At late cosmic times and on
+    large scales, where $\chi$ admits an approximately homogeneous and isotropic
+    description, this evolution may be coarse-grained into an effective cosmological
+    clock.
 
-  In this regime, the resulting effective gravitational acceleration naturally approaches
-  \begin{equation}
-    g_{\mathrm{eff}} \simeq \sqrt{g_N\,a_0(t)},
-  \end{equation}
-  recovering the characteristic deep-MOND scaling originally identified by Milgrom~\cite{Milgrom1983a}
-  without introducing an ad hoc interpolation function or modifying the underlying gravitational law.
+    In this regime, and only as an effective description, the temporal evolution of
+    $\chi$ may be written as
+    \begin{equation}
+      \partial_t \chi \simeq H(t)\,\chi ,
+    \end{equation}
+    where $H(t)$ denotes the emergent Hubble parameter associated with the global
+    relaxation of the field.
 
-  This interpretation offers two conceptual advantages over phenomenological MOND formulations:
-  \begin{enumerate}
-    \item \textbf{Cosmological scaling.} The acceleration scale $a_0$ is not fundamental but emerges
-    from the cosmological state of the $\chi$ field. As a result, $a_0(t)$ is expected to be larger at
-    earlier cosmic epochs, providing a potential observational handle through high-redshift galaxy
-    kinematics, now becoming accessible with modern surveys~\cite{McGaugh2015}.
-    \item \textbf{Environmental dependence.} Because the relaxation of $\chi$ is sensitive to the
-    global and local distribution of gradients, the effective acceleration scale can be weakly modulated
-    by environmental factors. This naturally incorporates effects analogous to the external field effect
-    (EFE) discussed in MOND literature~\cite{BekensteinMilgrom1984,FamaeyMcGaugh2012} and allows for
-    deviations from perfectly flat rotation curves in the far field or in strongly inhomogeneous
-    environments.
-  \end{enumerate}
+    The local kinematic constraint
+    \begin{equation}
+    (\partial_t \chi)^2 + |\nabla \chi|^2 = c^2
+    \end{equation}
+    then implies that even in the absence of localized matter excitations, the
+    cosmological evolution of $\chi$ induces a non-vanishing residual spatial gradient.
+    In the homogeneous limit, this minimal gradient is
+    \begin{equation}
+      |\nabla \chi|_{\min} = \sqrt{c^2 - (H\chi)^2} .
+    \end{equation}
 
-  In this framework, flat galactic rotation curves do not signal a breakdown of Newtonian gravity
-  nor the presence of unseen matter components.
-  Instead, they arise as a kinematic projection of the global cosmological relaxation of $\chi$ onto local gravitational
-  dynamics, with MOND-like behavior emerging as an effective, scale-dependent regime rather than as a fundamental
-  modification of gravity.
+    This residual gradient defines a background kinematic scale that constrains how
+    additional, locally induced gradients contribute to the effective dynamics. It may
+    be expressed operationally as an effective acceleration floor
+    \begin{equation}
+      a_0(t) \sim c\,H(t) .
+    \end{equation}
 
-\subsubsection{Gravitational Lensing in the Scalar Framework}
-  \label{sec:lensing_derivation}
+    When localized matter excitations are present, they induce additional gradients
+    $\nabla\chi_N$ that reproduce the Newtonian scaling
+    $|\nabla\chi_N| \propto M/r^2$ at short distances. Due to the non-linear nature of
+    the kinematic constraint, the total gradient does not superpose linearly. At
+    sufficiently large radii, the effective acceleration asymptotically approaches
+    \begin{equation}
+      g_{\mathrm{eff}} \simeq \sqrt{g_N\,a_0(t)} ,
+    \end{equation}
+    recovering the characteristic deep-MOND scaling without interpolation functions or
+    additional fields.
 
-  Light deflection is modeled as the propagation of a wave front where $\chi = \text{const}$.
-  The effective refractive index of the vacuum $n(r)$ is derived from the ratio of the global evolution rate to the local rate:
-  \begin{equation}
-    n(r) = \frac{c}{\partial_t \chi} = \frac{1}{\sqrt{1 - |\nabla \chi|^2/c^2}}
-  \end{equation}
-  Near a mass $M$, $|\nabla \chi| \approx \frac{GM}{c^2r}$. For small deflections, $n(r) \approx 1 + \frac{GM}{c^2r}$.
-  Integrating the gradient of $n$ along the photon path $z$ gives the deflection angle $\alpha$:
-  \begin{equation}
-    \alpha = \int_{-\infty}^{\infty} \nabla_\perp n \, dz = \frac{4GM}{bc^2}
-  \end{equation}
-  This matches the General Relativity prediction.
-  The factor of 2, which Newton's theory lacks, arises here from the non-linear square-root structure of the evolution equation~\eqref{eq:chi_dynamics}.
+    Importantly, Cosmochrony predicts that the acceleration scale $a_0$ is not
+    fundamental but slowly evolves with cosmic time through its dependence on $H(t)$,
+    providing a potential observational discriminator at high redshift.
+
+  \paragraph{Gravitational lensing.}
+    In Cosmochrony, light propagation follows wave fronts of constant $\chi$. The
+    effective refractive index of the vacuum is defined operationally as
+    \begin{equation}
+      n(r) = \frac{c}{\partial_t \chi}
+      = \frac{1}{\sqrt{1 - |\nabla \chi|^2/c^2}} .
+    \end{equation}
+
+    Near a localized mass $M$, where
+    $|\nabla \chi| \simeq GM/(c^2 r)$, the weak-field expansion gives
+    \begin{equation}
+      n(r) \simeq 1 + \frac{GM}{c^2 r} .
+    \end{equation}
+
+    Integrating the transverse gradient of $n$ along a photon trajectory yields the
+    deflection angle
+    \begin{equation}
+      \alpha = \frac{4GM}{b c^2},
+    \end{equation}
+    with $b$ the impact parameter. This reproduces the general-relativistic prediction,
+    with the enhancement relative to the Newtonian result arising from the non-linear
+    structure of the $\chi$ dynamics rather than from fundamental spacetime curvature.
+
+  \paragraph{Summary.}
+    The phenomenology of Cosmochrony reproduces key observational signatures of gravity
+    and cosmology while relying on a single scalar degree of freedom. Gravitational
+    perturbations propagate at exactly the invariant speed $c$, a MOND-like acceleration
+    scale emerges naturally from cosmological relaxation, and gravitational lensing is
+    recovered without postulating a fundamental metric. These results illustrate how
+    classical gravitational phenomena arise as coarse-grained manifestations of the
+    underlying $\chi$ dynamics.

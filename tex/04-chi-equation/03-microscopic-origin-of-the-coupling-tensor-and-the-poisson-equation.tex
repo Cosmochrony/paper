@@ -1,37 +1,58 @@
 \subsection{Microscopic Origin of the Coupling Tensor and the Poisson Equation}
   \label{subsec:microscopic-origin-of-the-coupling-tensor-and-the-poisson-equation}
 
-  To achieve self-consistency, the coupling tensor $K_{ij}$ must not be a mere constant but a dynamical measure of the
-  field's local stress.
-  We propose that $K_{ij}$ depends on the local gradient of $\chi$ through a non-linear constitutive relation.
-  A physically motivated form for this coupling is:
+  To ensure internal consistency, the effective coupling governing the relaxation of
+  $\chi$ cannot be taken as a universal constant.
+  Instead, it must reflect the local structural state of the field.
+  In Cosmochrony, this dependence is encoded through a constitutive relation linking
+  the effective coupling strength to variations of $\chi$ within the emergent
+  geometric description.
 
+  A convenient phenomenological form for this effective coupling is:
   \begin{equation}
-    K_{ij} = K_0 \exp\left( -\frac{(\chi_i - \chi_j)^2}{\chi_c^2} \right)
+    K_{\mathrm{eff}}
+    = K_0 \exp\!\left(-\frac{(\Delta \chi)^2}{\chi_c^2}\right),
+    \label{eq:effective_coupling_tensor}
   \end{equation}
+  where $\Delta\chi$ denotes the effective local variation of $\chi$ across correlated
+  configurations, $K_0$ is the vacuum coupling strength, and $\chi_c$ sets the
+  characteristic scale at which structural inhomogeneities significantly reduce the
+  relaxation conductivity.
 
-  where $K_0$ is the vacuum coupling constant and $\chi_c$ is a characteristic field scale.
-  This scenario implies that regions of high field gradients (solitons) locally weaken the coupling, thereby slowing
-  down the relaxation rate.
+  Regions exhibiting strong structural variation of $\chi$, such as localized
+  solitonic configurations, therefore weaken the effective coupling and locally slow
+  down the relaxation process.
+  This slowdown underlies the emergent gravitational phenomenology.
 
-  To derive the Newtonian limit, consider the continuous limit of the evolution equation (Eq. 34).
-  In the presence of a localized excitation (soliton) of mass $M$, the local relaxation rate $v = \partial_t \chi$ is
-  modified.
-  Let $v_0$ be the global relaxation rate far from any mass.
-  The local potential $\Phi$ can be identified through the relative shift in the relaxation velocity:
-
+  In regimes where an effective spacetime description applies, the local relaxation
+  rate $\mathcal{D}_{\mathrm{loc}}\chi$ differs from its asymptotic value
+  $\mathcal{D}_0$ far from localized excitations.
+  An effective gravitational potential $\Phi$ may then be introduced through the
+  relation:
   \begin{equation}
-    \frac{v(r)}{v_0} \approx 1 + \frac{\Phi(r)}{c^2}
+    \frac{\mathcal{D}_{\mathrm{loc}}\chi}{\mathcal{D}_0}
+    \simeq 1 + \frac{\Phi}{c^2},
+    \label{eq:relaxation_potential_relation}
   \end{equation}
+  which defines $\Phi$ as a convenient parametrization of the relative slowdown of
+  relaxation in the effective geometric regime.
 
-  By applying the Taylor expansion to the discrete sum $\sum_j K_{ij}(\chi_i - \chi_j)^2$ and assuming the form of
-  $K_{ij}$ from our scenario, the discrete evolution equation converges to a non-linear Poisson-like equation:
-
+  In the weak-structure limit, where variations of $\chi$ are small compared to
+  $\chi_c$, the spatial distribution of $\Phi$ is well described by an effective
+  elliptic relation of Poisson type:
   \begin{equation}
-    \nabla^2 \Phi - \frac{1}{\chi_c^2} (\nabla \Phi)^2 = 4\pi G \rho
+    \nabla^2 \Phi \simeq 4\pi G_{\mathrm{eff}} \rho,
+    \label{eq:effective_poisson_equation}
   \end{equation}
+  where $\rho$ denotes the density of localized excitations and
+  $G_{\mathrm{eff}}$ is an emergent coupling parameter determined by the collective
+  response of the $\chi$ field.
 
-  In the weak-field limit ($\Phi \ll c^2$), the second-order term becomes negligible, and we recover the standard
-  Poisson equation $\nabla^2 \Phi = 4\pi G \rho$.
-  This derivation proves that gravitation in Cosmochrony is not an external force but a direct consequence of the local
-  reduction in the $\chi$ field's ``relaxation conductivity'' induced by the presence of solitonic configurations.
+  This Poisson equation is not fundamental, but represents the weak-field,
+  coarse-grained limit of the constrained relaxation dynamics of $\chi$.
+  Gravitation thus appears not as an external interaction, but as an effective
+  manifestation of reduced relaxation conductivity induced by solitonic
+  configurations.
+
+  A fully relational formulation consistent with, but not required for, the effective
+  description presented here is provided in Appendix~\ref{app:relational_formulation}.

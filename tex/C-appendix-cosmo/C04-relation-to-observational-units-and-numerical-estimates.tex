@@ -1,108 +1,122 @@
 \subsection{Relation to Observational Units and Numerical Estimates}
   \label{subsec:observational-estimates}
 
+  This subsection provides order-of-magnitude estimates that connect the $\chi$ framework
+  to observed cosmological quantities.
+  The purpose is not to perform parameter fitting or derive precise numerical predictions,
+  but to assess the internal consistency of Cosmochrony and its compatibility with
+  empirical scales.
+
   \subsubsection{Normalization of the $\chi$ Field}
     \label{subsec:normalization-of-the-chi-field}
-    To connect the $\chi$ field to observable quantities, a normalization must be specified. We identify the present-day value $\chi(t_0)$ with the characteristic cosmological length scale governing expansion. Operationally, $\chi(t_0)$ may be interpreted as the proper wavelength accumulated since the epoch at which coherent propagation of radiation became possible, approximately recombination.
 
-    \subsubsubsection*{Constraints on $K_0$ and $\chi_c$}
+    To relate $\chi$ to observable quantities, a normalization must be specified.
+    We identify the present-day value $\chi(t_0)$ with the characteristic cosmological
+    length scale governing large-scale expansion.
+    Operationally, $\chi(t_0)$ may be interpreted as the cumulative geometric scale
+    associated with the global relaxation of $\chi$ up to the present epoch.
+
+    This identification does not assume a unique physical origin for $\chi(t_0)$,
+    but provides a minimal normalization consistent with the interpretation
+    $a(t) \propto \chi(t)$.
+
+  \subsubsection{Emergent Gravitational Coupling}
     \label{subsec:K0-chic-constraints}
-    The fundamental parameters $K_0$ and $\chi_c$ in the constitutive relation for $K_{ij}$ (Equation~\eqref{eq:Kij-def}) can be constrained by matching the emergent gravitational constant $G$ (Equation~\eqref{eq:G-emergent}) to its observed value. Using $G \approx 6.674 \times 10^{-11} \, \text{m}^3 \, \text{kg}^{-1} \, \text{s}^{-2}$ and $c \approx 3 \times 10^8 \, \text{m/s}$, we find:
+
+    In the effective description, the gravitational constant $G$ emerges from the
+    constitutive relation governing the coupling between neighboring $\chi$
+    configurations.
+    While the microscopic parameters $K_0$ and $\chi_c$ are not fixed individually,
+    their product is constrained by matching the observed value of $G$:
     \begin{equation}
-      K_0 \chi_c^2 = \frac{c^4}{16 \pi G} \approx 1.1 \times 10^{44} \, \text{N}
+      K_0 \chi_c^2 \sim \frac{c^4}{16 \pi G}.
     \end{equation}
 
-    If we associate $\chi_c$ with the \textbf{Planck length} $\ell_P \approx 1.6 \times 10^{-35} \, \text{m}$, then:
-    \begin{equation}
-      K_0 \approx \frac{c^4}{16 \pi G \ell_P^2} \approx 1.3 \times 10^{93} \, \text{m}^{-2}
-    \end{equation}
-    This value of $K_0$ sets the \textbf{stiffness scale} of the $\chi$-field network, while $\chi_c \approx \ell_P$ ensures that quantum gravitational effects become significant at the Planck scale.
-
-    Alternatively, if $\chi_c$ is associated with the \textbf{Hubble scale} $c / H_0 \approx 1.4 \times 10^{26} \, \text{m}$, then:
-    \begin{equation}
-      K_0 \approx \frac{H_0^2}{c^2} \approx 1.1 \times 10^{-52} \, \text{m}^{-2}
-    \end{equation}
-    This smaller value of $K_0$ would imply a \textbf{softer network}, with cosmological-scale effects dominating the dynamics. The precise values of $K_0$ and $\chi_c$ remain open to empirical constraints, but their product $K_0 \chi_c^2$ is fixed by the observed $G$.
-
-    \subsubsubsection*{Implications for Particle Masses}
-    The soliton mass scale $m \propto \sqrt{\lambda}$ (from Appendix~\ref{subsec:soliton_energy_mass}) requires
-    $\lambda \sim 10^{-116} \, \text{m}^{-2}$ to reproduce the electron mass $m_e \approx 9.11 \times 10^{-31} \, \text{kg}$.
-    This tiny value suggests that $\lambda$ may be \textbf{dynamically generated} rather than fundamental, reflecting the hierarchical structure of the $\chi$ field potential.
+    This relation fixes the overall stiffness scale of the effective $\chi$ network,
+    while leaving open whether the characteristic scale $\chi_c$ is associated with
+    microscopic (e.g.\ Planckian) or macroscopic (cosmological) physics.
+    The present framework does not require committing to a specific choice at this stage.
 
   \subsubsection{Hubble Constant}
     \label{subsec:hubble-constant}
 
-    From the fundamental relation
+    At the homogeneous level, the Hubble parameter is given by
     \begin{equation}
-      H(t) = \frac{\dot{\chi}}{\chi},
+      H(t) = \frac{\dot{\chi}}{\chi}.
     \end{equation}
-    and assuming maximal relaxation speed $\dot{\chi} \simeq c$, the present Hubble constant follows as
+    Assuming that the present universe is close to the maximal relaxation regime,
+    $\dot{\chi}(t_0) \simeq c$, the present Hubble constant follows as
     \begin{equation}
       H_0 \simeq \frac{c}{\chi(t_0)}.
     \end{equation}
 
-    Using the observed value $H_0 \sim 70~\mathrm{km\,s^{-1}\,Mpc^{-1}}$, one infers
+    Using the observed value $H_0 \approx 70~\mathrm{km\,s^{-1}\,Mpc^{-1}}$ yields
     \begin{equation}
       \chi(t_0) \sim 4 \times 10^{26}~\mathrm{m},
     \end{equation}
-    consistent with the current Hubble radius.
-
-    This correspondence arises without introducing free cosmological parameters.
-
-    The soliton mass scale $m \propto \sqrt{\lambda}$ then requires $\lambda \sim 10^{-116} \, \text{m}^{-2}$
-    to reproduce the electron mass $m_e \approx 9.11 \times 10^{-31} \, \text{kg}$.
-    This tiny value suggests that $\lambda$ may be dynamically generated rather than fundamental.
+    consistent with the observed Hubble radius.
+    This correspondence arises without introducing additional cosmological parameters.
 
   \subsubsection{Age of the Universe}
     \label{subsec:age-of-the-universe}
 
-    Integrating the relation $\dot{\chi} \simeq c$ yields
+    Integrating the homogeneous relaxation relation $\dot{\chi} \simeq c$ gives
     \begin{equation}
       \chi(t) \simeq c t + \chi_{\mathrm{init}},
     \end{equation}
-    where $\chi_{\mathrm{init}}$ denotes the effective value at the onset of coherent $\chi$ relaxation.
+    where $\chi_{\mathrm{init}}$ denotes the effective value of $\chi$ at the onset
+    of the relaxation regime relevant for cosmological observations.
 
-    Neglecting $\chi_{\mathrm{init}}$ compared to present values gives
+    Neglecting $\chi_{\mathrm{init}}$ relative to present values leads to
     \begin{equation}
       t_0 \simeq \frac{\chi(t_0)}{c} \sim 4 \times 10^{17}~\mathrm{s},
     \end{equation}
-    corresponding to approximately 13.8 billion years, in agreement with standard cosmological estimates.
+    corresponding to approximately $13.8$ billion years, in agreement with
+    standard cosmological estimates.
 
   \subsubsection{Redshift Interpretation}
     \label{subsec:redshift-interpretation}
 
-    Cosmological redshift arises from the increase of $\chi$ between emission and observation:
+    In Cosmochrony, cosmological redshift arises from the relative change of the
+    $\chi$ field between emission and observation:
     \begin{equation}
       1 + z = \frac{\chi(t_{\mathrm{obs}})}{\chi(t_{\mathrm{emit}})}.
     \end{equation}
 
-    This interpretation reproduces standard redshift relations while attributing them to geometric scaling rather than
-    recessional motion through spacetime.
+    This relation reproduces standard redshift phenomenology while attributing it
+    to geometric scaling induced by $\chi$ relaxation rather than to recessional
+    motion within a pre-existing spacetime.
 
   \subsubsection{Cosmic Microwave Background Scale}
     \label{subsec:cosmic-microwave-background-scale}
 
-    At recombination ($z_{\mathrm{rec}} \simeq 1100$), the characteristic scale of $\chi$
-    was smaller by the same factor:
+    At recombination ($z_{\mathrm{rec}} \simeq 1100$), the characteristic value of
+    $\chi$ was correspondingly smaller:
     \begin{equation}
       \chi(t_{\mathrm{rec}}) \simeq \frac{\chi(t_0)}{1 + z_{\mathrm{rec}}}.
     \end{equation}
 
-    Fluctuations imprinted at that epoch are stretched by subsequent $\chi$
-    growth, explaining the observed angular power spectrum of the CMB\@.
+    Fluctuations imprinted at that epoch are subsequently stretched by the
+    monotonic growth of $\chi$, providing a natural geometric interpretation of
+    the observed angular scales in the cosmic microwave background.
 
   \subsubsection{Orders of Magnitude and Robustness}
     \label{subsec:orders-of-magnitude-and-robustness}
 
-    All numerical estimates presented here rely solely on observed cosmological quantities and the assumption of
-    bounded $\chi$ relaxation.
-    No fine-tuning of parameters is required.
+    All numerical estimates presented in this subsection rely solely on observed
+    cosmological quantities and the bounded relaxation dynamics of $\chi$.
+    No fine-tuning of parameters or detailed model fitting is assumed.
 
-    While precise numerical modeling remains to be developed, these estimates demonstrate that Cosmochrony naturally
-    reproduces the correct orders of magnitude for key cosmological observables.
+    While a fully quantitative cosmological model remains to be developed,
+    these estimates demonstrate that Cosmochrony naturally reproduces the
+    correct orders of magnitude for key observables, including the Hubble
+    constant, cosmic age, redshift scaling, and CMB characteristic scales.
 
   \subsubsection{Summary}
     \label{subsec:summary}
 
-    The $\chi$ framework connects directly to measured cosmological quantities through simple scaling relations.
-    The Hubble constant, cosmic age, redshift, and CMB scales emerge consistently from the same underlying dynamics.
+    The $\chi$ framework admits a consistent normalization in observational units
+    and yields cosmologically relevant scales without introducing additional
+    fundamental parameters.
+    These order-of-magnitude relations support the internal consistency of
+    Cosmochrony and motivate further quantitative investigation.

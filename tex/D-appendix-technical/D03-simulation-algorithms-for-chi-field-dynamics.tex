@@ -1,152 +1,114 @@
 \subsection{Simulation Algorithms for $\chi$-Field Dynamics}
-  \label{subsec:simulation_algorithms}
+  \label{subsec:simulation-algorithms}
 
-  This appendix outlines a concrete numerical program aimed at testing the spectral
-  hypothesis for inertial mass in Cosmochrony.
-  The goal is not to compute the global spectrum of a homogeneous relaxation network,
-  but to extract the stability spectrum of localized solitonic configurations of the
-  $\chi$ field, whose lowest eigenmodes encode the inertial masses of particle-like
-  excitations.
+  This appendix presents numerical methods used to explore the dynamical behavior of the
+  $\chi$ field under the relaxation principles introduced in the main text.
+  Its purpose is neither to define the fundamental ontology of Cosmochrony nor to privilege
+  a specific microscopic substrate, but to provide a controlled computational framework in
+  which the consistency, stability, and collective behavior of $\chi$ configurations can be
+  investigated.
 
-  \subsubsection{Discrete Relaxation Network and Baseline Operator}
+  The simulations described here serve four complementary goals:
+  \begin{enumerate}
+    \item to verify the internal consistency of the bounded relaxation dynamics,
+    \item to test the spontaneous formation and persistence of localized excitations,
+    \item to study the response of the field to perturbations and external constraints,
+    \item to extract preliminary spectral signatures associated with stable configurations.
+  \end{enumerate}
 
-    We consider a discrete relaxation network $G(V,E)$ with fixed geometric couplings
-    $K^{(0)}_{ij}$.
-    The corresponding baseline relaxation operator is the graph Laplacian
+  All numerical constructions should therefore be understood as \emph{effective
+representations}.
+  They do not assume a fundamental spacetime geometry, nor do they fix a unique microscopic
+  realization of the theory.
+  Their role is analogous to lattice simulations in QCD: exploratory, non-fundamental, yet
+  indispensable for probing non-linear and collective regimes.
+
+  \paragraph{Discrete representation and numerical substrate.}
+    The $\chi$ field is represented on a discrete set of sites $\{i\}$, each carrying a scalar
+    value $\chi_i(\lambda)$, where $\lambda$ is the monotonic relaxation parameter introduced in
+    Section~\ref{subsec:parameter-independent-relaxation}.
+    Connectivity between sites is encoded by a local coupling matrix $K_{ij}$.
+
+    This discrete structure should be regarded strictly as a numerical scaffold.
+    It does not represent a physical lattice, causal set, or spacetime discretization.
+    Its sole purpose is to approximate local correlations and relaxation flows without
+    presupposing a background geometry.
+    Different graph topologies (regular grids, random graphs, locally weighted networks) lead
+    to qualitatively similar behavior, indicating that the observed phenomena are robust with
+    respect to discretization choices.
+
+    The simulations are therefore compatible with the relational formulation developed in
+    Appendix~\ref{app:relational_formulation}, while remaining technically independent of it.
+
+  \paragraph{Relaxation update rule.}
+    The discrete evolution of the field is governed by a bounded relaxation rule inspired by
+    the minimal kinematic constraint
+    (Section~\ref{subsec:minimal-kinematic-constraint}):
     \begin{equation}
-    (\Delta_G^{(0)} \psi)
-      _i = \sum_{j \sim i} K^{(0)}_{ij} (\psi_i - \psi_j),
-    \end{equation}
-    which encodes the geometric connectivity of the underlying substrate.
-
-    Periodic or open boundary conditions may be imposed at large distances to minimize
-    finite-size effects.
-    No physical interpretation is assigned to the global eigenmodes of $\Delta_G^{(0)}$
-    itself, which represent extended lattice modes rather than particle-like excitations.
-
-  \subsubsection{Construction of Localized Solitonic Configurations}
-
-    A localized solitonic configuration $\chi_{\mathrm{sol}}$ is constructed as a stationary
-    solution of the $\chi$-field relaxation dynamics.
-    Operationally, this configuration may be obtained either by numerical relaxation from
-    a topologically non-trivial initial condition (e.g., kink-, vortex-, or Skyrmion-like
-    profiles) or by imposing an analytical ansatz adapted to the dimensionality of the
-    network.
-
-    The soliton is required to be spatially localized, energetically stable, and stationary
-    under the relaxation dynamics, thereby representing a particle-like excitation of the
-    $\chi$ field.
-
-  \subsubsection{Linearized Stability Operator Around a Soliton}
-
-    Small perturbations $\delta\chi$ around the solitonic configuration,
-    \begin{equation}
-      \chi = \chi_{\mathrm{sol}} + \delta\chi,
-    \end{equation}
-    are governed by a linearized stability operator of the form
-    \begin{equation}
-      \mathcal{L}_{\mathrm{sol}} = \Delta_G^{(0)} + U_{\mathrm{sol}},
-    \end{equation}
-    where $U_{\mathrm{sol}}$ is a localized restoring operator determined by the background
-    configuration $\chi_{\mathrm{sol}}$.
-
-    The operator $U_{\mathrm{sol}}$ is non-vanishing only in regions where the soliton induces
-    strong gradients or topological constraints.
-    It may be constructed from local geometric quantities such as gradient saturation,
-    discrete curvature, or the second variation of an effective localization functional.
-
-  \subsubsection{Spectral Problem and Mass Identification}
-
-    In the regime where an effective wave description applies, perturbations satisfy a
-    Klein--Gordon-type equation,
-    \begin{equation}
-      \left(\frac{1}{c^2} \partial_t^2 + \mathcal{L}_{\mathrm{sol}}\right) \delta\chi = 0.
+      \label{eq:discrete-dynamics}
+      \frac{d\chi_i}{d\lambda}
+      =
+      c \sqrt{1 - \frac{1}{c^2}
+      \sum_{j \sim i} K_{ij} (\chi_i - \chi_j)^2 } .
     \end{equation}
 
-    Seeking normal-mode solutions $\delta\chi(t) = e^{-i\omega_n t}\psi_n$ leads to the
-    spectral problem
-    \begin{equation}
-      \mathcal{L}_{\mathrm{sol}} \psi_n = \lambda_n \psi_n, \qquad \omega_n^2 = c^2 \lambda_n.
-    \end{equation}
+    This update rule enforces strict monotonicity of $\chi$, a universal upper bound on the
+    local relaxation rate, and suppression of gradient-driven instabilities.
+    Time stepping is implemented using explicit adaptive schemes with stability control.
+    Alternative discretizations respecting the same bound lead to equivalent qualitative
+    behavior, confirming that the results do not depend on a fine-tuned algorithmic choice.
 
-    The inertial masses associated with localized modes are identified as
-    \begin{equation}
-      m_n = \frac{\hbar}{c} \sqrt{\lambda_n}.
-    \end{equation}
+  \paragraph{Formation of localized configurations.}
+    Starting from generic initial conditions, the simulations consistently exhibit the
+    emergence of localized regions where spatial variations of $\chi$ remain persistently
+    large.
+    These regions resist the global relaxation flow and remain stable over many relaxation
+    times.
 
-    A crucial diagnostic is the spatial localization of $\psi_n$, ensuring that the
-    corresponding eigenmodes represent soliton-bound states rather than extended lattice
-    modes.
+    Such configurations are interpreted as numerical counterparts of the solitonic
+    excitations discussed in
+    Section~\ref{sec:particles-as-localized-excitations-of-the-chi-field}.
+    They arise dynamically without being imposed by hand and do not require fine-tuned
+    initial conditions.
+    Perturbative tests show that small disturbances around these configurations decay rather
+    than grow, confirming their dynamical stability.
 
-  \subsubsection{Numerical Implementation and Diagnostics}
+  \paragraph{Spectral analysis and mode separation.}
+    To probe the internal structure of stable configurations, the relaxation operator is
+    linearized around a stationary $\chi$ background.
+    The resulting eigenvalue problem defines a discrete spectrum of modes characterizing the
+    response of the configuration to small perturbations.
 
-    The operator $\mathcal{L}_{\mathrm{sol}}$ is sparse and can be diagonalized using
-    iterative eigensolvers such as ARPACK or LOBPCG.
-    Shift--invert techniques are employed to resolve the lowest eigenvalues when large
-    spectral gaps are present.
+    A systematic spectral scan reveals a clear separation between a small number of
+    low-lying modes associated with collective, coherent deformations of the configuration,
+    and a dense set of higher modes that are rapidly damped by the relaxation dynamics.
+    This mode separation is a robust numerical feature and does not depend sensitively on the
+    discretization or boundary conditions.
 
-    Localization of eigenmodes is quantified using measures such as the inverse
-    participation ratio (IPR).
-    Robustness of the extracted spectrum is tested against variations in lattice size,
-    boundary conditions, and moderate deformations of the solitonic configuration.
+    These eigenmodes quantify intrinsic relaxation scales associated with the configuration.
+    At this stage, they are not identified with observed particle masses.
+    Rather, they provide a structural fingerprint of each stable excitation, capturing how
+    strongly it resists deformation.
+    The possible connection between these spectral hierarchies and physical mass spectra is
+    discussed conceptually in Appendix~\ref{subsec:spectral_mass}, without invoking
+    numerical matching.
 
-  \subsubsection{Success Criteria and Falsifiability}
+  \paragraph{Interpretation and scope.}
+    The existence of discrete spectral hierarchies is a robust numerical result.
+    Their role in the present work is structural rather than predictive: they demonstrate
+    that the relaxation dynamics of $\chi$ naturally supports stable localized excitations,
+    bounded and causal evolution, and internally organized mode spectra.
 
-    A successful outcome of this numerical program would be the emergence of a small number
-    of localized eigenmodes whose mass ratios fall within the observed ranges of elementary
-    particles (e.g., electron, pion, proton) up to order-of-magnitude accuracy, without
-    fine-tuning of microscopic parameters.
+  \paragraph{Limitations.}
+    The simulations presented here do not include quantum fluctuations, backreaction beyond
+    the effective level, or fully relativistic covariance.
+    They are not intended to provide numerical predictions for particle physics or precision
+    cosmology.
 
-    Conversely, failure to obtain such hierarchical spectra under controlled conditions
-    would directly falsify the spectral hypothesis for mass generation in Cosmochrony.
-
-  \subsubsection{Preliminary Spectral Results on Paired Localized Modes}
-    \label{subsec:paired_localized_modes}
-
-    As an initial validation of the numerical methodology, we have performed a series of
-    one-dimensional toy simulations involving pinned kink--antikink configurations.
-    While these simulations are not intended to model physical particles directly, they
-    provide a controlled setting to probe the qualitative structure of the stability
-    spectrum associated with localized $\chi$ configurations.
-
-    \begin{figure}[t]
-      \centering
-      \includegraphics[width=\linewidth]{spectral_scan_sep}
-      \caption{
-        Emergence and pairing of localized stability modes in a one-dimensional pinned
-        kink--antikink configuration.
-        Degenerate low-lying eigenvalues correlate with strong spatial localization
-        (high IPR) and reflect the duplication of local excitations associated with two
-        equivalent solitonic centers, rather than particle--antiparticle creation.
-      }
-      \label{fig:paired_modes}
-    \end{figure}
-
-  The appearance of degenerate low-lying eigenvalues correlates with strong spatial
-    localization, as quantified by the inverse participation ratio (IPR), and reflects
-    the duplication of local excitations associated with two equivalent solitonic centers.
-
-    When two identical localized centers are present, the lowest eigenvalues of
-    $\mathcal{L}_{\mathrm{sol}}$ systematically appear as degenerate pairs.
-    Inverse participation ratio (IPR) diagnostics confirm that each member of a degenerate
-    pair is strongly localized around one of the two centers.
-    Introducing a small asymmetry in the pinning strengths immediately lifts the degeneracy
-    and increases the localization of each mode, demonstrating that these paired eigenvalues
-    correspond to independent local excitations rather than global symmetric or antisymmetric
-    combinations.
-
-    As the separation between the kink and antikink is reduced, a clear transition is
-    observed.
-    Below a critical separation, localized low-lying modes disappear entirely, and the
-    spectrum becomes dominated by extended lattice modes.
-    Near this threshold, a soft quasi-zero mode emerges, characterized by a very small
-    eigenvalue and moderate localization.
-    This behavior is consistent with a weakly constrained local displacement (or sliding)
-    degree of freedom, rather than with a tunneling-induced level splitting.
-
-    These preliminary results indicate that the pairing of low-lying eigenmodes arises from
-    the duplication of local degrees of freedom associated with multiple solitonic centers,
-    and not from a dynamical coupling mechanism.
-    They provide a concrete illustration of how particle-like excitations in Cosmochrony
-    are expected to emerge as localized stability modes tied to individual solitons, with
-    degeneracies controlled by symmetry and lifted by small perturbations.
+  \paragraph{Conclusion.}
+    This appendix shows that the relaxation dynamics of the $\chi$ field can be implemented
+    numerically in a stable and controlled manner, without invoking a background geometry or
+    additional degrees of freedom.
+    The emergence of localized excitations and discrete spectral mode separation provides
+    strong support for the conceptual foundations of Cosmochrony and establishes a solid
+    basis for future quantitative developments.

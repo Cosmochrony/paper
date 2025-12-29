@@ -1,91 +1,82 @@
-\subsection{Analytical Solutions of the \(\chi\)-Field Dynamics}
+\subsection{Analytical Solutions of the $\chi$-Field Dynamics}
   \label{subsec:analytical-solutions}
 
-  To illustrate the behavior of the \(\chi\)
-  field, we derive explicit analytical solutions of the dynamical equation
-  \[
-    \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}},
-  \]
-  in two simple but physically relevant cases: \textbf{homogeneous configurations} and
-  \textbf{spherically symmetric solutions}.
+  To illustrate the behavior of the $\chi$ field, we derive explicit analytical solutions
+  of the dynamical equation
+  \begin{equation}
+    \partial_t \chi
+    =
+    c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}},
+  \end{equation}
+  in a set of simple but physically meaningful configurations.
+  These solutions are not intended to exhaust the dynamics, but to clarify its
+  geometric and causal structure.
 
   \subsubsection{Homogeneous Solution}
-    In a spatially homogeneous universe, \(\nabla \chi = 0\).
-    The dynamical equation reduces to:
-    \[
-      \partial_t \chi = c.
-    \]
-    Integrating with respect to time, we obtain the trivial but fundamental solution:
-    \[
-      \chi(t) = \chi_0 + c t,
-    \]
-    where \(\chi_0\) is the initial value of \(\chi\).
-    This solution describes the \textbf{background cosmological expansion} in Cosmochrony, where \(\chi\) grows linearly
-    with time, directly yielding a Hubble-like law for the scale factor \(a(t) \propto \chi(t)\).
 
-  \subsubsection{Spherically Symmetric Solution}
-    Consider a spherically symmetric configuration, where \(\chi = \chi(r,t)\) and the gradient reduces to
-    \(\nabla \chi = \partial_r \chi \, \hat{r}\).
-    The dynamical equation becomes:
-    \[
-      \partial_t \chi = c \sqrt{1 - \frac{(\partial_r \chi)^2}{c^2}}.
-    \]
+    In a spatially homogeneous configuration, $\nabla \chi = 0$ and the evolution equation
+    reduces to
+    \begin{equation}
+      \partial_t \chi = c .
+    \end{equation}
+    Integration yields
+    \begin{equation}
+      \chi(t) = \chi_0 + c t ,
+    \end{equation}
+    where $\chi_0$ is the initial value.
+    This solution defines the homogeneous cosmological background of Cosmochrony, in which
+    the global relaxation of $\chi$ provides a natural origin for cosmic expansion and the
+    Hubble law.
 
-    To find a stationary solution (\(\partial_t \chi = 0\)), we set:
-    \[
-      c \sqrt{1 - \frac{(\partial_r \chi)^2}{c^2}} = 0 \implies \partial_r \chi = \pm c.
-    \]
+  \subsubsection{Spherically Symmetric Gradient-Saturated Profiles}
 
-    Integrating, we obtain:
-    \[
-      \chi(r) = \chi_0 \pm c r,
-    \]
-    where \(\chi_0\) is an integration constant.
-    This solution represents a \textbf{conical profile} for \(\chi\), with a gradient maximal (\(|\nabla \chi| = c\)).
-    While this solution is not physically realizable globally (as it violates the boundedness of \(\chi\)), it illustrates
-    the extreme case where the relaxation of \(\chi\) is maximally slowed by spatial gradients.
+    Consider a spherically symmetric configuration $\chi = \chi(r,t)$.
+    The evolution equation becomes
+    \begin{equation}
+      \partial_t \chi
+      =
+      c \sqrt{1 - \frac{(\partial_r \chi)^2}{c^2}} .
+    \end{equation}
 
-    For a more realistic, time-dependent solution, assume a separable ansatz \(\chi(r,t) = R(r)T(t)\).
-    Substituting into the dynamical equation and separating variables, we find:
-    \[
-      \frac{\dot{T}}{c \sqrt{1 - \frac{T^2 (R')^2}{c^2}}} = 1.
-    \]
-    This implies \(\dot{T} = c\), so \(T(t) = c t + T_0\).
-    The spatial part \(R(r)\) must then satisfy:
-    \[
-      (R')^2 = \frac{c^2}{T^2} \left(1 - \frac{1}{c^2}\right).
-    \]
-    For \(T(t) = c t\), this simplifies to:
-    \[
-      R(r) = R_0 \pm r,
-    \]
-    yielding the time-dependent solution:
-    \[
-      \chi(r,t) = \chi_0 + c t \pm r.
-    \]
-    This solution describes a \textbf{propagating front} of \(\chi\), where the field grows linearly with time and varies linearly with radius.
-    It is particularly relevant for modeling localized excitations, such as particle-like solitons, in a spherically symmetric geometry.
+    Configurations satisfying $|\partial_r \chi| = c$ correspond to a complete local
+    suppression of relaxation, $\partial_t \chi = 0$.
+    Such profiles take the form
+    \begin{equation}
+      \chi(r) = \chi_0 \pm c r ,
+    \end{equation}
+    and represent limiting configurations in which the local unfolding of time is halted.
+    Although these profiles cannot be realized globally, they play an important conceptual
+    role as idealized models of horizons and maximally constrained regions.
 
-  \subsubsection{Planar Wave Solution}
-    For a planar wave ansatz \(\chi(x,t) = \chi_0 + \delta \chi(x,t)\), where \(\delta \chi\)
-    represents a small perturbation, we linearize the dynamical equation:
-    \[
-      \partial_t \delta \chi = -\frac{(\partial_x \delta \chi)^2}{2c}.
-    \]
-    Assuming a wave-like perturbation \(\delta \chi = \epsilon \sin(kx - \omega t)\),
-    we substitute into the linearized equation and find the dispersion relation:
-    \[
-      \omega = \frac{c k^2}{2 \chi_0}.
-    \]
-    This shows that \textbf{high-wavenumber perturbations are strongly damped},
-    confirming the stability of the homogeneous solution against small-scale fluctuations.
-    The planar wave solution is particularly useful for modeling propagating disturbances in \(\chi\),
-    such as gravitational waves or electromagnetic radiation in the Cosmochrony framework.
+  \subsubsection{Linear Front Solutions}
+
+    A simple class of exact solutions is given by linear fronts of the form
+    \begin{equation}
+      \chi(x,t) = \chi_0 + c t \pm x ,
+    \end{equation}
+    for which $|\nabla \chi| = 1 < c$ (in suitable units) and the evolution equation is
+    satisfied identically.
+    These solutions describe propagating relaxation fronts separating regions of different
+    $\chi$ values.
+    They do not correspond to waves in the usual sense, but to kinematic boundaries imposed
+    by the maximal relaxation speed.
+
+  \subsubsection{Absence of Linear Wave Solutions}
+
+    It is important to emphasize that the $\chi$-field dynamics does not admit linear wave
+    solutions.
+    Small perturbations do not propagate as oscillatory modes, but are smoothed through the
+    nonlinear relaxation mechanism discussed in
+    Section~\ref{subsec:stability-analysis}.
+    Apparent wave-like phenomena (gravitational or electromagnetic radiation) arise only as
+    effective descriptions associated with structured matter excitations and will be
+    discussed in later sections.
 
   \subsubsection{Conclusion}
-    These analytical solutions illustrate the rich dynamical behavior of the \(\chi\)
-    field in simple but physically meaningful configurations.
-    The homogeneous solution underpins the cosmological expansion,
-    while the spherically symmetric and planar wave solutions provide insights into localized excitations and propagating disturbances.
-    Together, they confirm the consistency and versatility
-    of the \(\chi\)-field dynamics as a unifying framework for spacetime, gravity, and quantum phenomena.
+
+    These analytical solutions illustrate the fundamentally relaxational character of the
+    $\chi$ dynamics.
+    Homogeneous growth underpins cosmological expansion, while gradient-saturated profiles
+    and relaxation fronts clarify the emergence of horizons and causal structure.
+    Together, they confirm the internal consistency of Cosmochrony and prepare the ground
+    for effective wave phenomena introduced at the macroscopic level.

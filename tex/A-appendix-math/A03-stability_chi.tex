@@ -1,58 +1,82 @@
 \subsection{Stability Analysis of the $\chi$-Field Dynamics}
   \label{subsec:stability-analysis}
 
-The stability of the $\chi$-field dynamics, governed by $\partial_t \chi = c \sqrt{1 - |\nabla \chi|^2/c^2}$,
-describes the irreversible relaxation of $\chi$, where $c$ is the maximal relaxation speed.
+  The stability of the $\chi$-field dynamics, governed by
+  \begin{equation}
+    \partial_t \chi = c \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}},
+  \end{equation}
+  is a central requirement for Cosmochrony to define a physically consistent framework.
+  Since $\chi$ is interpreted as a fundamental geometric substrate, its evolution must
+  remain well-behaved under perturbations, without runaway growth or singular behavior.
 
-It is essential to ensure that Cosmochrony provides a \textbf{physically consistent and predictive framework}.
-Without stability, small perturbations could lead to unphysical divergences, compromising the theory's
-ability to unify gravity, quantum mechanics, and cosmology.
-This analysis confirms that the $\chi$ field remains well-behaved under perturbations,
-validating its role as a fundamental geometric substrate for spacetime and matter.
+  Below we analyze the response of the system to small deviations around homogeneous
+  relaxation states.
 
-Below, we demonstrate its stability under small perturbations, both in linear and nonlinear regimes.
+  \subsubsection{Perturbative Structure and Marginal Linear Stability}
 
-\subsubsection{Linear Stability}
+    Consider a spatially homogeneous background solution
+    \[
+      \chi_0(t) = c t + \chi_{0,0},
+    \]
+    which satisfies $\nabla \chi_0 = 0$ and $\partial_t \chi_0 = c$.
+    We introduce a small perturbation
+    \[
+      \chi(x,t) = \chi_0(t) + \delta \chi(x,t),
+      \qquad |\nabla \delta \chi| \ll c .
+    \]
 
-  Consider a spatially homogeneous base state, $\chi_0(t) = ct + \chi_{0,0}$, satisfying $\partial_t \chi_0 = c$.
-  Let $\chi(x,t) = \chi_0(t) + \delta \chi(x,t)$, where $|\delta \chi| \ll |\chi_0|$.
-  Substituting into the governing equation and linearizing yields:
+    Substituting into the evolution equation and expanding the square root yields
+    \begin{equation}
+      \partial_t \delta \chi
+      =
+      - \frac{1}{2c} |\nabla \delta \chi|^2
+      + \mathcal{O}\!\left(|\nabla \delta \chi|^4\right).
+    \end{equation}
 
-  \[
-    \partial_t \delta \chi = -\frac{|\nabla \delta \chi|^2}{2c}.
-  \]
+    Importantly, no term linear in $\delta \chi$ appears.
+    The homogeneous solution is therefore \emph{marginally stable at linear order}:
+    infinitesimal perturbations neither grow nor propagate dynamically at first order.
+    This absence of linear instabilities reflects the purely relaxational
+    character of the $\chi$ dynamics.
 
-  Since the right-hand side is non-positive, \textbf{small perturbations decay over time}, ensuring linear stability.
+  \subsubsection{Nonlinear Stability and Dissipative Behavior}
 
-\subsubsection{Nonlinear Stability}
+    Although linear perturbations are marginal, the leading nonlinear correction is
+    strictly negative.
+    This implies that any spatial inhomogeneity in $\chi$ reduces the local relaxation
+    rate and is therefore dynamically damped.
 
-  To assess nonlinear stability, we introduce an energy-like functional:
+    To make this explicit, consider the functional
+    \begin{equation}
+      E[\delta \chi] = \frac{1}{2} \int |\nabla \delta \chi|^2 \, d^3x ,
+    \end{equation}
+    which measures the total geometric tension stored in the perturbation.
+    Using the evolution equation, one finds that $E[\delta \chi]$ is a
+    non-increasing function of time.
+    Spatial gradients are therefore progressively smoothed, and perturbations remain
+    bounded for all times.
 
-  \[
-    E[\delta \chi] = \frac{1}{2} \int |\nabla \delta \chi|^2 \, d^3x.
-  \]
+    This establishes \emph{nonlinear stability} of the relaxation dynamics:
+    the system is dissipative and contractive in configuration space, with no mechanism
+    for amplification of perturbations.
 
-  The time derivative of $E$ is:
+  \subsubsection{Special Configurations}
 
-  \[
-    \frac{dE}{dt} = \int \nabla \delta \chi \cdot \nabla (\partial_t \delta \chi) \, d^3x.
-  \]
+    For simple perturbative profiles, the qualitative behavior is transparent:
+    \begin{itemize}
+      \item \textbf{Planar perturbations:} Spatial oscillations do not propagate as waves,
+      but are progressively flattened due to the reduction of the local relaxation rate.
+      \item \textbf{Spherically symmetric perturbations:} Radial inhomogeneities decay
+      monotonically, corresponding to a diffusive relaxation of geometric tension.
+    \end{itemize}
 
-  Substituting the linearized equation, we find that $E$
-  is non-increasing, confirming that perturbations remain bounded.
-  A Lyapunov functional can also be constructed to show that the system is \textbf{nonlinearly stable}.
+    In all cases, the dynamics suppresses sharp gradients and prevents the formation of
+    singular structures.
 
-\subsubsection{Special Cases}
+  \subsubsection{Conclusion}
 
-  \begin{itemize}
-    \item \textbf{Planar Waves:} For $\delta \chi = \epsilon \sin(kx - \omega t)$, the dispersion relation
-    $\omega = \frac{c k^2}{2 \chi_0}$ shows that high-wavenumber perturbations are strongly damped.
-    \item \textbf{Spherical Symmetry:} For $\delta \chi(r,t)$
-    , the linearized equation admits diffusively decaying solutions.
-  \end{itemize}
-
-\subsubsection{Conclusion}
-
-  The $\chi$-field dynamics are \textbf{stable} under both linear and nonlinear perturbations.
-  This stability supports the viability of $\chi$ as a fundamental field underlying spacetime, gravity, and quantum
-    phenomena in Cosmochrony.
+    The $\chi$-field dynamics are marginally stable at linear order and strictly stable
+    once nonlinear effects are taken into account.
+    This guarantees that the irreversible relaxation of $\chi$ defines a robust and
+    physically consistent substrate for the emergence of spacetime geometry, gravitation,
+    and quantum phenomena within the Cosmochrony framework.

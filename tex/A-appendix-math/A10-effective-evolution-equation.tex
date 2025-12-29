@@ -1,17 +1,44 @@
 \subsection{Effective Evolution Equation}
   \label{subsec:effective-evolution-equation}
 
-  At the phenomenological level, the dynamics of $\chi$
-  may be described by a nonlinear wave--diffusion equation of the form
+  Once a stable geometric description has emerged from the underlying relaxation
+  dynamics of the $\chi$ field, it becomes possible to express its large-scale
+  behavior using effective differential operators familiar from relativistic field
+  theory.
+  At this phenomenological level only, the evolution of $\chi$ may be summarized by
+  an effective equation of the form
   \begin{equation}
-    \Box \chi = S[\chi, \rho],
+    \Box_{\mathrm{eff}} \chi = S[\chi,\rho],
   \end{equation}
-  where $\Box$ denotes the covariant d'Alembert operator associated with the effective metric, and $\rho$
-  represents the density of localized excitations (matter).
+  where $\Box_{\mathrm{eff}}$ denotes the d'Alembert operator associated with the
+  \emph{emergent} metric, and $\rho$ represents the density of localized excitations
+  (matter).
 
-  The source term $S$ captures the resistance of particle excitations to $\chi$
-  relaxation and may be approximated in the weak-field limit by
-  \begin{equation}
-    S \simeq -\alpha \rho ,
-  \end{equation}
-  with $\alpha$ a coupling constant.
+  This equation is not fundamental.
+  Both the operator $\Box_{\mathrm{eff}}$ and the source term $S$ arise as
+  coarse-grained descriptors of the underlying relaxation process and should be
+  understood as bookkeeping devices rather than primary dynamical laws.
+
+  \paragraph{Physical interpretation of the source term.}
+    The term $S[\chi,\rho]$ does not represent an external force acting on $\chi$.
+    Instead, it encodes the effective resistance of localized excitations to the
+    global relaxation of the field.
+    Regions containing matter correspond to structured configurations of $\chi$ that
+    locally reduce the relaxation rate, giving rise to spatial gradients and
+    differential proper-time flow.
+
+    In weak-field regimes, where matter-induced gradients are small, this effective
+    resistance may be approximated as linear in the excitation density:
+    \begin{equation}
+      S[\chi,\rho] \simeq -\alpha \rho ,
+    \end{equation}
+    with $\alpha$ an effective coupling constant.
+    Matching with the Newtonian limit identifies $\alpha \sim G/c^2$, where $G$
+    emerges as the macroscopic coupling between matter density and relaxation
+    slowdown.
+
+    Beyond this regime, nonlinear corrections to $S[\chi,\rho]$ are expected to
+    reflect saturation effects in the relaxation dynamics.
+    Such corrections prevent unphysical halting of the field evolution and encode
+    departures from classical gravitational behavior without modifying the
+    fundamental ontological structure of Cosmochrony.

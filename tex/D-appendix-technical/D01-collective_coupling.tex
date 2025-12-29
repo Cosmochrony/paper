@@ -1,146 +1,70 @@
 \subsection{Collective Gravitational Coupling and Operational Geometry}
   \label{subsec:collective-coupling}
 
-  \subsubsection*{Status and Scope of the Construction}
-    This appendix provides the technical construction underlying the collective gravitational coupling introduced in Section~\ref{sec:gravity-emergence}.
-    Its purpose is to demonstrate explicitly how an effective spatial geometry and a Newtonian gravitational interaction emerge from the local relaxation dynamics of the $\chi$ field, without assuming any pre-existing metric structure.
+  This subsection develops an effective and operational description of gravitational
+  phenomena within the Cosmochrony framework.
+  Its purpose is to demonstrate explicitly how standard Newtonian gravity and its
+  geometric interpretation emerge from the collective dynamics of the $\chi$ field
+  in regimes where a quasi-static and weak-gradient approximation is valid.
 
-  \subsubsection*{Minimal Local Ansatz for the Collective Coupling $K_{ij}$}
-    \label{subsec:Kij-ansatz}
-    We adopt a \textbf{constitutive relation} for the connectivity matrix $K_{ij}$ that encodes the local resistance of the $\chi$ field to variations between neighboring nodes $i$ and $j$:
-    \begin{equation}
-      K_{ij} = K_0 \cdot f\left( \frac{|\chi_i - \chi_j|^2}{\chi_c^2} \right)
-      \label{eq:Kij-ansatz}
-    \end{equation}
-    where:
-    \begin{itemize}
-      \item $K_0$ is a \textbf{fundamental stiffness scale} (with dimensions of $[\text{length}]^{-2}$), setting the maximal connectivity strength in the absence of excitations.
-      \item $\chi_c$ is a \textbf{characteristic scale} of the $\chi$ field, naturally associated with the Planck length $\ell_P$ or the cosmological relaxation scale $c / H_0$.
-      \item $f(x)$ is a \textbf{dimensionless regularization function} satisfying:
-      \begin{itemize}
-        \item $f(0) = 1$ (maximal connectivity for uniform $\chi$),
-        \item $f(x) \to 0$ as $x \to \infty$ (vanishing connectivity for large gradients),
-        \item $f(x)$ is monotonically decreasing (connectivity weakens with increasing gradients).
-      \end{itemize}
-    \end{itemize}
+  The constructions introduced here are not fundamental.
+  They constitute a technical representation of the underlying continuous dynamics,
+  designed to connect the relational formulation of Cosmochrony to familiar
+  gravitational phenomenology.
+  The fully relational and metric-free foundation of the theory is developed
+  independently in Appendix~\ref{app:relational_formulation}.
 
-    For concreteness, we adopt the \textbf{illustrative choice}:
-    \begin{equation}
-      f(x) = \frac{1}{1 + x}
-    \end{equation}
-    This ansatz ensures that:
-    \begin{enumerate}
-      \item \textbf{Symmetry}: $K_{ij} = K_{ji}$, as required for a consistent relational network.
-      \item \textbf{Locality}: $K_{ij}$ depends only on the \textbf{local difference} $|\chi_i - \chi_j|$, reflecting the pre-geometric nature of the theory.
-      \item \textbf{Boundedness}: $0 < K_{ij} \leq K_0$, preventing unphysical divergences in the emergent metric.
-      \item \textbf{Gradient sensitivity}: $K_{ij}$ decreases as $|\chi_i - \chi_j|$ increases, encoding the \textbf{resistance to relaxation} induced by localized excitations.
-    \end{enumerate}
+  \paragraph{Collective coupling and effective description.}
+    Localized excitations of the $\chi$ field resist its global relaxation and thereby
+    slow the local evolution rate $\partial_t \chi$.
+    When many such excitations are present, their influence superposes collectively,
+    leading to a macroscopic modification of the relaxation dynamics.
 
-    \subsubsubsection*{Physical Interpretation}
-      \begin{itemize}
-        \item In regions where $\chi$ is uniform ($\chi_i \approx \chi_j$), $K_{ij} \approx K_0$, and the network behaves as a \textbf{flat spacetime} (minimal resistance to relaxation).
-        \item Near localized excitations (e.g., particles or black holes), $|\chi_i - \chi_j|$ increases, reducing $K_{ij}$ and thus \textbf{slowing the relaxation of $\chi$}. This manifests as \textbf{gravitational time dilation} and \textbf{spacetime curvature}.
-      \end{itemize}
+    In an effective description, this collective influence may be encoded in a coupling
+    kernel $K_{ij}$, which characterizes how variations of $\chi$ between neighboring
+    regions affect the local relaxation rate.
+    The kernel depends only on differences of $\chi$ and captures the local stiffness
+    of the field, without presupposing any background notion of distance or metric.
 
-    \subsubsubsection*{Relation to Fundamental Constants}
-      The scales $K_0$ and $\chi_c$ are expected to be related to fundamental constants. For example:
-      \begin{itemize}
-        \item $\chi_c$ may be identified with the \textbf{Planck length} $\ell_P \approx 1.6 \times 10^{-35} \, \text{m}$, setting the scale at which quantum gravitational effects become significant.
-        \item $K_0$ may be linked to the \textbf{cosmological relaxation rate} $H_0 \approx 70 \, \text{km/s/Mpc}$, via $K_0 \sim H_0^2 / c^2$.
-      \end{itemize}
-
-      The precise mapping between $(K_0, \chi_c)$ and observable constants (e.g., $G$, $\Lambda$) is derived in Section~\ref{subsec:newtonian-limit}.
-
-  \subsubsection*{Operational Definition of Distance on the Discrete Network}
-    In the absence of a fundamental background geometry, spatial distance is defined operationally through the resistance to $\chi$ propagation across the network. For any discrete path $\gamma = \{i_0, i_1, \ldots, i_n\}$ connecting two sites $i$ and $j$, we define the squared path length:
+  \paragraph{Continuum limit and emergence of the Newtonian potential.}
+    In regimes where variations of $\chi$ are small and slowly varying, the collective
+    dynamics may be approximated by a continuum description.
+    In this limit, spatial variations of the relaxation rate can be expressed in terms
+    of an effective gravitational potential $\Phi$, defined operationally through the
+    relative slowdown of $\chi$:
     \begin{equation}
-      d_\gamma^2 = \ell_0^2 \sum_{(i_k, i_{k+1}) \in \gamma} \frac{K_0}{K_{i_k i_{k+1}}}
-    \end{equation}
-    where $\ell_0$ is a microscopic length scale characterizing the underlying network. The physical distance between sites $i$ and $j$ is then defined as the minimal path length over all admissible paths:
-    \begin{equation}
-      d(i, j) = \min_\gamma \sqrt{d_\gamma^2}
-    \end{equation}
-    This definition is analogous to an electrical resistance network: strongly coupled sites (large $K_{ij}$) are operationally close, while weakly coupled sites are distant. Importantly, this notion of distance is not derived from a pre-existing geometry but emerges from the dynamics of $\chi$ itself.
-
-  \subsubsection*{Continuum Limit and Effective Spatial Line Element}
-    We now consider the continuum limit in which the lattice spacing $\varepsilon \rightarrow 0$ while the physical domain remains finite. For neighboring sites separated by $\varepsilon$ along direction $\hat{n}$, we expand:
-    \begin{equation}
-      \chi_j - \chi_i \simeq \varepsilon \partial_{\hat{n}} \chi
-    \end{equation}
-    In this limit, discrete sums over nearest neighbors reduce to integrals, and the collective interaction term becomes:
-    \begin{equation}
-      \sum_j K_{ij} (\chi_i - \chi_j)^2 \longrightarrow K_0 \varepsilon^2 \int |\nabla \chi|^2 \, d^3 x
-    \end{equation}
-    up to numerical factors of order unity arising from lattice geometry. In the weak-gradient regime, where $\chi = \bar{\chi} + \phi$ with $|\nabla \phi| \ll \bar{\chi}$, the operational distance induces an effective spatial line element of the form:
-    \begin{equation}
-      ds^2 = \ell_0^2 \left[ \delta_{ij} + \mathcal{O}\left(\frac{\partial_i \phi}{\bar{\chi}^2}\right) \right] dx^i dx^j
-    \end{equation}
-    This expression defines an effective spatial geometry to leading order in perturbations. The full spacetime structure, including temporal components, follows from the fundamental kinematic constraint governing the $\chi$ field.
-
-  \subsubsection*{From the Kinematic Constraint to the Field Equation}
-    The $\chi$ field obeys the fundamental kinematic constraint:
-    \begin{equation}
-    (\partial_t \chi)^2 + |\nabla \chi|^2 = c^2
-    \end{equation}
-    which enforces a bounded relaxation dynamics. In the discrete formulation, this constraint takes the form:
-    \begin{equation}
-      \left( \frac{d \chi_i}{d \lambda} \right)^2 = c^2 \left[1 - \frac{1}{c^2} \sum_j K_{ij} (\chi_i - \chi_j)^2 \right]
-    \end{equation}
-    Passing to the continuum and linearizing around a homogeneous background $\chi = \bar{\chi}(t) + \phi(\mathbf{x}, t)$ with $\dot{\bar{\chi}} = c$, we obtain, to leading order:
-    \begin{equation}
-      \partial_t^2 \phi - c^2 \nabla^2 \phi = S[\rho]
-    \end{equation}
-    where $S[\rho]$ represents the source term associated with localized solitonic matter excitations.
-
-  \subsubsection*{Quasi-Static Regime and Newtonian Limit}
-    \label{subsec:newtonian-limit}
-    For gravitational phenomena on astrophysical scales, characteristic timescales are much longer than the light-crossing time of the system.
-    In this quasi-static regime, $\partial_t^2 \phi$ is negligible compared to spatial gradients, and the field equation reduces to:
-    \begin{equation}
-      \nabla^2 \phi = -\frac{1}{c^2} S[\rho]
-    \end{equation}
-    Modeling a localized soliton of rest mass $m$ as an effective source $S[\rho] = 4 \pi G c^2 \rho$, the equation becomes:
-    \begin{equation}
-      \nabla^2 \phi = 4 \pi G \rho
-    \end{equation}
-    which is precisely the Poisson equation for the Newtonian gravitational potential.
-    The physical gravitational potential is identified consistently with the main text as:
-    \begin{equation}
-      \Phi = c^2 \ln \left( \frac{\partial_t \chi}{c} \right) \simeq \frac{c^2}{\bar{\chi}} \phi \quad (|\phi| \ll \bar{\chi})
+      \frac{\partial_t \chi}{c} \simeq 1 + \frac{\Phi}{c^2}.
     \end{equation}
 
-    \subsubsubsection*{Emergence of the Gravitational Constant $G$}
-    \label{sec:gravity-emergence}
-      The gravitational constant $G$ emerges as an \textbf{effective coupling constant} derived from the microscopic parameters $K_0$ and $\chi_c$:
-      \begin{equation}
-        G = \frac{c^4}{16 \pi K_0 \chi_c^2}
-        \label{eq:G-emergent}
-      \end{equation}
-      This relation should be understood as a consistency condition fixing the combination
-      $K_0 \chi_c^2$ once the observed value of $G$ is imposed, rather than as an independent
-      prediction of the theory.
-      This relation illustrates how the observed value of $G$ constrains the microscopic parameters
-      of the theory. For example:
-      \begin{itemize}
-        \item If $\chi_c \approx \ell_P \approx 1.6 \times 10^{-35} \, \text{m}$, then $K_0 \approx 1.3 \times 10^{93} \, \text{m}^{-2}$ to match the observed $G$.
-        \item If $\chi_c \approx c / H_0 \approx 1.4 \times 10^{26} \, \text{m}$, then $K_0 \approx 1.1 \times 10^{-52} \, \text{m}^{-2}$, reflecting a softer network with cosmological-scale effects.
-      \end{itemize}
-      These examples are not predictions but illustrate how different physical regimes correspond
-      to different effective network stiffnesses compatible with the same observed gravitational
-      constant.
+    Under this identification, the collective relaxation dynamics reduce to a Poisson-like
+    equation,
+    \begin{equation}
+      \nabla^2 \Phi = 4\pi G \rho,
+    \end{equation}
+    where $\rho$ denotes the density of localized excitations.
+    The gravitational constant $G$ emerges here as an effective parameter relating the
+    strength of the collective coupling to the density of excitations.
+    Its numerical value is not predicted from first principles in the present framework,
+    but must be fixed empirically, as in other effective theories of gravity.
 
+  \paragraph{Operational notion of geometry.}
+    Because Cosmochrony does not assume a fundamental spacetime metric, spatial geometry
+    is defined operationally through the propagation of $\chi$ variations.
+    Two regions are considered close if perturbations of $\chi$ propagate efficiently
+    between them, and distant otherwise.
 
-  \subsubsubsection*{Equivalence Principle}
-      Within this construction, gravitational mass characterizes the strength with which a soliton acts as a source for $\chi$ perturbations, while inertial mass is determined by the energy stored in the soliton's $\chi$ gradients:
-      \begin{equation}
-        M_{\text{inertial}} = \frac{1}{c^2} \int |\nabla \chi_{\text{soliton}}|^2 \, d^3 x
-      \end{equation}
-      Because both masses originate from the same underlying $\chi$ configuration, they coincide within the present effective description:
-      \begin{equation}
-        M_{\text{grav}} = M_{\text{inertial}}
-      \end{equation}
-      establishing the equivalence principle as an \textbf{emergent property} rather than an independent postulate.
+    In the weak-gradient regime, this operational notion induces an effective spatial
+    geometry that coincides with the standard Newtonian and post-Newtonian descriptions.
+    Spacetime curvature therefore appears as a macroscopic summary of how localized
+    excitations collectively modulate the relaxation and propagation of the $\chi$ field,
+    rather than as a primitive geometric property.
 
-  \subsubsection*{A.20.8 Summary}
-    This appendix has demonstrated explicitly how a purely local collective coupling of the $\chi$ field gives rise to an operational notion of distance, an effective spatial geometry, and a Newtonian gravitational interaction in the quasi-static regime.
-    The construction supports the interpretation of gravitation presented in Section~\ref{sec:gravity-emergence} as a collective, emergent phenomenon rooted in the relaxation dynamics of the $\chi$ field.
+  \paragraph{Scope and limitations.}
+    The construction presented in this subsection is restricted to quasi-static,
+    weak-field regimes where an effective spatial description is meaningful.
+    It does not address strong-field dynamics, relativistic corrections beyond leading
+    order, or quantum fluctuations of the $\chi$ field.
+
+    Its role is to establish that classical gravitational behavior can be recovered
+    consistently from the collective dynamics of $\chi$ without introducing a
+    fundamental metric or an independent gravitational interaction.

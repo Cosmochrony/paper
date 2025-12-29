@@ -1,154 +1,65 @@
 \subsection{Perspectives: Towards a Derivation of the Mass Spectrum}
-\label{subsec:perspectives_mass_spectrum}
-  While the identification of particles as topological solitons provides a qualitative
-  mechanism for inertial mass—understood as the resistance of localized $\chi$
-  configurations to field relaxation—the explicit derivation of the Standard Model
-  mass spectrum, in particular the hierarchy of lepton and quark flavors, remains an
-  open challenge.
+  \label{subsec:perspectives_mass_spectrum}
 
-  In the Cosmochrony framework, this spectrum should not be fixed by arbitrary coupling
-  constants, but should emerge from the intrinsic geometry of the relaxation network
-  $G(V,E)$. The following sections outline a programmatic approach toward such a
-  derivation.
+  While the identification of particles as topological $\chi$-solitons provides a
+  geometric and dynamical origin for inertial mass—understood as resistance to
+  relaxation—the explicit derivation of the observed particle mass spectrum
+  remains an open challenge.
 
-  The conceptual interpretation of inertial mass underlying this programmatic
-  approach is discussed in~\ref{subsec:spectral_mass}.
+  In Cosmochrony, particle masses are not expected to arise from arbitrary
+  coupling constants or symmetry-breaking scales, but from the intrinsic stability
+  properties of localized configurations within the relaxation substrate.
+  This motivates a spectral approach, in which masses emerge as characteristic
+  frequencies associated with small fluctuations around solitonic backgrounds.
 
-  \subsubsection{The Geometric Resonance Hypothesis}
-  We conjecture that observed masses correspond to the eigenvalues of a transfer operator on the discrete network, where the mass $m_n$ of a configuration $n$ follows a scaling law linked to the local curvature induced by the soliton:
-  \begin{equation}
-    m_n c^2 \approx E_{\text{fund}} \cdot \Lambda(Q_n, \mathcal{K})
-  \end{equation}
-  where $E_{\text{fund}}$ is a fundamental energy scale (potentially linked to the Planck scale or the global relaxation density), $Q_n$ is the topological charge (winding number), and $\mathcal{K}$ represents a curvature invariant of the network.
+  \subsubsection{Spectral Stability Hypothesis}
 
-\subsubsection{Future Research Program}
-  Transitioning toward a predictive theory of the mass spectrum requires:
-  \begin{enumerate}
-    \item \textbf{Discretization of the Potential $V(\chi)$}: Demonstrating how the minima of the potential on the network favor specific mass scales over others.
-    \item \textbf{Network Eigenmode Analysis}: Investigating whether the flavor hierarchy (the three generations of particles) can be interpreted as higher-order harmonic modes of a single fundamental topological structure.
-    \item \textbf{Numerical Simulations}: Implementing relaxation algorithms on large-scale graphs to verify if stable configurations spontaneously emerge with mass ratios corresponding to physical constants (e.g., the proton-to-electron mass ratio).
-  \end{enumerate}
+    Let $\chi_{\mathrm{sol}}$ denote a stationary localized configuration.
+    Small perturbations $\delta\chi$ around this background are governed, at the
+    coarse-grained level, by a linear stability operator $\mathcal{L}_{\mathrm{sol}}$,
+    defined as the second variation of an effective localization functional.
+    Normal modes satisfy the eigenvalue problem
+    \begin{equation}
+      \mathcal{L}_{\mathrm{sol}} \psi_n = \lambda_n \psi_n .
+    \end{equation}
 
-  This approach aims to transform the ``magic numbers'' of the Standard Model into geometric properties derivable from
-  the first principles of relaxation dynamics.
+    In regimes where an effective wave description applies, these modes exhibit
+    oscillation frequencies $\omega_n = c\sqrt{\lambda_n}$.
+    Identifying the lowest characteristic frequency with the rest energy of the
+    excitation yields the relation
+    \begin{equation}
+      m_n = \frac{\hbar_{\mathrm{eff}}}{c}\sqrt{\lambda_n},
+    \end{equation}
+    where $\hbar_{\mathrm{eff}}$ acts as an effective conversion factor between
+    geometric frequency and observed inertial mass.
+    In this framework, $\hbar$ is not postulated as a fundamental constant, but
+    emerges phenomenologically from the coarse-grained description of relaxation
+    dynamics.
 
-\subsubsection{Spectral Relaxation Operators and Multi-Level Structure}
-\label{subsec:spectral-relaxation}
+  \subsubsection{Geometric Origin of Mass Hierarchies}
 
-    This subsection introduces a spectral relaxation operator as a technical tool
-    for quantifying the stability properties of localized configurations within the
-    relaxation network.
-    It does not redefine the physical origin of inertial mass, which remains the
-    resistance of solitonic configurations to the relaxation of the $\chi$ field,
-    but provides a mathematical framework for analyzing its spectral manifestation.
+    Within this spectral perspective, mass hierarchies correspond to the structure
+    of the low-lying spectrum of $\mathcal{L}_{\mathrm{sol}}$.
+    Different particle species arise from topologically inequivalent solitonic
+    sectors, while generational structure may reflect higher-order stable modes
+    associated with a single underlying configuration.
 
-  Following the conceptual separation introduced in Section~\ref{subsec:conceptual-implications-and-open-challenges},
-    this appendix outlines an explicit but exploratory specification of the discrete relaxation operator underlying the
-    spectral interpretation of particle masses in Cosmochrony.
-    Rather than proposing a finalized microscopic model, the constructions presented here are intended
-    to clarify how this separation may be implemented in a concrete and computationally tractable way,
-    while preserving the non-circular distinction between fundamental geometry, emergent spacetime, and
-    dynamical interactions.
+    This approach transforms the problem of particle masses into a question of
+    spectral geometry: determining which network connectivities and stability
+    conditions give rise to discrete, hierarchically separated eigenvalues.
 
-    \paragraph{Spectral origin of the mass scale.}
-      While the fundamental relaxation equation of Cosmochrony is first order in time,
-      it fixes the geometric structure of the underlying relaxation network through the
-      graph Laplacian $\Delta_G^{(0)}$.
-      The inertial mass of localized excitations instead emerges from the stability
-      properties of small fluctuations around a stationary solitonic configuration.
+  \subsubsection{Programmatic Outlook}
 
-      To make this explicit, we introduce an effective localization functional,
-      defined at the coarse-grained level,
-      \begin{equation}
-        E[\chi] \;=\; \frac{1}{2}\sum_{(i,j)\in E} w_{ij}^{(0)}(\chi_i-\chi_j)^2 \;+\; E_{\mathrm{loc}}[\chi],
-      \end{equation}
-      where $w_{ij}^{(0)}$ are fixed geometric weights encoding the relaxation network,
-      and $E_{\mathrm{loc}}$ denotes an effective stabilizing contribution ensuring the
-      existence of localized stationary configurations.
-      This functional is not assumed to be fundamental but serves to characterize
-      the stability of solitonic excitations.
+    Developing this proposal into a predictive framework requires:
+    \begin{enumerate}
+      \item constructing explicit classes of solitonic configurations and their
+      associated stability operators,
+      \item analyzing the dependence of the low-lying spectrum on topological and
+      geometric parameters,
+      \item and implementing numerical studies of large relaxation networks to test
+      whether realistic mass hierarchies emerge without fine tuning.
+    \end{enumerate}
 
-      Let $\chi_{\mathrm{sol}}$ be a stationary localized configuration, and consider
-      small fluctuations $\chi = \chi_{\mathrm{sol}} + \delta\chi$.
-      The second variation of $E[\chi]$ around $\chi_{\mathrm{sol}}$ defines a linear operator
-      \begin{equation}
-        \delta^2 E \;=\; \langle \delta\chi,\, \mathcal{L}_{\mathrm{sol}}\,\delta\chi \rangle,
-        \qquad
-        \mathcal{L}_{\mathrm{sol}} \equiv \Delta_G^{(0)} + U_{\mathrm{sol}},
-      \end{equation}
-      where $U_{\mathrm{sol}}$ is a local restoring operator determined by the background
-      configuration.
-
-      In the regime where an effective wave description applies, small fluctuations
-      are governed by a Klein--Gordon-type equation,
-      \begin{equation}
-        \left(\frac{1}{c^2}\partial_t^2 + \mathcal{L}_{\mathrm{sol}}\right)\delta\chi = 0.
-      \end{equation}
-      For normal modes $\delta\chi(t)=e^{-i\omega t}\psi_n$, one obtains the spectral problem
-      \begin{equation}
-        \mathcal{L}_{\mathrm{sol}}\psi_n = \lambda_n \psi_n,
-        \qquad
-        \omega_n^2 = c^2 \lambda_n .
-      \end{equation}
-      Identifying the rest frequency $\omega_0$ with the inertial mass via
-      $\omega_0 = m c^2/\hbar$ yields
-      \begin{equation}
-        m_n = \frac{\hbar}{c}\sqrt{\lambda_n}.
-      \end{equation}
-
-      Hence, particle masses in Cosmochrony arise as square roots of the eigenvalues
-      of the linearized relaxation operator governing the stability of localized
-      configurations.
-
-  \subsubsubsection{*Fundamental spectral operator}
-
-  Let $G=(V,E)$ be a discrete network encoding the intrinsic connectivity of the pre-geometric substrate.
-  The fundamental relaxation operator is defined as a weighted graph Laplacian
-  \begin{equation}
-  (\Delta_G^{(0)} \psi)_i = \sum_{j\sim i} w_{ij}^{(0)} (\psi_i - \psi_j),
-  \end{equation}
-  where the weights $w_{ij}^{(0)} = 1/K_{ij}^{(0)}$ encode the intrinsic compliance of the relaxation network.
-  At this level, $K_{ij}^{(0)}$ are fixed coefficients determined by network topology and symmetry
-  constraints, and do not depend on the dynamical state of the $\chi$ field.
-
-  The eigenvalue problem
-  \begin{equation}
-    \Delta_G^{(0)} \psi_n = \lambda_n \psi_n
-  \end{equation}
-  defines a discrete spectrum.
-  Within the Cosmochrony framework, particle masses are conjectured to scale as
-  \begin{equation}
-    m_n c^2 \propto \sqrt{\lambda_n},
-  \end{equation}
-  so that mass hierarchies emerge as geometric properties of the relaxation network rather than as
-  parameters encoded in a fundamental potential.
-
-\subsubsubsection{*Emergent geometric level}
-
-  On larger scales, coarse-grained configurations of the $\chi$ field define an effective geometric
-  description.
-  This level governs gravitational phenomena, time dilation, and cosmological expansion through the
-  local and global rates of $\chi$ relaxation.
-  Importantly, while this emergent geometry influences the propagation of excitations, it does not
-  redefine the fundamental spectral operator $\Delta_G^{(0)}$.
-
-\subsubsubsection{*Dynamical and interaction level}
-
-  Fast processes such as radiation, scattering, and decoherence correspond to interaction-induced
-  redistributions of relaxation potential within the $\chi$ field.
-  At this effective level, it is natural to consider corrections to the relaxation dynamics encoded
-  by coefficients $K_{ij}(\chi)$ that depend smoothly on coarse-grained field variations.
-  Such dependencies modify local dynamics and observable interaction rates but do not enter the
-  definition of the fundamental spectral problem associated with mass generation.
-
-\subsubsubsection{*Boundary conditions and numerical implementation}
-
-  For numerical studies, the graph $G$ may be taken as large but finite, with periodic boundary
-  conditions to minimize edge effects, or with Dirichlet or Neumann conditions to model confined
-  regions.
-  Standard sparse eigensolvers may then be used to compute the low-lying spectrum of $\Delta_G^{(0)}$
-  and to test whether simple network connectivities can reproduce observed mass hierarchies.
-
-  These constructions illustrate how Cosmochrony may be developed into a calculable spectral program,
-  while preserving the non-circular separation between fundamental geometry, emergent spacetime, and
-  dynamical interactions.
+    The purpose of the present section is not to claim a derivation of the Standard
+    Model spectrum, but to establish a concrete and non-arbitrary route by which such
+    a derivation could, in principle, be achieved within the Cosmochrony framework.

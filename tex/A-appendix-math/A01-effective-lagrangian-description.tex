@@ -1,29 +1,80 @@
 \subsection{Effective Lagrangian Description as a Hydrodynamic Limit}
   \label{subsec:hydrodynamic-limit}
 
-  \subsubsection*{From Discrete Network to Continuum}
-    This appendix provides a \textbf{technical derivation} of the effective Lagrangian density $\mathcal{L}_{\mathrm{CC}}$
-    in the continuum limit, where the discrete network dynamics (Section~\ref{subsec:geometric-action})
-    are approximated by smooth fields.
-    The connectivity matrix $K_{ij}$, introduced in Section~\ref{subsec:geometric-action},
-    is mapped to an effective metric $g_{\mu\nu}$ through the relation:
-    \[
-      g_{\mu\nu} dx^\mu dx^\nu \approx \sum_{(u,v) \in \text{path}} \frac{1}{K_{uv}}
-    \]
-    This mapping ensures that the emergent geometry is consistent with the fundamental relational structure of the
-    $\chi$-field.
+  \noindent\emph{The purpose of this subsection is not to introduce any additional
+fundamental structure into Cosmochrony, but to provide an effective hydrodynamic
+tool for connecting the relational $\chi$ framework to standard geometric
+formulations in regimes where a spacetime description becomes operationally
+meaningful.}
 
-  \subsubsection*{From Discrete to Continuum}
-    The discrete dynamics of $\chi$ (Equation~\ref{eq:discrete-dynamics} in Section~\ref{subsec:hamiltonian-derivation})
-    are recovered in the continuum limit, where the sum over neighbors becomes a spatial integral.
-    The effective Lagrangian density $\mathcal{L}_{\mathrm{CC}}$ is then constructed to reproduce the continuum dynamics
-    while preserving the constraints of the discrete network.
+  \subsubsection*{From Relational Dynamics to an Effective Continuum Description}
 
-  \subsubsection*{Gravity and Time: The Geometric Relaxation Term ($\mathcal{L}_{\text{Gravity/Time}}$)}
-    This term ensures the emergence of General Relativity (GR) in the macroscopic limit and imposes the fundamental
-    directionality of time via the irreversible relaxation of $\chi$:
+    At the fundamental level, Cosmochrony is defined without reference to any
+    pre-existing spacetime manifold or metric structure.
+    The dynamics of the $\chi$ field are relational and are specified directly in
+    terms of local relaxation rules and coupling relations between configurations
+    (Section~\ref{subsec:geometric-action}).
+
+    In regimes where $\chi$ varies smoothly over large scales, it becomes convenient
+    to introduce a continuum approximation in order to compare the theory with
+    standard geometric and field-theoretic formulations.
+    This approximation does not alter the underlying ontology but provides a
+    coarse-grained description suitable for analytical calculations and contact with
+    general relativity.
+
+  \subsubsection*{Hydrodynamic Limit and Emergent Geometry}
+
+    In this hydrodynamic regime, the discrete relational couplings encoded in the
+    connectivity matrix $K_{ij}$ can be summarized by effective continuum quantities.
+    Operationally, distances are defined through the resistance encountered by the
+    propagation of $\chi$-relaxation across the network.
+    In the continuum limit, this leads to an effective line element of the form
     \[
-      \mathcal{L}_{\text{Gravity/Time}} = \frac{1}{16 \pi G_{\text{eff}}} \cdot F(\chi) R - \Lambda_{\text{Flow}}^4 \cdot \chi
+      g_{\mu\nu} \, dx^\mu dx^\nu \;\sim\; \sum_{(u,v)\in\text{path}} \frac{1}{K_{uv}},
     \]
-    where $R$ is the Ricci scalar, $F(\chi)$ is the non-minimal coupling function, and $\Lambda_{\text{Flow}}$ is a constant
-    ensuring the monotonic relaxation of $\chi$.
+    which should be understood as a \emph{derived diagnostic} of the relational
+    structure, not as a fundamental geometric postulate.
+
+    The effective metric $g_{\mu\nu}$ therefore encodes the coarse-grained density of
+    correlations in the $\chi$ field and serves as a convenient macroscopic summary of
+    its relational dynamics.
+
+  \subsubsection*{Effective Lagrangian Representation}
+
+    To reproduce the continuum evolution equations obtained from the discrete
+    relaxation dynamics (Equation~\ref{eq:discrete-dynamics}), one may introduce an
+    effective Lagrangian density $\mathcal{L}_{\mathrm{CC}}$.
+    This Lagrangian is constructed to match the hydrodynamic behavior of the $\chi$
+    field in the smooth regime, while remaining fully subordinate to the underlying
+    relational description.
+
+    In this representation, terms resembling those of standard geometric theories
+    naturally appear.
+    In particular, a curvature-like contribution emerges as the leading-order
+    descriptor of spatial variations in the relaxation rate:
+    \[
+      \mathcal{L}_{\text{eff}} \;=\; \frac{1}{16\pi G_{\text{eff}}} \, F(\chi)\, R
+      \;-\; \Lambda_{\text{flow}}^{4}\,\chi \;+\; \cdots
+    \]
+    where $R$ is the Ricci scalar associated with the effective metric, $F(\chi)$ is a
+    non-minimal coupling function, and $\Lambda_{\text{flow}}$ enforces the monotonic
+    relaxation of $\chi$.
+
+    Crucially, this Lagrangian does \emph{not} define the fundamental dynamics of the
+    theory.
+    It is an effective bookkeeping device that reproduces the macroscopic behavior
+    of $\chi$ once a geometric interpretation becomes applicable.
+
+  \subsubsection*{Status and Limitations}
+
+    The hydrodynamic Lagrangian formulation presented here should be understood as an
+    auxiliary representation, not as an alternative foundation of Cosmochrony.
+    All physical content remains encoded in the relational relaxation dynamics of the
+    $\chi$ field.
+
+    The emergence of Einstein-like field equations in this limit reflects the
+    universality of geometric descriptions for slowly varying collective phenomena,
+    rather than the presence of a fundamental spacetime structure.
+    As such, singularities or breakdowns of the effective metric signal only the
+    limits of the hydrodynamic approximation, not a failure of the underlying
+    $\chi$ dynamics.
