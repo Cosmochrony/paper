@@ -47,10 +47,36 @@
         Unlike $\Lambda$CDM, where low-$\ell$ suppression is treated as a statistical
         accident, Cosmochrony interprets it as a structural consequence of the finite
         relaxation capacity of the largest-scale $\chi$ configurations.
-        The envelope is illustrative and does not represent a parameter-fitted
-        prediction.}
+        The shaded region illustrates an attenuation envelope that can be summarized
+        phenomenologically by Eq.~\eqref{eq:cc_lowell_envelope}.}
       \label{fig:cmb_lowell_unsmoothed}
     \end{figure}
+
+  \paragraph{Phenomenological parametrization.}
+    To make the schematic attenuation envelope of Fig.~6 minimally quantitative without
+    performing a full Boltzmann treatment, we introduce a two-parameter phenomenological
+    model in which the low-$\ell$ power is multiplicatively suppressed relative to the
+    $\Lambda$CDM best-fit spectrum:
+    \begin{equation}
+      C_\ell^{\mathrm{CC}}
+      = C_\ell^{\Lambda\mathrm{CDM}}
+      \left[1-\alpha \exp\!\left(-\frac{\ell}{\ell_0}\right)\right],
+      \qquad \alpha\in[0,1],\;\;\ell_0>0.
+      \label{eq:cc_lowell_envelope}
+    \end{equation}
+    Equivalently, in terms of $D_\ell \equiv \ell(\ell+1)C_\ell/(2\pi)$,
+    $D_\ell^{\mathrm{CC}} = D_\ell^{\Lambda\mathrm{CDM}}\left[1-\alpha e^{-\ell/\ell_0}\right]$.
+    In this parametrization, $\alpha$ sets the large-angle suppression amplitude, while
+    $\ell_0$ controls the transition scale beyond which the spectrum rapidly converges
+    back to $\Lambda$CDM.
+
+  \paragraph{Indicative low-$\ell$ fit.}
+    An indicative estimate of $(\alpha,\ell_0)$ can be obtained by fitting the ratio
+    $R_\ell \equiv D_\ell^{\mathrm{obs}}/D_\ell^{\Lambda\mathrm{CDM}}$ over a low-$\ell$
+    range (e.g.\ $\ell=2\ldots 30$) with cosmic-variance dominated uncertainties
+    $\sigma(R_\ell)\simeq \sqrt{2/(2\ell+1)}$.
+    This procedure is not intended as a detection claim but as a compact way to replace
+    the hand-drawn envelope by a reproducible two-parameter summary of the effect.
 
   \paragraph{Conceptual distinction from $\Lambda$CDM.}
     In $\Lambda$CDM, deviations at low $\ell$ are explained \emph{a posteriori}

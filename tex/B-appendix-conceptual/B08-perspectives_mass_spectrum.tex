@@ -1,20 +1,19 @@
-\subsection{Perspectives: Towards a Derivation of the Mass Spectrum}
+\subsection{Perspectives: Towards a Derivation of the Proton-to-Electron Mass Ratio}
   \label{subsec:perspectives_mass_spectrum}
 
-  While the identification of particles as topological $\chi$-solitons provides a
-  geometric and dynamical origin for inertial mass—understood as resistance to
-  relaxation—the explicit derivation of the observed particle mass spectrum
-  remains an open challenge.
-
-  In Cosmochrony, particle masses are not expected to arise from arbitrary
-  coupling constants or symmetry-breaking scales, but from the intrinsic stability
-  properties of localized configurations within the relaxation substrate.
-  This motivates a spectral approach, in which masses emerge as characteristic
-  frequencies associated with small fluctuations around solitonic backgrounds.
+  The proton-to-electron mass ratio ($m_p/m_e \simeq 1836$) is one of the most
+  precisely measured dimensionless constants in physics.
+  Within the Cosmochrony framework, the aim of this section is not to derive this
+  value from first principles, but to clarify how such a ratio could emerge from
+  the spectral and topological structure of localized $\chi$-solitons.
+  The discussion below should therefore be understood as a minimal spectral
+  ansatz, intended to identify the relevant mechanisms and constraints rather than
+  to provide a complete microscopic calculation.
 
   \subsubsection{Spectral Stability Hypothesis}
 
-    Let $\chi_{\mathrm{sol}}$ denote a stationary localized configuration.
+    Let $\chi_{\mathrm{sol}}$ denote a stationary localized configuration of the
+    $\chi$ field.
     Small perturbations $\delta\chi$ around this background are governed, at the
     coarse-grained level, by a linear stability operator $\mathcal{L}_{\mathrm{sol}}$,
     defined as the second variation of an effective localization functional.
@@ -26,40 +25,157 @@
     In regimes where an effective wave description applies, these modes exhibit
     oscillation frequencies $\omega_n = c\sqrt{\lambda_n}$.
     Identifying the lowest characteristic frequency with the rest energy of the
-    excitation yields the relation
+    excitation leads to the effective relation
     \begin{equation}
-      m_n = \frac{\hbar_{\mathrm{eff}}}{c}\sqrt{\lambda_n},
+      m_n = \sqrt{\lambda_n}\,\chi_c ,
     \end{equation}
-    where $\hbar_{\mathrm{eff}}$ acts as an effective conversion factor between
-    geometric frequency and observed inertial mass.
-    In this framework, $\hbar$ is not postulated as a fundamental constant, but
-    emerges phenomenologically from the coarse-grained description of relaxation
-    dynamics.
+    where $\chi_c$ denotes a characteristic length scale associated with the spatial
+    extent of the solitonic configuration.
 
-  \subsubsection{Geometric Origin of Mass Hierarchies}
+    \paragraph{Dimensional consistency and effective scales.}
+      The relation above should be understood as an effective parametrization.
+      If $\chi_c$ is a pure length scale, then $\lambda_n$ must implicitly incorporate
+      the appropriate conversion factors (e.g.\ powers of $c$ and an effective action
+      scale) for $m_n$ to carry dimensions of mass.
+      Equivalently, $\chi_c$ may be viewed as absorbing such factors, including the
+      emergent scale $\hbar_{\mathrm{eff}}/c$ discussed in earlier sections.
+      A first-principles derivation of these effective scales from the microscopic
+      $\chi$ dynamics lies beyond the scope of the present work.
+      Throughout the remainder of this section, the relation
+      $m_n=\sqrt{\lambda_n}\,\chi_c$ is used as a convenient coarse-grained description,
+      without implying that $\chi_c$ is a universal fundamental constant.
 
-    Within this spectral perspective, mass hierarchies correspond to the structure
-    of the low-lying spectrum of $\mathcal{L}_{\mathrm{sol}}$.
-    Different particle species arise from topologically inequivalent solitonic
-    sectors, while generational structure may reflect higher-order stable modes
-    associated with a single underlying configuration.
+  \subsubsection{Elementary versus Composite Spectral Structures}
 
-    This approach transforms the problem of particle masses into a question of
-    spectral geometry: determining which network connectivities and stability
-    conditions give rise to discrete, hierarchically separated eigenvalues.
+    A crucial distinction must be made between elementary and composite excitations
+    within the spectral stability framework.
+    Elementary particles, such as leptons, are expected to correspond to
+    topologically elementary solitonic configurations whose inertial mass is
+    dominated by a single lowest stability eigenvalue.
+    By contrast, baryonic excitations are composite objects, whose mass reflects the
+    combined contribution of several coupled stability modes associated with a bound
+    configuration.
 
-  \subsubsection{Programmatic Outlook}
+    In this view, mass ratios between elementary and composite particles cannot, in
+    general, be expressed as the ratio of two single eigenvalues of the same operator.
+    Rather, they take the schematic form
+    \begin{equation}
+      \frac{m_{\mathrm{comp}}}{m_{\mathrm{elem}}}
+      \;\sim\;
+      \frac{\sum_k \sqrt{\lambda^{(\mathrm{comp})}_k}}
+      {\sqrt{\lambda^{(\mathrm{elem})}_0}},
+      \label{eq:mass_ratio_schematic}
+    \end{equation}
+    where $\lambda^{(\mathrm{elem})}_0$ denotes the fundamental stability mode of an
+    elementary soliton, and $\{\lambda^{(\mathrm{comp})}_k\}$ label the low-lying modes
+    contributing to a composite bound structure.
 
-    Developing this proposal into a predictive framework requires:
-    \begin{enumerate}
-      \item constructing explicit classes of solitonic configurations and their
-      associated stability operators,
-      \item analyzing the dependence of the low-lying spectrum on topological and
-      geometric parameters,
-      \item and implementing numerical studies of large relaxation networks to test
-      whether realistic mass hierarchies emerge without fine tuning.
-    \end{enumerate}
+  \subsubsection{Ansatz for the Proton as a Composite Soliton}
 
-    The purpose of the present section is not to claim a derivation of the Standard
-    Model spectrum, but to establish a concrete and non-arbitrary route by which such
-    a derivation could, in principle, be achieved within the Cosmochrony framework.
+    As an exploratory working hypothesis, inspired by but not equivalent to Skyrme-type
+    models, we consider the proton as a composite solitonic excitation.
+    Specifically, we assume:
+    \begin{itemize}
+      \item The electron corresponds to a fundamental soliton with topological charge
+      $Q_e = 1$ and eigenvalue $\lambda_e$.
+      \item The proton corresponds to a bound state of three such elementary solitons,
+      with total topological charge $Q_p = 3$, supplemented by an additional
+      collective binding mode with eigenvalue $\lambda_{\mathrm{bind}}$.
+    \end{itemize}
+
+    The choice $Q_p=3$ is motivated by the observed threefold constituent structure
+    of baryons, but is not derived here from a classification of solitonic topological
+    sectors.
+    Other composite configurations are not excluded by the present framework.
+
+  \subsubsection{Mass Ratio from Spectral Scaling}
+
+    Under the above assumptions, the effective eigenvalue associated with the proton
+    may be written schematically as
+    \begin{equation}
+      \lambda_p \;\approx\; \lambda_{\mathrm{bind}} + 3\lambda_e ,
+    \end{equation}
+    leading to the mass ratio
+    \begin{equation}
+      \frac{m_p}{m_e}
+      \;\approx\;
+      \sqrt{\frac{\lambda_{\mathrm{bind}} + 3\lambda_e}{\lambda_e}} .
+    \end{equation}
+
+    In the binding-dominated regime $\lambda_{\mathrm{bind}} \gg \lambda_e$, this
+    expression reduces to
+    \begin{equation}
+      \frac{m_p}{m_e} \;\approx\; \sqrt{\frac{\lambda_{\mathrm{bind}}}{\lambda_e}} .
+    \end{equation}
+    Matching the observed value $m_p/m_e \simeq 1836$ therefore imposes the spectral
+    constraint
+    \begin{equation}
+      \frac{\lambda_{\mathrm{bind}}}{\lambda_e}
+      \;\sim\; 3.4 \times 10^{6}.
+    \end{equation}
+
+    This relation is not derived here but identified as a target condition on the
+    relative spectral scales of elementary and composite solitonic sectors.
+    Whether such a hierarchy can arise naturally from specific topological
+    connectivities and stability operators remains an open problem.
+
+  \subsubsection{Open Questions and Research Directions}
+
+    Several key questions must be addressed to turn this ansatz into a predictive
+    framework:
+    \begin{itemize}
+      \item What topological features of composite solitons determine the magnitude
+      of $\lambda_{\mathrm{bind}}$?
+      \item Does a universal scaling law $\lambda_{\mathrm{bind}} =
+      f(Q_p,Q_e,\chi_c)$ exist?
+      \item Is the ratio $m_p/m_e$ stable under perturbations of the effective
+      potential $V(\chi)$?
+      \item Can the choice $Q_p=3$ be derived from a systematic classification of
+      solitonic topological sectors?
+    \end{itemize}
+
+  \subsubsection{Summary}
+
+    Within the Cosmochrony framework, the proton-to-electron mass ratio is interpreted
+    not as a fundamental input, but as an emergent constraint on the relative spectral
+    organization of elementary and composite solitonic excitations.
+    The present analysis provides a consistent toy model that identifies the
+    conditions such a framework must satisfy, while leaving their explicit
+    realization to future analytical and numerical work.
+
+\subsection{Role of $V(\chi)$ and Outlook}
+  \label{subsec:role_vchi_mass}
+
+  The effective potential $V(\chi)$ is expected to play a secondary role in mass
+  generation, primarily by controlling fine splittings within a given solitonic
+  sector rather than by setting the overall mass scale.
+
+  \subsubsection{Eigenvalue Splittings and Fine Structure}
+
+    In general, one may write
+    \begin{equation}
+      V(\chi) = \sum_n \lambda_n (\chi - \chi_c)^n ,
+    \end{equation}
+    where the coefficients $\lambda_n$ encode nonlinear interactions between
+    solitonic modes.
+    Differences such as the neutron--proton mass splitting could arise from small
+    electromagnetic or topological corrections to this potential.
+    No quantitative prediction is attempted here in the absence of an explicit form
+    for $V(\chi)$.
+
+  \subsubsection{Future Work}
+
+    Key directions for future investigation include:
+    \begin{itemize}
+      \item Deriving the effective potential $V(\chi)$ from the underlying relaxation
+      dynamics of the $\chi$ field.
+      \item Constructing and classifying composite solitonic configurations and their
+      associated stability operators.
+      \item Performing numerical simulations to test whether large spectral
+      hierarchies can arise without fine tuning.
+    \end{itemize}
+
+    In this sense, topology constrains the structure of the stability spectrum, while
+    $V(\chi)$ controls fine splittings.
+    The emergence of observed mass hierarchies is thus framed as a concrete but open
+    spectral-geometric problem within the Cosmochrony framework.
