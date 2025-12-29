@@ -1,39 +1,50 @@
 \subsection{Estimates of $\chi$-Field Parameters}
   \label{subsec:chi-parameters}
 
-  This section compiles order-of-magnitude estimates for the effective parameters
-  governing the $\chi$-field dynamics.
-  These estimates are not presented as fundamental constants,
-  but as \emph{consistency ranges} inferred from observational constraints
-  and from the requirement that the emergent description reproduces known
-  gravitational and cosmological scales.
+  The quantities introduced in this section, including effective coupling matrices and spectral
+  modes, should be understood as properties of a projected relaxation operator acting on a finite
+  function space.
 
-  The parameters considered here include:
+  They characterize how localized $\chi$ configurations respond to perturbations within a given
+  resolution scale, rather than representing fundamental degrees of freedom of the theory.
+  The parameters considered here characterize the effective response of the $\chi$
+  relaxation dynamics in regimes where a coarse-grained geometric description applies.
+  They do not correspond to fundamental constants of the theory, but to emergent or
+  environment-dependent scales encoding how localized structures constrain relaxation.
+
+  The relevant parameters include:
   \begin{itemize}
-    \item the \textbf{connectivity scale} $K_0$ entering the collective coupling $K_{ij}$,
-    \item the \textbf{characteristic $\chi$ scale} $\chi_c$,
-    \item effective parameters $(\lambda,\eta)$ controlling solitonic stabilization,
+    \item the \textbf{effective coupling scale} $K_0$ entering the projected kernel $K_{ij}$,
+    \item the \textbf{characteristic $\chi$ scale} $\chi_c$ at which macroscopic geometric
+    effects become significant,
+    \item effective solitonic parameters $(\lambda,\eta)$ controlling stabilization
+    mechanisms,
     \item the maximal relaxation speed $c$.
   \end{itemize}
 
-  \subsubsection{Connectivity Scale $K_0$ and Characteristic Scale $\chi_c$}
+  \subsubsection{Effective Coupling Scale $K_0$ and Characteristic Scale $\chi_c$}
 
-    In the continuum limit, the effective gravitational coupling emerges from the
-    collective stiffness of the $\chi$ network.
+    In weak-field regimes admitting an effective geometric description, the gravitational
+    coupling emerges from the collective stiffness of the $\chi$ relaxation dynamics.
     Dimensional consistency and matching to the Newtonian limit yield the relation
     \begin{equation}
       G = \frac{c^4}{16 \pi K_0 \chi_c^2},
       \label{eq:G-emergent}
     \end{equation}
-    which links the emergent gravitational constant $G$ to two independent scales:
-    \begin{itemize}
-      \item $K_0$, with dimensions $[\mathrm{length}]^{-2}$, characterizing the maximal
-      local connectivity of the network,
-      \item $\chi_c$, the characteristic magnitude of $\chi$ over which macroscopic
-      geometric effects become significant.
-    \end{itemize}
+    which links the effective gravitational constant $G$ to two emergent scales.
 
-    Equation~\eqref{eq:G-emergent} admits two physically distinct regimes:
+    The parameter $K_0$, with dimensions $[\mathrm{length}]^{-2}$, characterizes the maximal
+    strength of the collective relaxation response in a homogeneous background.
+    It should be understood as a property of the projected relaxation operator introduced
+    for numerical and phenomenological purposes, not as a microscopic connectivity.
+
+    The scale $\chi_c$ sets the characteristic magnitude of $\chi$ over which structural
+    variations significantly modulate relaxation and thereby induce macroscopic geometric
+    effects.
+    It marks the breakdown scale of the homogeneous relaxation regime, beyond which
+    localized configurations noticeably slow the relaxation flow.
+
+    Equation~\eqref{eq:G-emergent} admits two physically distinct normalization regimes:
 
     \paragraph{Planck-scale normalization.}
       If $\chi_c$ is associated with the Planck length
@@ -42,53 +53,57 @@
       \begin{equation}
         K_0 \sim 10^{93}\,\mathrm{m}^{-2}.
       \end{equation}
-      In this regime, the $\chi$ network is extremely stiff,
-      and gravitational effects are interpreted as arising from microscopic connectivity
-      close to quantum-gravitational scales.
+      In this regime, the effective relaxation dynamics is extremely stiff, and gravitational
+      phenomena are interpreted as arising from structural constraints operating near the
+      threshold where classical spacetime descriptions cease to apply.
 
     \paragraph{Cosmological-scale normalization.}
       If instead $\chi_c$ is identified with the present Hubble scale
       $c/H_0 \simeq 1.4 \times 10^{26}\,\mathrm{m}$,
-      the inferred connectivity is
+      the inferred effective coupling scale is
       \begin{equation}
         K_0 \sim 10^{-52}\,\mathrm{m}^{-2}.
       \end{equation}
-      This corresponds to a much softer network,
-      where large-scale cosmological relaxation dominates the effective geometry.
-
-      Both regimes are internally consistent at the level of dimensional analysis;
+      This regime corresponds to a much softer collective response, dominated by large-scale
+      cosmological relaxation.
+      Both normalizations are internally consistent at the level of dimensional analysis;
       discriminating between them requires additional observational input.
 
   \subsubsection{Effective Solitonic Parameters $(\lambda,\eta)$}
 
-    Localized particle-like excitations are modeled as stabilized configurations
-    of the $\chi$ field.
-    In generic solitonic models, the characteristic mass scale satisfies
+    Localized particle-like excitations are modeled as stabilized configurations of the
+    $\chi$ field.
+    Their persistence against relaxation is controlled by effective parameters governing
+    nonlinear self-organization and structural amplitude.
+
+    In generic solitonic models, the characteristic energy scale satisfies
     \begin{equation}
       m_{\text{soliton}} \propto \sqrt{\lambda}\,\eta^3,
     \end{equation}
-    where $\lambda$ controls nonlinear self-interaction strength
-    and $\eta$ sets the characteristic field amplitude.
+    where $\lambda$ controls the strength of nonlinear stabilization and $\eta$ sets the
+    typical amplitude of the configuration.
+    Within Cosmochrony, these parameters are not universal constants but encode how a given
+    topological configuration resists the global relaxation flow.
 
-    Matching the electron mass scale provides an indicative constraint:
+    Matching the electron mass scale provides an indicative constraint,
     \begin{equation}
       \lambda \sim 10^{-116}\,\mathrm{m}^{-2}
     \end{equation}
     for $\eta \sim \mathcal{O}(1)$ in naturalized units.
-    This extremely small value should not be interpreted as a fundamental constant,
-    but as evidence that $\lambda$ is an emergent or environment-dependent parameter,
-    analogous to effective couplings in condensed-matter systems.
+    Such an extremely small value should not be interpreted as fine-tuning, but as evidence
+    that $\lambda$ is an emergent parameter sensitive to the internal structure and
+    environment of the excitation, in close analogy with effective couplings in
+    condensed-matter systems.
 
-    Mass hierarchies between particle species (e.g.\ $m_p/m_e \simeq 1836$)
-    would then arise from differences in topological class,
-    effective $\eta$, or collective stabilization mechanisms,
-    rather than from a single universal coupling.
+    Mass hierarchies between particle species (e.g.\ $m_p/m_e \simeq 1836$) would then arise
+    from differences in topological class, effective amplitudes, or collective stabilization
+    mechanisms, rather than from a single universal coupling.
 
   \subsubsection{Relaxation Speed and Cosmological Constraints}
 
-    The maximal relaxation speed $c$ is identified with the invariant speed
-    of relativistic kinematics.
-    At the cosmological level, the background evolution implies
+    The maximal relaxation speed $c$ is identified with the invariant speed of relativistic
+    kinematics.
+    At the cosmological level, the homogeneous relaxation dynamics imply
     \begin{equation}
       H(t) \simeq \frac{\dot{\chi}}{\chi},
     \end{equation}
@@ -98,26 +113,28 @@
       \sim 4 \times 10^{26}\,\mathrm{m}.
     \end{equation}
 
-    This identification reproduces the observed age of the Universe
-    $t_0 \sim \chi(t_0)/c \simeq 13.8\,\mathrm{Gyr}$
-    without introducing additional cosmological parameters.
+    This identification reproduces the observed age of the Universe,
+    $t_0 \sim \chi(t_0)/c \simeq 13.8\,\mathrm{Gyr}$,
+    without introducing additional cosmological parameters or modifying late-time
+    dynamics.
 
   \subsubsection{Observational Constraints}
 
-    Current observations impose indirect constraints on the allowed parameter space:
+    Current observations impose indirect constraints on the allowed effective parameter
+    space:
     \begin{itemize}
-      \item \textbf{CMB anisotropies} constrain large-scale $\chi$ fluctuations,
-      disfavouring values of $\chi_c$ that would over-amplify low-$\ell$ modes.
-      \item \textbf{Hubble tension} can be interpreted as probing different effective
-      $\chi$ regimes at low and high redshift.
-      \item \textbf{Gravitational-wave propagation} constrains variations of $K_0$
-      in strong-field environments to remain subdominant.
+      \item \textbf{CMB anisotropies} constrain large-scale $\chi$ fluctuations, disfavouring
+      values of $\chi_c$ that would excessively amplify low-$\ell$ modes.
+      \item \textbf{The Hubble tension} may be interpreted as probing different effective
+      $\chi$ relaxation regimes at low and high redshift.
+      \item \textbf{Gravitational-wave propagation} constrains variations of the effective
+      coupling scale $K_0$ in strong-field environments to remain subdominant.
     \end{itemize}
 
   \subsubsection{Summary and Status}
 
     Table~\ref{tab:chi-parameters} summarizes the indicative ranges discussed above.
-    These values should be understood as \emph{consistency windows}, not predictions.
+    These values define consistency windows rather than predictions.
 
     \begin{table}[h]
       \centering
@@ -133,6 +150,6 @@
       \end{tabular}
     \end{table}
 
-    A first-principles derivation of these parameters from the microscopic
-    $\chi$ dynamics remains an open problem and is identified as a key target
-    for future analytical and numerical work.
+    A first-principles derivation of these effective parameters from the underlying
+    $\chi$ relaxation dynamics remains an open problem and is identified as a central
+    target for future analytical and numerical work.

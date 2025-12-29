@@ -1,114 +1,121 @@
 \subsection{Simulation Algorithms for $\chi$-Field Dynamics}
   \label{subsec:simulation-algorithms}
 
-  This appendix presents numerical methods used to explore the dynamical behavior of the
-  $\chi$ field under the relaxation principles introduced in the main text.
-  Its purpose is neither to define the fundamental ontology of Cosmochrony nor to privilege
-  a specific microscopic substrate, but to provide a controlled computational framework in
-  which the consistency, stability, and collective behavior of $\chi$ configurations can be
-  investigated.
+  The numerical simulations presented here do not assume an underlying network or lattice structure
+  for the $\chi$ field.
+  Instead, they rely on a finite basis representation chosen for numerical stability and diagnostic
+  clarity, analogous to spectral, finite-element, or wavelet-based methods commonly used in
+  continuum field theories.
 
-  The simulations described here serve four complementary goals:
+  The apparent graph-like structure appearing in the implementation reflects this choice of basis
+  and sampling, not a physical discretization of the $\chi$ substrate.
+
+  The numerical simulations presented in this appendix pursue four complementary goals:
   \begin{enumerate}
     \item to verify the internal consistency of the bounded relaxation dynamics,
-    \item to test the spontaneous formation and persistence of localized excitations,
-    \item to study the response of the field to perturbations and external constraints,
-    \item to extract preliminary spectral signatures associated with stable configurations.
+    \item to test the spontaneous formation and persistence of localized configurations,
+    \item to study the response of the $\chi$ field to perturbations and imposed constraints,
+    \item to extract structural spectral signatures associated with stable configurations.
   \end{enumerate}
 
-  All numerical constructions should therefore be understood as \emph{effective
-representations}.
-  They do not assume a fundamental spacetime geometry, nor do they fix a unique microscopic
-  realization of the theory.
-  Their role is analogous to lattice simulations in QCD: exploratory, non-fundamental, yet
-  indispensable for probing non-linear and collective regimes.
+  These simulations implement finite-dimensional representations of the fundamentally
+  continuous $\chi$ relaxation dynamics.
+  They do not assume a fundamental spacetime geometry, nor do they select a unique
+  microscopic realization of the theory.
+  Their role is analogous to numerical approximations commonly used in continuum field
+  theories to probe non-linear and collective regimes that are analytically inaccessible.
 
-  \paragraph{Discrete representation and numerical substrate.}
-    The $\chi$ field is represented on a discrete set of sites $\{i\}$, each carrying a scalar
-    value $\chi_i(\lambda)$, where $\lambda$ is the monotonic relaxation parameter introduced in
+  \paragraph{Numerical representation and computational substrate.}
+    For numerical purposes, the $\chi$ field is represented on a finite set of degrees of
+    freedom $\{\chi_i(\lambda)\}$, where the index $i$ labels elements of a chosen numerical
+    basis and $\lambda$ denotes the monotonic relaxation parameter introduced in
     Section~\ref{subsec:parameter-independent-relaxation}.
-    Connectivity between sites is encoded by a local coupling matrix $K_{ij}$.
+    The interactions between these degrees of freedom are encoded through a coupling
+    matrix $K_{ij}$, which represents a finite projection of the effective relaxation kernel.
 
-    This discrete structure should be regarded strictly as a numerical scaffold.
-    It does not represent a physical lattice, causal set, or spacetime discretization.
-    Its sole purpose is to approximate local correlations and relaxation flows without
-    presupposing a background geometry.
-    Different graph topologies (regular grids, random graphs, locally weighted networks) lead
-    to qualitatively similar behavior, indicating that the observed phenomena are robust with
-    respect to discretization choices.
-
-    The simulations are therefore compatible with the relational formulation developed in
-    Appendix~\ref{app:relational_formulation}, while remaining technically independent of it.
+    This construction should not be interpreted as a physical lattice, causal structure,
+    or discretized spacetime.
+    Different choices of numerical bases or sampling strategies (regular grids, irregular
+    samplings, weighted connectivity graphs) lead to qualitatively similar behavior,
+    indicating that the observed phenomena reflect intrinsic properties of the relaxation
+    dynamics rather than artifacts of a particular representation.
 
   \paragraph{Relaxation update rule.}
-    The discrete evolution of the field is governed by a bounded relaxation rule inspired by
-    the minimal kinematic constraint
-    (Section~\ref{subsec:minimal-kinematic-constraint}):
+    The numerical evolution of the field follows a bounded relaxation rule inspired by the
+    minimal kinematic constraint discussed in
+    Section~\ref{subsec:minimal-kinematic-constraint}.
+    In the chosen representation, the evolution equation takes the form
     \begin{equation}
       \label{eq:discrete-dynamics}
       \frac{d\chi_i}{d\lambda}
       =
       c \sqrt{1 - \frac{1}{c^2}
-      \sum_{j \sim i} K_{ij} (\chi_i - \chi_j)^2 } .
+      \sum_{j} K_{ij} (\chi_i - \chi_j)^2 } .
     \end{equation}
 
     This update rule enforces strict monotonicity of $\chi$, a universal upper bound on the
-    local relaxation rate, and suppression of gradient-driven instabilities.
-    Time stepping is implemented using explicit adaptive schemes with stability control.
-    Alternative discretizations respecting the same bound lead to equivalent qualitative
-    behavior, confirming that the results do not depend on a fine-tuned algorithmic choice.
+    local relaxation rate, and the suppression of gradient-driven instabilities.
+    Time stepping is implemented using adaptive schemes with stability control.
+    Alternative numerical implementations respecting the same bound produce equivalent
+    qualitative behavior, confirming that the results are not sensitive to algorithmic
+    details.
 
   \paragraph{Formation of localized configurations.}
-    Starting from generic initial conditions, the simulations consistently exhibit the
-    emergence of localized regions where spatial variations of $\chi$ remain persistently
-    large.
-    These regions resist the global relaxation flow and remain stable over many relaxation
-    times.
+    Starting from generic initial conditions, the simulations robustly exhibit the
+    spontaneous emergence of localized configurations in which structural variations of
+    $\chi$ remain persistently large.
+    These configurations locally resist the global relaxation flow and remain stable over
+    many relaxation intervals.
 
     Such configurations are interpreted as numerical counterparts of the solitonic
     excitations discussed in
     Section~\ref{sec:particles-as-localized-excitations-of-the-chi-field}.
     They arise dynamically without being imposed by hand and do not require fine-tuned
     initial conditions.
-    Perturbative tests show that small disturbances around these configurations decay rather
-    than grow, confirming their dynamical stability.
+    Perturbative tests indicate that small disturbances around these configurations decay
+    rather than grow, confirming their dynamical stability within the relaxation framework.
 
-  \paragraph{Spectral analysis and mode separation.}
-    To probe the internal structure of stable configurations, the relaxation operator is
-    linearized around a stationary $\chi$ background.
-    The resulting eigenvalue problem defines a discrete spectrum of modes characterizing the
-    response of the configuration to small perturbations.
+  \paragraph{Spectral analysis and response modes.}
+    To probe the internal structure of stable configurations, the effective relaxation
+    operator is linearized around a stationary background configuration.
+    The resulting eigenvalue problem defines a discrete set of response modes describing
+    how the configuration reacts to small perturbations within the chosen numerical
+    representation.
 
-    A systematic spectral scan reveals a clear separation between a small number of
-    low-lying modes associated with collective, coherent deformations of the configuration,
+    A systematic spectral analysis reveals a clear separation between a small number of
+    low-lying modes associated with coherent, collective deformations of the configuration,
     and a dense set of higher modes that are rapidly damped by the relaxation dynamics.
-    This mode separation is a robust numerical feature and does not depend sensitively on the
-    discretization or boundary conditions.
+    This separation is a robust numerical feature and does not depend sensitively on the
+    choice of basis, resolution, or boundary conditions.
 
-    These eigenmodes quantify intrinsic relaxation scales associated with the configuration.
+    These response modes quantify intrinsic relaxation scales associated with a given
+    configuration.
     At this stage, they are not identified with observed particle masses.
-    Rather, they provide a structural fingerprint of each stable excitation, capturing how
-    strongly it resists deformation.
-    The possible connection between these spectral hierarchies and physical mass spectra is
-    discussed conceptually in Appendix~\ref{subsec:spectral_mass}, without invoking
-    numerical matching.
+    Rather, they provide a structural fingerprint characterizing the degree of internal
+    organization and resistance to deformation of each stable excitation.
+    Possible connections between such spectral hierarchies and physical mass spectra are
+    discussed conceptually in
+    Appendix~\ref{subsec:spectral_mass}, without invoking numerical matching.
 
   \paragraph{Interpretation and scope.}
-    The existence of discrete spectral hierarchies is a robust numerical result.
-    Their role in the present work is structural rather than predictive: they demonstrate
-    that the relaxation dynamics of $\chi$ naturally supports stable localized excitations,
-    bounded and causal evolution, and internally organized mode spectra.
+    The appearance of discrete spectral hierarchies in the simulations is a robust and
+    reproducible numerical result.
+    Within the present work, their role is structural rather than predictive: they
+    demonstrate that the bounded relaxation dynamics of $\chi$ naturally supports stable
+    localized configurations, causal and monotonic evolution, and internally organized
+    response spectra.
 
   \paragraph{Limitations.}
-    The simulations presented here do not include quantum fluctuations, backreaction beyond
-    the effective level, or fully relativistic covariance.
-    They are not intended to provide numerical predictions for particle physics or precision
-    cosmology.
+    The simulations presented here do not include quantum fluctuations, higher-order
+    backreaction effects, or fully relativistic covariance.
+    They are not intended to provide quantitative predictions for particle physics or
+    precision cosmology.
 
   \paragraph{Conclusion.}
-    This appendix shows that the relaxation dynamics of the $\chi$ field can be implemented
-    numerically in a stable and controlled manner, without invoking a background geometry or
-    additional degrees of freedom.
-    The emergence of localized excitations and discrete spectral mode separation provides
-    strong support for the conceptual foundations of Cosmochrony and establishes a solid
-    basis for future quantitative developments.
+    This appendix demonstrates that the relaxation dynamics of the $\chi$ field can be
+    implemented numerically in a stable and controlled manner using finite-dimensional
+    representations, without invoking a background geometry or additional fundamental
+    degrees of freedom.
+    The spontaneous emergence of localized configurations and the associated separation of
+    response modes provide strong numerical support for the conceptual foundations of
+    Cosmochrony and establish a solid basis for future quantitative investigations.

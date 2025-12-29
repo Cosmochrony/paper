@@ -1,70 +1,80 @@
 \subsection{Collective Gravitational Coupling and Operational Geometry}
   \label{subsec:collective-coupling}
 
-  This subsection develops an effective and operational description of gravitational
-  phenomena within the Cosmochrony framework.
-  Its purpose is to demonstrate explicitly how standard Newtonian gravity and its
-  geometric interpretation emerge from the collective dynamics of the $\chi$ field
-  in regimes where a quasi-static and weak-gradient approximation is valid.
+  The $\chi$ field is fundamentally continuous, and its dynamics is defined through non-linear,
+  non-perturbative relaxation constraints that do not admit a closed-form spectral decomposition.
+  As a consequence, any explicit investigation of stability, mode structure, or response to localized
+  excitations necessarily requires a finite-dimensional projection of the underlying functional
+  operator.
 
-  The constructions introduced here are not fundamental.
-  They constitute a technical representation of the underlying continuous dynamics,
-  designed to connect the relational formulation of Cosmochrony to familiar
-  gravitational phenomenology.
-  The fully relational and metric-free foundation of the theory is developed
-  independently in Appendix~\ref{app:relational_formulation}.
+  In this appendix, we introduce such a projection as a numerical representation of the
+  \emph{continuous} relaxation operator governing $\chi$.
+  This construction does not reflect any discretization of the underlying substrate, but provides
+  a computationally tractable surrogate for an operator whose exact functional spectrum is
+  analytically inaccessible.
 
   \paragraph{Collective coupling and effective description.}
     Localized excitations of the $\chi$ field resist its global relaxation and thereby
-    slow the local evolution rate $\partial_t \chi$.
-    When many such excitations are present, their influence superposes collectively,
-    leading to a macroscopic modification of the relaxation dynamics.
+    reduce the local relaxation rate.
+    When many such excitations are present, their influence combines collectively,
+    leading to a macroscopic modulation of the relaxation dynamics.
 
-    In an effective description, this collective influence may be encoded in a coupling
-    kernel $K_{ij}$, which characterizes how variations of $\chi$ between neighboring
-    regions affect the local relaxation rate.
-    The kernel depends only on differences of $\chi$ and captures the local stiffness
-    of the field, without presupposing any background notion of distance or metric.
+    At the effective level, this collective influence can be summarized by a coupling
+    kernel $K_{ij}$, understood as a finite representation of the response of the
+    $\chi$ relaxation flow to structural variations.
+    The indices $i$ and $j$ label elements of a chosen numerical or functional basis
+    used to represent configurations of $\chi$; they do not correspond to fundamental
+    spatial locations.
+    The kernel depends only on differences of $\chi$ between configurations and
+    characterizes the stiffness of the relaxation dynamics, without presupposing any
+    background notion of distance, adjacency, or metric structure.
 
-  \paragraph{Continuum limit and emergence of the Newtonian potential.}
-    In regimes where variations of $\chi$ are small and slowly varying, the collective
-    dynamics may be approximated by a continuum description.
-    In this limit, spatial variations of the relaxation rate can be expressed in terms
-    of an effective gravitational potential $\Phi$, defined operationally through the
-    relative slowdown of $\chi$:
+  \paragraph{Effective gravitational potential and weak-field regime.}
+    In regimes where variations of $\chi$ are weak and smoothly distributed, the
+    collective relaxation dynamics admit a coarse-grained description in which
+    spatial organization becomes meaningful.
+    In this regime, variations of the local relaxation rate may be parametrized
+    by an effective gravitational potential $\Phi$, defined operationally through
+    the relative slowdown of $\chi$:
     \begin{equation}
       \frac{\partial_t \chi}{c} \simeq 1 + \frac{\Phi}{c^2}.
     \end{equation}
 
-    Under this identification, the collective relaxation dynamics reduce to a Poisson-like
-    equation,
+    This definition introduces $\Phi$ not as a fundamental field, but as a convenient
+    summary of how localized excitations collectively constrain the relaxation flow.
+    Under this identification, and in the weak-structure limit, the effective dynamics
+    reduce to a Poisson-like relation,
     \begin{equation}
       \nabla^2 \Phi = 4\pi G \rho,
     \end{equation}
-    where $\rho$ denotes the density of localized excitations.
-    The gravitational constant $G$ emerges here as an effective parameter relating the
-    strength of the collective coupling to the density of excitations.
-    Its numerical value is not predicted from first principles in the present framework,
-    but must be fixed empirically, as in other effective theories of gravity.
+    where $\rho$ denotes the effective density of localized, relaxation-resistant
+    configurations.
+    The constant $G$ appears here as an emergent coupling parameter relating the
+    collective response of the $\chi$ field to the density of such excitations.
+    As in other effective descriptions of gravity, its numerical value is fixed
+    empirically rather than derived from first principles at this level.
 
-  \paragraph{Operational notion of geometry.}
+  \paragraph{Operational emergence of geometry.}
     Because Cosmochrony does not assume a fundamental spacetime metric, spatial geometry
-    is defined operationally through the propagation of $\chi$ variations.
-    Two regions are considered close if perturbations of $\chi$ propagate efficiently
-    between them, and distant otherwise.
+    is defined operationally through the propagation and attenuation of variations
+    in the $\chi$ field.
+    Two configurations are considered close if perturbations of $\chi$ propagate
+    efficiently between them, and distant otherwise.
 
     In the weak-gradient regime, this operational notion induces an effective spatial
     geometry that coincides with the standard Newtonian and post-Newtonian descriptions.
-    Spacetime curvature therefore appears as a macroscopic summary of how localized
-    excitations collectively modulate the relaxation and propagation of the $\chi$ field,
-    rather than as a primitive geometric property.
+    Spacetime curvature therefore arises as a macroscopic descriptor of how localized
+    excitations collectively modulate the relaxation and propagation properties of
+    $\chi$, rather than as a primitive geometric attribute.
 
   \paragraph{Scope and limitations.}
     The construction presented in this subsection is restricted to quasi-static,
-    weak-field regimes where an effective spatial description is meaningful.
-    It does not address strong-field dynamics, relativistic corrections beyond leading
-    order, or quantum fluctuations of the $\chi$ field.
+    weak-field regimes in which a smooth geometric description provides a faithful
+    summary of the underlying relaxation dynamics.
+    It does not address strong-field configurations, fully relativistic corrections,
+    or quantum fluctuations of the $\chi$ field.
 
-    Its role is to establish that classical gravitational behavior can be recovered
-    consistently from the collective dynamics of $\chi$ without introducing a
-    fundamental metric or an independent gravitational interaction.
+    Its purpose is to establish that classical gravitational behavior can be recovered
+    consistently as an effective manifestation of the collective relaxation dynamics
+    of $\chi$, without introducing a fundamental metric structure or an independent
+    gravitational interaction.
