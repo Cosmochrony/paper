@@ -107,6 +107,30 @@
       signal-to-noise ratios exceeding $\sim 100$ for massive black hole mergers, may
       provide sufficient sensitivity to test this prediction.
 
+    \paragraph{Semi-quantitative estimate of gravitational wave attenuation.}
+      Within the Cosmochrony framework, the attenuation of gravitational wave amplitudes
+      near compact objects arises from the local slowdown of $\chi$-field relaxation in
+      regions of high curvature.
+      At leading order, the relative amplitude reduction is expected to scale with the
+      dimensionless curvature parameter $(r_s / r)$, where
+      \[
+        r_s = \frac{2GM}{c^2}
+      \]
+      is the Schwarzschild radius of a black hole of mass $M$.
+
+      A simple dimensional estimate yields
+      \[
+        \frac{\Delta A}{A} \sim \left( \frac{r_s}{r} \right)^2 ,
+      \]
+      indicating that the attenuation depends explicitly on both the black hole mass and
+      the wave trajectory’s impact parameter.
+      For propagation at distances $r \approx 10\,r_s$, this scaling gives
+      \[
+        \frac{\Delta A}{A} \sim 10^{-2},
+      \]
+      consistent with the order-of-magnitude estimates discussed above and with numerical
+      results obtained from exploratory $\chi$-field simulations (Appendix~D.3).
+
 \subsection{Spin and Topological Signatures}
   \label{subsec:spin-and-topological-signatures}
 
@@ -163,6 +187,18 @@ fine-tuned parameters or additional fundamental fields.
   such as hemispherical asymmetry, without requiring fine-tuned initial conditions.
   Quantitative estimates of the resulting low-$\ell$ suppression are discussed in
   Appendix~\ref{app:lowell_attenuation}.
+
+\paragraph{Connection with CMB observations.}
+  Observationally, the \emph{Planck} 2018 data report a suppression of the CMB
+  quadrupole power at the level of $\sim 10\%$ relative to the $\Lambda$CDM best-fit
+  expectation, corresponding to the long-standing low-$\ell$ anomaly at
+  $\ell = 2$~\cite{Aghanim2020}.
+  Within Cosmochrony, this suppression arises naturally from the pre-geometric
+  relaxation dynamics of the $\chi$ field, which reduces large-angle correlations
+  prior to the emergence of an effective spacetime description.
+  Unlike phenomenological explanations based on fine-tuned initial conditions or
+  ad hoc modifications of primordial spectra, the effect follows directly from the
+  intrinsic relaxation properties of the underlying field.
 
 \paragraph{Gravitational-wave propagation.}
   In regions of strong structural variation of $\chi$, such as near compact objects,
