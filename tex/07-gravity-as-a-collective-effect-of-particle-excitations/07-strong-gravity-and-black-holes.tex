@@ -23,7 +23,7 @@ projective regimes discussed in this section.
 
     Effective &
     &
-    $\Phi$ non-injective &
+    $\Pi$ non-injective &
     &
     No spacetime \\
     Modulations &
@@ -76,8 +76,8 @@ relational structure.
     In general relativity, such shadows arise from the absence of escaping null
     geodesics within a characteristic angular region.
     In Cosmochrony, an equivalent observational signature emerges because effective
-    propagating descriptions, including radiation-like modes, cease to be representable
-    once projectability is lost.
+    propagating descriptions, including radiation-like modes, no longer admit a faithful
+    spacetime representation once projectability is lost.
     External observers therefore perceive a dark angular region corresponding to the
     projection of a non-projectable domain.
 
@@ -113,7 +113,7 @@ relational structure.
       While $c$ may exhibit effective regime-dependent variations, the bound $c_{\chi}$ is
       invariant.
 
-  \subsubsection{Black Holes, Deprojection, and Reprojection}
+  \subsubsection{Black Holes, Deprojection, and Vacuum Reprojection}
     \label{subsec:black-hole-deprojection-cycle}
 
     Within Cosmochrony, the absence of physical singularities does not imply that black
@@ -123,7 +123,7 @@ relational structure.
 
     The emergence of an effective spacetime description relies on a projection map
     \[
-      \Phi : \mathcal{C}_{\mathrm{rel}} \longrightarrow \mathcal{M},
+      \Pi : \mathcal{C}_{\mathrm{rel}} \longrightarrow \mathcal{M},
     \]
     from the space of relational configurations to an effective spacetime manifold.
     In weak- and moderate-field regimes, this map is locally injective, ensuring a faithful
@@ -144,6 +144,14 @@ relational structure.
     is in principle reprojectable once projectability is restored.
     Reprojection occurs discretely and manifests in effective spacetime descriptions as
     radiation-like excitations or particle--antiparticle pairs.
+
+    The deprojection regime associated with black hole horizons does not imply the
+    absence of dynamical processes.
+    While smooth metric evolution ceases, the χ substrate remains structurally active.
+    In particular, reprojection may occur intermittently when local configurations
+    reach the threshold required for effective visibility.
+    In the following section, this process is formalized through an explicit
+    reprojection flux equation governing black hole evaporation.
 
     \paragraph{Information conservation and unitarity.}
       Deprojection does not correspond to information loss.
@@ -185,3 +193,64 @@ relational structure.
     information loss.
     The black hole information paradox is thus resolved by recognizing it as an artifact
     of extrapolating spacetime concepts beyond their domain of validity.
+
+\subsubsection{Horizon Reprojection Equation}
+  \label{subsec:horizon-reprojection-equation}
+
+  Within Cosmochrony, black hole evaporation is described as a reprojection process
+  by which structural energy stored in the χ substrate is released into the projected
+  spacetime in discrete units.
+
+  The energy flux emerging from the horizon is defined as a sum over reprojection
+  events associated with micro-configurations of the projection fiber:
+  \[
+    \Phi_\chi \equiv \frac{dE}{dt}
+    = \sum_k \delta(t - t_k)\, \hbar_\chi\, \nu_k(L_{\mathrm{sol}}).
+  \]
+
+  Here, $\hbar_\chi$ denotes the fundamental quantum of reprojection, setting the
+  minimal granularity of projected action.
+  The quantities $\nu_k(L_{\mathrm{sol}})$ correspond to the resonance frequencies
+  associated with the eigenmodes of the stability operator $L_{\mathrm{sol}}$ acting
+  on the projection fiber $\Pi^{-1}(g_H)$ at the horizon, where $g_H$ denotes the
+  effective near-horizon geometry.
+  The times $t_k$ label the instants at which local χ configurations reach the
+  projection threshold and become effectively visible in spacetime.
+
+  Black hole evaporation thus proceeds as a sequence of discrete reprojection pulses,
+  rather than as a continuous emission process.
+
+\subsubsection{Emergent Temperature and Relaxation Gradient}
+  \label{subsec:emergent-temperature}
+
+  The apparent Hawking temperature perceived by a distant observer emerges from the
+  statistical distribution of reprojection events.
+  It is determined by the gradient of effective χ relaxation normal to the horizon.
+
+  This relation may be expressed as
+  \[
+    k_B T_\chi = \frac{\hbar_\chi c}{2\pi}\,
+    \left| \nabla_{\perp} \chi_{\mathrm{eff}} \right|_H.
+  \]
+
+  For more massive black holes, the relaxation gradient is distributed over a larger
+  horizon area, reducing the frequency of reprojection events.
+  This directly explains the inverse mass–temperature relation without invoking
+  vacuum particle creation or fundamental thermodynamic assumptions.
+
+\subsubsection{Information Conservation and Spectral Encoding}
+  \label{subsec:information-conservation}
+
+  In contrast with semiclassical descriptions, information is never destroyed in
+  Cosmochrony.
+  The projection operator $\Pi$ acts as a filter rather than as an irreversible map.
+
+  During the deprojection phase, information is stored in the nonlinear degrees of
+  freedom of the χ substrate, encoded within the projection fiber.
+  During reprojection, the emitted radiation carries the precise spectral imprint of
+  the eigenmodes governing the χ configuration.
+
+  Each emitted quantum corresponds to a specific transition within the substrate,
+  ensuring global unitarity.
+  The apparent loss of information arises solely from restricting attention to the
+  projected metric degrees of freedom.
