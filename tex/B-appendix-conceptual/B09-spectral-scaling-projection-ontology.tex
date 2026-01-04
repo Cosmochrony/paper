@@ -53,7 +53,9 @@
     projection, as schematically illustrated in Fig.~\ref{fig:spectral-gap},
     rather than as an arbitrary fundamental constant.
 
-    \begin{tikzpicture}[x=1cm,y=1cm]
+    \begin{figure}[htbp]
+      \centering
+      \begin{tikzpicture}[x=1cm,y=1cm]
       % Axis
       \draw[->] (0,0) -- (0,6.2) node[above] {$\lambda$ (eigenvalue)};
       \draw (0,0) -- (5.2,0);
@@ -83,15 +85,16 @@
       % Formula moved to the bottom-right (no overlap)
       \node[anchor=west,align=left] at (2.6,0.45)
         {\small $\displaystyle \frac{m_p}{m_e}\approx \sqrt{\frac{\lambda_{\mathrm{bind}}}{\lambda_e}}$};
-      \caption{%
-        Conceptual schematic of a spectral gap in the stability spectrum of
-        $\mathcal{L}_{\mathrm{sol}}$.
-        The elementary mode $\lambda_e$ is separated from a dense band of binding modes
-        near $\lambda_{\mathrm{bind}}$, illustrating the interpretation of
-        $m_p/m_e$ as a macroscopic signature of spectral organization rather than an
-        intrinsic mass parameter.}
-      \label{fig:spectral-gap}
     \end{tikzpicture}
+    \caption{%
+      Conceptual schematic of a spectral gap in the stability spectrum of
+      $\mathcal{L}_{\mathrm{sol}}$.
+      The elementary mode $\lambda_e$ is separated from a dense band of binding modes
+      near $\lambda_{\mathrm{bind}}$, illustrating the interpretation of
+      $m_p/m_e$ as a macroscopic signature of spectral organization rather than an
+      intrinsic mass parameter.}
+    \label{fig:spectral-gap}
+\end{figure}
 
 \subsubsection*{Summary and Outlook}
 
