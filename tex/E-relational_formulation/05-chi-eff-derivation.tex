@@ -1,108 +1,86 @@
-\subsection{Derivation of $\chi_{\text{eff}}$ from Relational Observables}
-\label{subsec:chi-eff-derivation}
+\subsection{Derivation of $\chi_{\mathrm{eff}}$ from Relational Observables}
+  \label{app:chi-eff-derivation}
 
-The projected field $\chi_{\text{eff}}$ is not fundamental: it is a coarse-grained
-description of relational configurations of $\chi$. The construction below introduces
-$\chi_{\text{eff}}$ \emph{without} assuming a background manifold, coordinates, or
-differential operators.
+  The effective field $\chi_{\mathrm{eff}}$ is introduced as an operational description of
+  $\chi$-configurations once a stable projected regime exists. Since the projected regime
+  admits an effective geometric interpretation, $\chi_{\mathrm{eff}}$ must be constructed in a
+  way that does not implicitly assume the very metric structure it is meant to support.
+  In particular, if a distance $d_{ij}$ used to define coarse-graining neighborhoods depends
+  on weights that themselves depend on $\chi$, then a hidden circularity would arise.
 
-\subsubsection*{Step 1: Coarse-graining domain defined by relational distance}
-  Fix an operational coarse-graining scale $\ell_0$.
-  For any node $i$, define the relational neighborhood
-  \begin{equation}
-    \mathcal{V}_{\ell_0}(i)\;=\;\{\,j \mid d_{ij}\le \ell_0\,\},
-    \label{eq:relational-ball}
-  \end{equation}
-  where $d_{ij}$ is the shortest-path distance defined in
-  Eq.~\eqref{eq:relational-distance}.
+  To remove this ambiguity, we adopt a \textbf{two-level construction} based on the explicit
+  distinction between the combinatorial distance $d_{ij}^{C}$ and the weighted distance
+  $d_{ij}^{W}$ introduced in Appendix~E.4.
 
-\subsubsection*{Step 2: Definition of the effective field}
-  Define the coarse-grained (projected) field at node $i$ by a local average:
-  \begin{equation}
-    \chi_{\text{eff}}(i)\;=\;\frac{1}{|\mathcal{V}_{\ell_0}(i)|}
-    \sum_{j\in \mathcal{V}_{\ell_0}(i)} \chi_j.
-    \label{eq:chi-eff-discrete}
-  \end{equation}
-  This step is purely relational: it only uses adjacency/connectivity and the induced
-  distance functional.
+  \paragraph{(1) Relational background field $\bar{\chi}$.}
+    We define a background field $\bar{\chi}$ by a \textbf{relational average} that uses only the
+    \textbf{combinatorial (pre-geometric) distance} $d_{ij}^{C}$. Let
+    \begin{equation}
+      N_i \;=\; \left\{ j \,\middle|\, d_{ij}^{C} \le \ell_0 \right\}
+      \label{eq:combinatorial_neighborhood}
+    \end{equation}
+    be the combinatorial neighborhood of radius $\ell_0$ around node $i$. We then set
+    \begin{equation}
+      \bar{\chi}_i
+      \;=\;
+      \frac{1}{|N_i|}
+      \sum_{j\in N_i} \chi_j.
+      \label{eq:relational_average_bar_chi}
+    \end{equation}
+    Because $N_i$ depends only on $d_{ij}^{C}$, the definition of $\bar{\chi}$ is \textbf{independent
+of any weighted metric} and therefore does not depend on $\chi$ through a distance functional.
+    This is the crucial step that prevents circularity.
 
-\subsubsection*{Step 3: Emergent differential operators as shorthand}
-  Once a projectable regime exists, continuum notation becomes a compact shorthand for
-  graph operations. For instance, for a locally regular region of the network, discrete
-  finite differences provide an operational meaning to gradients:
-  \begin{equation}
-    \partial_\mu \chi_{\text{eff}}(x)
-    \;\widehat{=}\;
-    \frac{\chi_{\text{eff}}(x+\hat{\mu}\,\ell_0)-\chi_{\text{eff}}(x)}{\ell_0},
-    \label{eq:chi-eff-gradient-shorthand}
-  \end{equation}
-  while integrals are operationally replaced by weighted sums over coarse-grained cells.
-  In this sense, $\nabla$ and $\int$ are \emph{notations} for relational procedures rather
-  than primitive geometric inputs.
+  \paragraph{(2) Emergent connectivity and weighted distance.}
+    Using the background field $\bar{\chi}$, we define the link weights and the corresponding
+    connectivity through Eq.~\eqref{eq:weight_function_background}:
+    \[
+      w_{uv}(\bar{\chi})
+      \;=\;
+      \frac{1}{K_0}
+      \left[
+        1 + \left(\frac{\bar{\chi}_u-\bar{\chi}_v}{\chi_c}\right)^2
+      \right],
+      \qquad
+      K_{uv}(\bar{\chi}) \;=\; \frac{1}{w_{uv}(\bar{\chi})}.
+    \]
+    The \textbf{weighted distance} used for effective geometry is then
+    \begin{equation}
+      d_{ij}^{W}
+      \;=\;
+      \min_{\gamma_{ij}}
+      \sum_{(u,v)\in\gamma_{ij}} w_{uv}(\bar{\chi}),
+      \label{eq:weighted_distance}
+    \end{equation}
+    which depends on $\bar{\chi}$ but not on instantaneous $\chi$ values through the metric definition.
 
-  \paragraph{Role of the bound \texorpdfstring{$c$}{c}.}
-    The constant \(c\) does not represent a signal velocity in a pre-existing
-    spacetime.
-    At the relational level, it defines a fundamental upper bound on the rate at which
-    the internal structure of a \(\chi\) configuration may change.
-    This bound is encoded directly in the relaxation constraints governing the
-    evolution of \(\chi\).
+  \paragraph{(3) Effective field $\chi_{\mathrm{eff}}$ (geometry-aware coarse-graining).}
+    Finally, we define $\chi_{\mathrm{eff}}$ by coarse-graining $\chi$ over neighborhoods defined
+    with the \textbf{weighted distance} $d_{ij}^{W}$:
+    \begin{equation}
+      V_{\ell_0}(i)
+      \;=\;
+      \left\{ j \,\middle|\, d_{ij}^{W} \le \ell_0 \right\},
+      \label{eq:weighted_neighborhood}
+    \end{equation}
+    \begin{equation}
+      \chi_{\mathrm{eff}}(i)
+      \;=\;
+      \frac{1}{|V_{\ell_0}(i)|}
+      \sum_{j\in V_{\ell_0}(i)} \chi_j.
+      \label{eq:chi_eff_definition}
+    \end{equation}
 
-    As a consequence, while relational configurations may be globally defined and
-    non-factorizable, their evolution remains locally constrained once an effective
-    notion of causality emerges.
-    No relational reconfiguration can induce arbitrarily rapid changes in projected
-    descriptions.
-
-  \paragraph{Emergence of locality.}
-    Locality is not assumed at the fundamental level.
-    It arises only when relational configurations admit a projectable regime in which
-    spatial organization becomes meaningful.
-    In such regimes, the bound \(c\) manifests operationally as a maximum propagation
-    speed for disturbances in the projected field \(\chi_{\mathrm{eff}}\).
-
-    This emergent locality ensures that effective interactions respect relativistic
-    causal ordering.
-    Dynamical influences propagate continuously and are limited by the same invariant
-    speed that governs relativistic kinematics.
-
-  \paragraph{Compatibility with entanglement.}
-    The coexistence of global relational correlations and bounded dynamical evolution
-    resolves the apparent tension between quantum entanglement and relativistic
-    causality.
-    Entangled configurations correspond to non-factorizable relational structures that
-    are globally specified.
-    Their correlated measurement outcomes do not result from superluminal influences,
-    but from the consistency constraints imposed by a shared relational configuration.
-
-    Because no dynamical update propagates between subsystems during measurement,
-    entanglement does not violate the causal bound \(c\).
-    All observable dynamical effects remain subluminal in the emergent geometric
-    description.
-
-  \paragraph{Causality as a projected concept.}
-    Causality, in Cosmochrony, is not a primitive feature of the relational ontology.
-    It is a property of the effective geometric description that emerges once temporal
-    ordering and spatial separation become meaningful.
-    The bound \(c\) ensures that this emergent causal structure is well-defined and
-    internally consistent.
-
-    Thus, Cosmochrony distinguishes sharply between:
-    \begin{itemize}
-      \item \emph{relational correlations}, which may be global and nonlocal in a
-      geometric sense, and
-      \item \emph{dynamical causation}, which is always constrained by the bound \(c\)
-      once projected.
-    \end{itemize}
-
-  \paragraph{Conceptual role.}
-    This distinction clarifies how Cosmochrony accommodates both the holistic features
-    of quantum phenomena and the strict causal structure of relativistic physics
-    without contradiction.
-    The bound \(c\) acts as the bridge between the relational and geometric levels,
-    ensuring that emergent spacetime dynamics remain causal even though the underlying
-    ontology is non-geometric and nonlocal.
-
-    The present subsection therefore establishes the foundation for reconciling
-    entanglement, relativistic causality, and the emergence of spacetime within a
-    single coherent framework.
+  \paragraph{Non-circular dependency structure.}
+    The construction is explicitly hierarchical:
+    \[
+      d^{C} \;\Longrightarrow\; \bar{\chi}
+      \;\Longrightarrow\; w(\bar{\chi}),\,K(\bar{\chi})
+      \;\Longrightarrow\; d^{W}
+      \;\Longrightarrow\; \chi_{\mathrm{eff}}.
+    \]
+    The neighborhood used to compute $\bar{\chi}$ is defined using $d^{C}$ and is therefore
+    $\chi$-independent. The effective geometry is encoded in $d^{W}$ through weights that depend
+    only on $\bar{\chi}$, breaking any instantaneous feedback loop. This makes the operational
+    definition of $\chi_{\mathrm{eff}}$ compatible with the pre-geometric status of $\chi$, while still
+    allowing an emergent geometric regime for spectral and effective-field analyses.
