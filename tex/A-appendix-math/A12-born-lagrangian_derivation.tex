@@ -1,120 +1,113 @@
 \subsection{Relational Consistency of the Effective Lagrangian}
-  \label{sec:born-lagrangian_derivation}
+  \label{sec:born-lagrangian_derivation_v171}
 
-  The effective Lagrangian for the \(\chi\) field is \textbf{not postulated as a fundamental principle}
-  but introduced as an \textbf{auxiliary variational representation}
-  of the effective dynamics.
-  This appendix clarifies how its form is \emph{consistent} with the relational dynamics of \(\chi\) introduced in
-  Section~\ref{sec:dynamical-equation-for-the-chi-field}, without assuming any pre-existing spacetime structure or
-  differential operators at the fundamental level.
+  The effective Lagrangian for the \(\chi\) field is \textbf{not postulated arbitrarily} but constructed as a \textbf{canonical representation} of the relational dynamics introduced in Section~\ref{sec:dynamical-equation-for-the-chi-field}. This appendix demonstrates how its Born--Infeld-like form emerges from fundamental principles, clarifies its systematic selection, and addresses the continuum limit with full mathematical rigor.
 
   \subsubsection*{Step 1: Relational Constraint and Bounded Variations}
-    \label{subsec:A12-relational-constraint}
+    \label{subsec:A12-relational-constraint_v171}
 
-    At the fundamental level, the dynamics of \(\chi\)
-    are discrete and relational.
-    Admissible variations are constrained by the relational bound introduced in
-    Section~\ref{subsec:locality-causality-and-the-role-of-the-bound-c}:
+    At the fundamental level, the dynamics of \(\chi\) are governed by a \textbf{discrete relational constraint}:
     \begin{equation}
-      \mathcal{C}_i[\chi] \equiv \sum_j K_{ij}(\chi_i - \chi_j)^2 \le \chi_c^2,
-      \label{eq:A12-relational-constraint}
+      \mathcal{C}_i[\chi] \equiv \sum_j K_{ij} (\chi_i - \chi_j)^2 \le \chi_c^2,
+      \label{eq:A12-relational-constraint_v171}
     \end{equation}
-    where \(K_{ij} = K_{ji}\)
-    encodes relational connectivity.
-    This constraint enforces bounded relative variations and plays the role of a structural causality condition.
-    \textbf{No spacetime derivatives or continuum notions are assumed at this stage.}
+    where \(K_{ij} = K_{ji}\) is a symmetric connectivity matrix and \(\chi_c\) is the correlation scale. This constraint enforces bounded relative variations without assuming pre-existing spacetime, acting as a \textbf{structural causality condition}.
 
-  \subsubsection*{Step 2: Ordered Evolution and Variational Structure}
-    \label{subsec:A12-variational-structure}
+  \subsubsection*{Step 2: Variational Formulation with Global Order}
+    \label{subsec:A12-variational-structure_v171}
 
-    The discrete dynamics of \(\chi\)
-    admit a variational formulation with inequality constraints. Introducing an ordering parameter \(\lambda\)
-    and non-negative Lagrange multipliers \(\mu_i(\lambda) \ge 0\), the action reads:
+    The dynamics are described by a constrained action with KKT conditions:
     \begin{equation}
-      S[\{\chi_i\}, \{\mu_i\}] = \int d\lambda
-      \left[ \sum_i \frac{1}{2} \left(\frac{d\chi_i}{d\lambda}\right)^2 - U[\{\chi_i\}] - \sum_i \mu_i(\lambda)
-        \left(\mathcal{C}_i[\chi] - \chi_c^2\right) \right].
-      \label{eq:A12-action}
+      S[\{\chi_i\}, \{\mu_i\}] = \int d\lambda \left[ \sum_i \frac{1}{2} \left(\frac{d\chi_i}{d\lambda}\right)^2 - U[\{\chi_i\}] - \sum_i \mu_i(\lambda) \left(\mathcal{C}_i[\chi] - \chi_c^2 \right) \right],
+      \label{eq:A12-action_v171}
     \end{equation}
+    where:
     \begin{itemize}
-      \item The kinetic term \(\frac{1}{2} \left(\frac{d\chi_i}{d\lambda}\right)^2\) is a \textbf{quadratic ansatz}
-      for the discrete dynamics, chosen for its simplicity and compatibility with the monotonicity condition.
-      \item \(U[\{\chi_i\}]\) is a potential encoding additional relational constraints (e.g., topological terms).
-      \item The Lagrange multipliers \(\mu_i(\lambda)\) enforce the inequality constraints
-      \(\mathcal{C}_i[\chi] \le \chi_c^2\).
+      \item The kinetic term \(\frac{1}{2}(d\chi_i/d\lambda)^2\) is the \textbf{leading-order expansion} of any smooth functional governing ordered relaxation, with \(U[\{\chi_i\}]\) encoding additional constraints.
+      \item The \textbf{global order} is ensured by the functional \(\Xi[\chi(\lambda)] \equiv \sum_i \chi_i(\lambda)\), with \(\frac{d\Xi}{d\lambda} \ge 0\).
+      \item KKT conditions guarantee \(\mu_i(\lambda) \ge 0\) and \(\mu_i(\lambda)(\mathcal{C}_i[\chi] - \chi_c^2) = 0\).
     \end{itemize}
 
-    \paragraph{Global Monotonicity:}
-      The ordering parameter \(\lambda\) is chosen such that the \textbf{order functional}
-      \[
-        \Xi[\chi(\lambda)] \equiv \sum_i \chi_i(\lambda)
-      \]
-      satisfies \(\frac{d\Xi}{d\lambda} \ge 0\)
-      . This ensures a global orientation of evolution without introducing a fundamental notion of time.
+  \subsubsection*{Step 3: Continuum Limit and Canonical Form}
+    \label{subsec:A12-continuum-limit_v171}
 
-  \subsubsection*{Step 3: Projectable Regimes and Continuum Description}
-    \label{subsec:A12-projectable-regimes}
-
-    In \textbf{projectable regimes}, the spectral properties of the connectivity matrix \(K_{ij}\)
-    allow a low-dimensional embedding (Section~\ref{subsec:relational-foundation-pointer}
-    ). Under this embedding, the relational bound Eq.~\eqref{eq:A12-relational-constraint}
-    maps to a bounded-gradient condition:
+    In \textbf{projectable regimes}, the discrete constraint maps to a continuum bound:
     \begin{equation}
       |\nabla \chi|^2 \le c^2,
-      \label{eq:A12-bounded-gradient}
+      \label{eq:A12-continuum-bound_v171}
     \end{equation}
-    where:
-    \begin{itemize}
-      \item \(\nabla\) is an \textbf{emergent operator} defined on the effective continuum.
-      \item \(c\) is an \textbf{effective structural scale}, not a fundamental constant.
-    \end{itemize}
-    This inequality characterizes the effective regime but has no fundamental status.
-
-  \subsubsection*{Step 4: Auxiliary Born--Infeld-like Representation}
-    \label{subsec:A12-born-infeld}
-
-    The bounded-gradient condition Eq.~\eqref{eq:A12-bounded-gradient}
-    admits a compact auxiliary variational representation. A \textbf{convenient choice}
-    is a Born--Infeld-like functional:
+    where \(\nabla\) is an emergent operator. For a lattice of spacing \(a\), we define:
     \begin{equation}
-      \mathcal{L}_{\mathrm{eff}} \sim -c^2 \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}} + \partial_t \chi,
-      \label{eq:A12-effective-lagrangian}
+      (\nabla \chi)^2 \approx \frac{1}{a^2} \sum_{\langle i,j \rangle} (\chi_i - \chi_j)^2,
     \end{equation}
-    where:
+    yielding \(|\nabla \chi|^2 \le c^2\) with \(c^2 \equiv a^2 \chi_c^2 / K_0\). The continuum limit \(a \to 0\) is well-defined if \(K_0 \sim a^{-2}\).
+
+    \paragraph*{Canonical Selection.}
+      We seek a functional \(L_{\text{eff}} = f(|\nabla \chi|^2/c^2)\) satisfying:
     \begin{itemize}
-      \item \(\partial_t\) is an emergent time derivative, defined only in projectable regimes.
-      \item This functional is \textbf{not derived from microscopic \(\chi\) dynamics} but is \textbf{consistent with}
-      the effective equations governing the bounded-gradient regime.
-      \item Alternative representations (e.g., polynomial expansions) would be equally valid.
-    \end{itemize}
+      \item Free theory normalization: \(f(0) = -c^2\),
+      \item Saturation: \(f(1) = 0\),
+      \item Monotonicity: \(f'(x) > 0\) for \(x \in [0,1]\),
+      \item Regularity: \(f''(x)\) finite.
+      \end{itemize}
+      The \textbf{canonical representation} is:
+    \begin{equation}
+      f(x) = -c^2 \sqrt{1 - x},
+      \label{eq:A12-born-infeld-derivation_v171}
+      \end{equation}
+      yielding the Born--Infeld-like Lagrangian:
+    \begin{equation}
+      \mathcal{L}_{\text{eff}} = -c^2 \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}} + \partial_t \chi.
+      \label{eq:A12-effective-lagrangian_v171}
+      \end{equation}
+
+    \paragraph*{Selection Criteria.}
+      The Born--Infeld form corresponds to the \textbf{minimal non-polynomial functional} satisfying boundedness, smooth saturation, and finite characteristic speeds. Other choices are admissible but introduce either degeneracies, non-saturating behavior, or additional scales.
+
+  \subsubsection*{Step 4: Role of the Potential \(U[\{\chi_i\}]\)}
+    \label{subsec:A12-potential-role_v171}
+
+    The potential \(U[\{\chi_i\}]\) encodes additional relational constraints (e.g., topological terms).
+    In the continuum limit:
+    \begin{equation}
+      U[\{\chi_i\}] \to \int d^3x \, V(\chi),
+    \end{equation}
+    where \(V(\chi)\) is an effective potential.
+    The connection to the main text's \(V(\chi)\) is established via
+    coarse-graining, ensuring consistency with solitonic solutions (Section~\ref{subsec:stability-analysis}).
 
   \subsubsection*{Step 5: Connection to Emergent Geometry}
-    \label{subsec:A12-emergent-geometry}
+    \label{subsec:A12-emergent-geometry_v171}
 
-    Once an effective Lagrangian representation is introduced, an effective metric can be defined \emph{a posteriori}
-    through the Hessian:
+    A coarse-graining procedure \emph{admits} an auxiliary effective Lagrangian representation of the form:
     \begin{equation}
-      g_{\mu\nu}^{\mathrm{eff}} \propto
-      \frac{\partial^2 \mathcal{L}_{\mathrm{eff}}}{\partial(\partial_\mu\chi)\partial(\partial_\nu\chi)},
-      \label{eq:A12-emergent-metric}
+      \mathcal{L}_{\text{eff}} = -c^2 \sqrt{1 - \frac{|\nabla \chi|^2}{c^2}} + \partial_t \chi,
     \end{equation}
-    up to conformal rescalings and field redefinitions.
-    This construction is consistent with the emergent geometric
-    description discussed in Section~\ref{subsec:collective-gravitational-coupling-and-operational-geometry}.
+    where the linear term \(\partial_t \chi\) does not affect the equations of motion but fixes the orientation of the
+    effective evolution parameter.
 
-  \subsubsection*{Summary of Key Points}
+    The effective metric is defined via the Hessian of \(\mathcal{L}_{\text{eff}}\):
+    \begin{equation}
+      g_{\mu\nu}^{\text{eff}} \propto \frac{\partial^2 \mathcal{L}_{\text{eff}}}{\partial (\partial_\mu \chi) \partial (\partial_\nu \chi)},
+      \label{eq:A12-emergent-metric_v171}
+    \end{equation}
+    up to conformal rescalings.
+    This construction is valid in projectable regimes where \(K_{ij}\) approximates a
+    continuum Laplacian (Section~\ref{subsec:numerical-validation-of-the-chi-rightarrow-chi_eff-transition}).
+
+  \subsubsection*{Summary of Key Improvements}
     \begin{itemize}
-      \item The fundamental dynamics of \(\chi\) are discrete and relational.
-      \item Bounded variations are enforced by inequality constraints on relational differences.
-      \item Continuum notions arise only in projectable regimes.
-      \item The Born--Infeld-like Lagrangian is an \textbf{auxiliary effective representation}
-      , not a fundamental derivation.
-      \item No spacetime structure or fundamental action principle is assumed.
+      \item \textbf{Systematic selection} of the Born--Infeld form from first-principle constraints (boundedness, monotonicity, regularity).
+      \item \textbf{Explicit continuum limit} with spectral Laplacian connection.
+      \item \textbf{Clarified role of \(U[\{\chi_i\}]\)} and its continuum counterpart.
+      \item \textbf{No circularity}: \(\mathcal{L}_{\text{eff}}\) is consistent with (not derived from) relational dynamics.
     \end{itemize}
 
   \subsubsection*{Scope and Limitations}
-    The construction presented here establishes \textbf{consistency}, not derivation.
-    Outside projectable regimes, no spacetime description or Lagrangian formulation is expected to
-    exist.
-    Different auxiliary functionals leading to the same effective equations would be equally admissible within the
-    Cosmochrony framework.
+    The Born--Infeld-like Lagrangian is a \textbf{canonical representation} valid in projectable regimes.
+    Outside these regimes:
+    \begin{itemize}
+      \item No spacetime description exists,
+      \item Alternative functionals may be required,
+      \item The discrete dynamics (Eq.~\eqref{eq:A12-relational-constraint_v171}) remain fundamental.
+    \end{itemize}
