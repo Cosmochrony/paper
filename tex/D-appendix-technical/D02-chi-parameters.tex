@@ -3,92 +3,70 @@
 
   The quantities introduced in this section—effective coupling scales, spectral
   parameters, and characteristic lengths—should be understood as properties of a
-  \emph{projected relaxation operator} acting on a finite-dimensional function
-  space.
+  \emph{projected relaxation operator} acting on a finite-dimensional function space.
   They characterize the response of localized \(\chi\) configurations to
   perturbations within a given resolution scale and do not represent fundamental
   degrees of freedom of the theory.
 
-  All parameters discussed below are therefore \emph{effective} and
-  \emph{environment-dependent}.
-  They encode how localized structures constrain relaxation once a coarse-grained
-  geometric description becomes applicable.
-  No claim is made that they correspond to universal constants of nature.
+  \textbf{Distinction between Bare and Effective Scales:}
+  As established in Section~\ref{subsec:renormalization-hbar}, we distinguish
+  between the \textbf{bare} parameters (\(K_{0,\text{bare}}\), \(\chi_{c,\text{bare}}\)),
+  which are universal substrate invariants, and the \textbf{effective} parameters
+  discussed here (\(K_{0,\text{eff}}\), \(\chi_{c,\text{eff}}\)). These encode
+  how localized structures constrain relaxation once a coarse-grained geometric
+  description becomes applicable, effectively describing a \textbf{projective renormalization}
+  of the substrate's stiffness.
 
   The relevant effective parameters include:
   \begin{itemize}
-    \item the \textbf{effective coupling scale} \(K_0\) entering the projected
-    response operator \(K_{ij}\),
-    \item the \textbf{characteristic scale} \(\chi_c\) at which macroscopic geometric
-    effects emerge,
-    \item effective solitonic parameters \((\lambda,\eta)\) controlling stabilization
+    \item the \textbf{effective coupling scale} \(K_{0,\text{eff}}\) entering the
+    projected response operator \(K_{ij}\),
+    \item the \textbf{characteristic scale} \(\chi_{c,\text{eff}}\) at which
+    macroscopic geometric effects emerge,
+    \item effective solitonic parameters \((\lambda, \eta)\) controlling stabilization
     mechanisms in reduced descriptions,
-    \item the maximal relaxation speed \(c\), identified with the invariant speed of
-    relativistic kinematics.
+    \item the maximal relaxation speed \(c\), which remains an invariant link
+    between the bare and effective regimes.
   \end{itemize}
 
-  \subsubsection*{Effective Coupling Scale \texorpdfstring{$K_0$}{K0} and Characteristic Scale \texorpdfstring{
-    $\chi_c$}{χc}}
+  \subsubsection*
+  {Effective Coupling Scale \texorpdfstring{$K_0$}{K0} and Characteristic Scale \texorpdfstring{$\chi_c$}{chic}}
 
-    In weak-field regimes admitting an effective geometric description, gravitational
-    coupling emerges from the collective stiffness of the \(\chi\) relaxation
-    dynamics.
-    Dimensional consistency and matching to the Newtonian limit lead to the effective
-    relation
-    \begin{equation}
-      G = \frac{c^4}{16\pi K_0 \chi_c^2},
-      \label{eq:G-emergent}
-    \end{equation}
-    which links the observed gravitational constant \(G\) to two emergent scales.
+    The scale \(\chi_{c,\text{eff}}\) sets the characteristic magnitude of \(\chi\)
+    over which structural variations significantly modulate relaxation and induce
+    macroscopic geometric effects.
+    It marks the breakdown of homogeneous relaxation and the onset of structure-induced slowdown.
 
-    The parameter \(K_0\), with dimensions of inverse length squared, characterizes the
-    maximal stiffness of the projected relaxation response in a homogeneous background.
-    It is a property of the projected operator used for numerical and phenomenological
-    analysis, not a microscopic connectivity or lattice spacing.
-
-    Crucially, \(K_0\) is not scale-invariant.
-    It is defined only after projection and coarse-graining of the underlying
-    \(\chi\)-field dynamics and therefore depends explicitly on the resolution scale
-    at which the operator is constructed.
-    This dependence may be summarized as
-    \begin{equation}
-      K_0 \equiv K_0(\ell_{\mathrm{cg}}),
-    \end{equation}
-    where \(\ell_{\mathrm{cg}}\) denotes the characteristic coarse-graining scale.
-
-    The large variation of \(K_0\) across different regimes—Planckian, mesoscopic, or
-    cosmological—is therefore not a sign of fine-tuning.
-    It is a generic consequence of scale-dependent projection in an emergent
-    framework.
-
-    The scale \(\chi_c\) sets the characteristic magnitude of \(\chi\) over which
-    structural variations significantly modulate relaxation and induce macroscopic
-    geometric effects.
-    It marks the breakdown of homogeneous relaxation and the onset of
-    structure-induced slowdown.
-
-    Equation~\eqref{eq:G-emergent} admits two illustrative normalization regimes:
+    The emergent gravitational constant \(G\) is driven by the ratio
+    \(K_{0,\text{eff}} / \chi_{c,\text{eff}}^2\).
+    Equation~\eqref{eq:G-emergent} admits two illustrative normalization regimes, highlighting the scale-dependency
+    of these effective ``dressed'' parameters:
 
     \paragraph{Planck-scale normalization.}
-      If \(\chi_c\) is associated with the Planck length
-      \(\ell_P \simeq 1.6 \times 10^{-35}\,\mathrm{m}\),
-      one finds
-      \begin{equation}
-        K_0 \sim 10^{93}\,\mathrm{m}^{-2}.
+      If \(\chi_{c,\text{eff}}\) is associated with the Planck length
+      \(\ell_P \simeq 1.6 \times 10^{-35}\,\mathrm{m}\), one finds
+    \begin{equation}
+      K_{0,\text{eff}} \sim 10^{93}\,\mathrm{m}^{-2}.
       \end{equation}
       In this regime, the effective relaxation dynamics is extremely stiff, and
-      gravitational phenomena are interpreted as arising from structural constraints
-      near the limit of applicability of classical spacetime descriptions.
+      gravitational phenomena are interpreted as structural constraints near the
+      limit of applicability of classical spacetime descriptions.
 
     \paragraph{Cosmological-scale normalization.}
-      If instead \(\chi_c\) is identified with the present Hubble scale
-      \(c/H_0 \simeq 1.4 \times 10^{26}\,\mathrm{m}\),
-      the inferred coupling scale becomes
-      \begin{equation}
-        K_0 \sim 10^{-52}\,\mathrm{m}^{-2}.
+      If instead \(\chi_{c,\text{eff}}\) is identified with the present Hubble scale
+      \(c/H_0 \simeq 1.4 \times 10^{26}\,\mathrm{m}\), the inferred coupling scale
+      becomes
+    \begin{equation}
+      K_{0,\text{eff}} \sim 10^{-52}\,\mathrm{m}^{-2}.
       \end{equation}
       This regime corresponds to a much softer collective response dominated by
       large-scale cosmological relaxation.
-      Both normalizations are internally consistent at the level of dimensional
-      analysis; discriminating between them requires additional observational or
-      dynamical input.
+
+      \textbf{Conclusion on Scalability:}
+      Both normalizations are internally consistent at the level of dimensional analysis.
+      Their coexistence suggests that the Cosmochrony dynamics are
+      \textbf{spectrally self-similar}: the fundamental physics remains invariant
+      under the transformation of scales, provided the ratio of effective stiffness
+      to correlation length is preserved.
+      This self-similarity ensures that \(G\) remains constant across observational scales despite the vast differences in
+      effective parameter magnitudes.
