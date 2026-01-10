@@ -2,6 +2,10 @@
 \texorpdfstring{$\chi$}{χ} Relaxation}
   \label{app:lowell_attenuation}
 
+  This appendix provides a detailed phenomenological treatment of the low-$\ell$
+  CMB power suppression discussed in
+  Sections~\ref{subsec:cmb} and~\ref{subsec:large-angle-anomalies}.
+
   One of the most persistent large-scale anomalies of the cosmic microwave
   background (CMB) concerns the suppression of temperature anisotropy power at the
   largest angular scales (\(\ell \lesssim 30\)), most notably in the quadrupole and
@@ -122,6 +126,37 @@
     Small-scale modes probe local relaxation and behave approximately as independent
     perturbations, while large-scale modes encode global structural properties of the
     field.
+
+  \paragraph{Graph-theoretic origin of the admissibility filter.}
+    Building on the concept of ontological poverty introduced in
+    Section~\ref{subsec:initial-conditions-and-global-structure}, the admissibility
+    filter $\mathcal{A}(k,t)$ admits a natural graph-theoretic interpretation.
+    At any effective cosmological time $t$, the relational substrate $\chi$ defines
+    a connectivity graph $G(t)$ whose weighted Laplacian $L_G(t)$ encodes the
+    admissible collective modes.
+
+    The spectrum of $L_G(t)$,
+    \[
+      L_G(t)\,\psi_n = \lambda_n(t)\,\psi_n,
+    \]
+    sets a minimal nonzero eigenvalue $\lambda_2(t)$ that characterizes the global
+    connectivity of the relational structure.
+    Modes with wavelengths exceeding the corresponding scale
+    $k_c(t) \sim \sqrt{\lambda_2(t)}$ are structurally inadmissible.
+
+    The primordial power spectrum is therefore modulated by a structural
+    admissibility filter,
+    \[
+      \mathcal{A}(k,t)
+      =
+      \exp\!\left[
+        -\left(
+          \frac{\lambda_2(t)}{k^2}
+        \right)^{p/2}
+      \right],
+    \]
+    reflecting the inability of an insufficiently connected relational graph to
+    support large-scale coherent modes.
 
   \paragraph{Scope and limitations.}
     The present analysis does not replace full Boltzmann calculations and does not aim
