@@ -8,15 +8,19 @@
   relaxation patterns.
 
   In effective descriptions admitting a scalar representation $\chi_{\mathrm{eff}}$,
-  this postulate may be written in the compact form
+  this postulate may be written, in its \emph{saturated form}, as
   \begin{equation}
     (\partial_t \chi)^2 + |\nabla \chi|^2 = c^2 ,
     \label{eq:minimal-kinematic-constraint}
   \end{equation}
   where the symbols $\partial_t$ and $\nabla$ denote \emph{effective} temporal and relational
   variations introduced only once a projectable geometric regime is established.
+  More generally, admissible configurations satisfy the corresponding inequality, with
+  equality characterizing locally saturated relaxation.
 
-  This constraint underlies the Hamiltonian derivation in Section~\ref{subsec:hamiltonian-derivation}.
+  This constraint underlies, but is not derived from, the Hamiltonian formulation
+  introduced in Section~\ref{subsec:hamiltonian-derivation}, which provides an effective
+  representation valid only within the projected geometric regime.
 
   \paragraph{Pre-geometric status.}
     Equation~\eqref{eq:minimal-kinematic-constraint} does \emph{not} presuppose the existence
@@ -49,8 +53,8 @@
     representation does~\eqref{eq:minimal-kinematic-constraint} take on a familiar relativistic
     form.
     In such cases, the bound $c$ coincides numerically with the invariant speed appearing
-    in special relativity, and the constraint can be rewritten in a form suggestive of a
-    light-cone structure.
+    in special relativity, and the saturated form of the constraint can be rewritten in a
+    form suggestive of a light-cone structure.
     This resemblance is emergent and descriptive, not ontological: Lorentz symmetry
     arises \emph{a posteriori} as a property of saturated relaxation, rather than as a
     fundamental symmetry imposed on spacetime.
@@ -87,20 +91,23 @@
     A fully discrete formulation of the kinematic constraint and its implications for
     early-universe dynamics is deferred to future work.
 
-  \begin{tcolorbox}[colback=white, colframe=green!75!black, title=Example: Homogeneous Relaxation]
-      Consider a spatially homogeneous configuration where $|\nabla \chi| = 0$.
+    \begin{tcolorbox}[colback=white, colframe=green!75!black, title=Example: Homogeneous Relaxation]
+      Consider a spatially homogeneous projected configuration where
+      $|\nabla \chi| = 0$.
       The minimal kinematic constraint reduces to
       \[
         (\partial_t \chi)^2 \leq c^2 .
       \]
-      In regimes where the bound is locally saturated, this implies
+      In regimes where the bound is locally saturated within the effective description,
+      this implies
       \[
         \partial_t \chi = c ,
       \]
-      leading to a linear effective evolution
+      leading to a linear effective ordering relation
       \[
         \chi(t) = \chi_0 + ct .
       \]
-      When the effective scale factor satisfies $a(t) \propto \chi(t)$, this directly yields
+      When the effective scale factor satisfies $a(t) \propto \chi(t)$, this yields
       the Hubble law discussed in Section~\ref{subsec:homogeneous-cosmological-limit}.
+      No fundamental temporal evolution of the $\chi$ substrate is implied.
     \end{tcolorbox}

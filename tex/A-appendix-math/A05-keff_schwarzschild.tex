@@ -12,17 +12,17 @@
       \label{eq:keff_constitutive}
     \end{equation}
     This relation is not fundamental.
-    It provides a coarse-grained parametrization of how collective structural
-    constraints within $\chi$ suppress relaxation transport in regimes where an
-    emergent geometric description becomes applicable.
+    It provides a coarse-grained and purely constitutive parametrization of how
+    collective structural constraints within $\chi$ suppress relaxation transport in
+    regimes where an emergent geometric description becomes applicable.
 
     In weak-field situations, this description leads to a Poisson-like equation and
     to the recovery of Schwarzschild phenomenology at leading order
     (Section~\ref{subsec:recovery-of-the-schwarzschild-metric}).
-    The purpose of the present appendix is to construct a \emph{consistent strong-field
-completion} of this picture in the spherically symmetric case, suitable for
-    describing the approach to an effective horizon without introducing geometric
-    singularities.
+    The purpose of the present appendix is not to modify or extend general relativity,
+    but to construct a \emph{self-consistent strong-field constitutive description}
+    within the Cosmochrony framework, suitable for characterizing the approach to an
+    effective horizon without introducing geometric singularities.
 
   \paragraph{Operational time-dilation factor.}
     In the emergent spacetime regime, gravitational time dilation is operationally
@@ -39,14 +39,17 @@ completion} of this picture in the spherically symmetric case, suitable for
     \end{equation}
     where $\mathcal{D}_0\chi$ denotes the relaxation rate far from localized
     excitations.
-    In the weak-field limit, this quantity reduces to
+    This quantity is an operational descriptor within the effective geometric regime
+    and does not correspond to a fundamental lapse function of an underlying spacetime.
+
+    In the weak-field limit, $N(r)$ reduces to
     \(N \simeq 1 + \Phi/c^2\),
     with $\Phi$ an effective Newtonian potential.
 
   \paragraph{Matching to Schwarzschild phenomenology.}
     In regimes where a stable geometric description applies, the exterior field of an
     isolated compact excitation may be summarized by a Schwarzschild-like metric.
-    We therefore adopt, purely as an \emph{effective descriptor},
+    We therefore adopt, \emph{purely as an effective and auxiliary descriptor},
     \begin{equation}
       ds^2
       =
@@ -58,6 +61,8 @@ completion} of this picture in the spherically symmetric case, suitable for
       \label{eq:schwarzschild_standard}
     \end{equation}
     where $r_s = 2GM/c^2$ is defined operationally by asymptotic weak-field matching.
+    This metric has no ontological status within Cosmochrony and serves only as a
+    compact parametrization of the effective exterior regime.
 
     Consistency with the interpretation of $N(r)$ as the local time-dilation factor
     then implies
@@ -66,7 +71,8 @@ completion} of this picture in the spherically symmetric case, suitable for
       \label{eq:lapse_schwarzschild}
     \end{equation}
     The limit $N(r)\to 0$ as $r\to r_s^+$ corresponds to an asymptotic freeze-out of
-    local relaxation and defines an \emph{effective horizon}.
+    local relaxation and defines an \emph{effective horizon} within the projected
+    description.
 
   \paragraph{From relaxation slowdown to conductivity.}
     To relate the relaxation slowdown to the constitutive conductivity, we adopt a
@@ -77,12 +83,12 @@ completion} of this picture in the spherically symmetric case, suitable for
       N(r)^2 .
       \label{eq:keff_lapse_ansatz}
     \end{equation}
-    This choice is not postulated as fundamental.
+    This identification is neither unique nor fundamental.
     It is selected because it:
     (i) reproduces the weak-field expansion,
     (ii) ensures $K_{\mathrm{eff}}\to 0$ at the horizon, preventing relaxation transport
     across an asymptotically frozen region,
-    and (iii) remains monotone and bounded.
+    and (iii) remains monotone and bounded throughout the exterior domain.
 
     Combining \eqref{eq:keff_lapse_ansatz} with
     \eqref{eq:lapse_schwarzschild} yields the explicit strong-field profile
@@ -94,8 +100,8 @@ completion} of this picture in the spherically symmetric case, suitable for
       r > r_s .
       \label{eq:keff_schwarzschild_profile}
     \end{equation}
-    This expression should be read as an \emph{effective constitutive law} valid only
-    within the emergent geometric regime.
+    This expression should be read strictly as an \emph{effective constitutive law}
+    valid only within the emergent geometric regime.
 
   \paragraph{Implied structural variation of \texorpdfstring{$\chi$}{χ}.}
     Inverting the constitutive relation
@@ -116,15 +122,17 @@ completion} of this picture in the spherically symmetric case, suitable for
       \label{eq:deltachi_horizon_asymptotic}
     \end{equation}
 
-    This divergence must not be interpreted as a physical singularity.
-    It indicates that the coarse-grained structural measure $\Delta\chi$ ceases to
-    remain small and that the effective geometric parametrization is pushed beyond
-    its domain of validity near the horizon.
+    This divergence must not be interpreted as a physical singularity of the $\chi$
+    substrate.
+    It indicates that the coarse-grained structural descriptor $\Delta\chi$ ceases to
+    remain small and that the hydrodynamic and geometric parametrization is pushed
+    beyond its domain of validity near the effective horizon.
 
   \paragraph{Interpretation: horizons as conductivity zeros.}
     Equations
     \eqref{eq:keff_schwarzschild_profile}--\eqref{eq:deltachi_schwarzschild}
-    provide a coherent strong-field completion of the weak-field Poisson description.
+    provide a coherent strong-field constitutive completion of the weak-field Poisson
+    description.
     In Cosmochrony, a Schwarzschild horizon corresponds to a \emph{vanishing relaxation
 conductivity},
     \[
