@@ -73,6 +73,89 @@
     Alternative numerical implementations respecting the same kinematic bound produce
     equivalent qualitative behavior, confirming that the results do not depend sensitively on algorithmic details.
 
+  \paragraph{Reference pseudocode for bounded relaxation dynamics.}
+    The following pseudocode summarizes a minimal numerical implementation of the bounded
+    relaxation rule~\eqref{eq:discrete-dynamics}. It is intentionally representation-agnostic:
+    indices label basis coefficients, and the coupling operator \(K_{ij}\) encodes the chosen
+    finite-dimensional approximation of the effective relaxation kernel.
+
+    \begin{algorithm}[t]
+\caption{Bounded \(\chi\)-relaxation with stability diagnostics}
+\label{alg:bounded-chi-relaxation}
+\begin{algorithmic}[1]
+  \Require Initial coefficients \(\chi^{(0)}_i\), coupling operator \(K_{ij}\), bound \(c\),
+  tolerances \(\varepsilon_\chi,\varepsilon_S\), max steps \(N_{\max}\)
+  \Ensure Relaxed configuration \(\chi^\star\) and diagnostics \((S_{\max}, \Theta_p, \{\lambda_n\})\)
+
+  \State \(n \gets 0\), \(\chi \gets \chi^{(0)}\)
+  \State Initialize diagnostic logs \(\mathcal{L}\)
+
+  \While{\(n < N_{\max}\)}
+    \State \textbf{Compute local saturation density}:
+    \For{each index \(i\)}
+      \State \(S_i \gets \frac{1}{c^2}\sum_j K_{ij}\,(\chi_i - \chi_j)^2\)
+      \State \(S_i \gets \min(S_i,\,1)\) \Comment{numerical safety clamp}
+    \EndFor
+    \State \(S_{\max} \gets \max_i S_i\)
+
+    \If{\(S_{\max} > 1 - \varepsilon_S\)}
+      \State \textbf{Flag near-saturation regime} in \(\mathcal{L}\)
+      \Comment{may indicate metastability or impending reconfiguration}
+    \EndIf
+
+    \State \textbf{Bounded relaxation update}:
+    \For{each index \(i\)}
+      \State \(v_i \gets c\,\sqrt{1 - S_i}\) \Comment{implements Eq.~\eqref{eq:discrete-dynamics}}
+    \EndFor
+
+    \State \textbf{Adaptive step control}:
+    \State Choose \(\Delta\lambda\) such that \(\max_i |\Delta\lambda\, v_i| \le \Delta\chi_{\max}\)
+    \Comment{e.g., \(\Delta\chi_{\max}\) fixed small fraction of typical \(|\chi|\)}
+
+    \State \textbf{Update} \(\chi_i \gets \chi_i + \Delta\lambda\, v_i\) for all \(i\)
+
+    \State \textbf{Convergence test}:
+    \State \(\delta \gets \max_i |\chi_i^{(n+1)} - \chi_i^{(n)}|\)
+    \If{\(\delta < \varepsilon_\chi\)}
+      \State \textbf{break}
+    \EndIf
+
+    \State \textbf{Optional: linearized spectrum around current state}:
+    \If{diagnostics scheduled at step \(n\)}
+      \State Construct linearized response operator \(L[\chi]\) around current \(\chi\)
+      \State Compute low-lying eigenpairs \(\{(\lambda_k,\psi_k)\}_{k=1..m}\)
+      \State Evaluate projectability threshold \(\Theta_p\) from spectral gap and Dirichlet energy
+      \State Log \((S_{\max}, \{\lambda_k\}, \Theta_p)\) into \(\mathcal{L}\)
+    \EndIf
+
+    \State \(n \gets n+1\)
+  \EndWhile
+
+  \State \(\chi^\star \gets \chi\)
+  \State \Return \(\chi^\star, \mathcal{L}\)
+\end{algorithmic}
+    \end{algorithm}
+
+    The clamp is a numerical safeguard and does not modify the conceptual bound $S\le 1$.
+    Loops are defined in the computational representation only, as a diagnostic of torsional organization; they do not
+    imply spatial connectivity.
+
+  \paragraph{Optional diagnostic: chiral--torsional charge invariant.}
+    To quantify charge as a chiral--torsional invariant of the relaxation flux,
+    we define a discrete flux on relational links \(J_{ij} \sim (\chi_j-\chi_i)\).
+    For a chosen set of closed loops \(\gamma\) in the numerical representation,
+    a winding-like invariant can be monitored by transporting the local flux orientation
+    around each loop and computing the net defect:
+    \begin{equation}
+      \label{eq:charge_winding_pseudocode}
+      Q_\gamma \;\equiv\; \frac{1}{2\pi}\sum_{(i,j)\in\gamma}\Delta \theta_{ij},
+    \end{equation}
+    where \(\theta_{ij}\) encodes the local oriented direction of the bounded flux and
+    \(\Delta\theta_{ij}\) is taken modulo \(2\pi\).
+    Stable charged excitations correspond to persistent nonzero \(Q_\gamma\) values,
+    while near-saturation events (large \(S_{\max}\)) typically coincide with
+    reconfiguration of torsional patterns and a redistribution of \(Q_\gamma\).
+
   \paragraph{Emergence and persistence of localized configurations.}
     Starting from generic initial conditions, the simulations robustly exhibit the
     spontaneous emergence of localized configurations in which structural variations of
