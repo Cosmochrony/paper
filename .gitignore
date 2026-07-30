@@ -13,3 +13,12 @@ out/
 # Local-only archive and editor settings (never committed)
 pdfs/
 .claude/
+
+# Common build-artefact baseline
+**/.DS_Store
+.venv/
+media/
+**/__pycache__/
+*.py[cod]
+*.fdb_latexmk
+*.fls
